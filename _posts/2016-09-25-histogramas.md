@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Histogramas
+comments: true
 ---
 
 <div class="message">

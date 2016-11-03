@@ -14,15 +14,15 @@ baseurl:          /
 
 author:
   name:           'Adelmo Filho'
-  url:            https://twitter.com/SoulFilho
+  url:            https://adelmofilho.github.io/
 
 paginate:         5
 
 # Custom vars
 version:          1.0.0 "Getting started"
 
-github:
-  repo:           adelmofilho.github.io
+github:           
+  repo:           https://github.com/adelmofilho
   
 # Gems
 gems: [jekyll-paginate]

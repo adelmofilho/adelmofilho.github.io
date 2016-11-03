@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Something about us
+title: Shiny Apps
 ---
 
 <p class="message">

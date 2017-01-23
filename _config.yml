@@ -6,15 +6,15 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Variável Aleatória
+title:            R and Blues
 tagline:          'A data science blog'
 description:      'Falhando em rejeitar a hipótese nula quando ela é falsa!'
-url:              https://adelmofilho.github.io/
+url:              http://blog.randblues.pro/
 baseurl:          /
 
 author:
   name:           'Adelmo Filho'
-  url:            https://adelmofilho.github.io/
+  url:            http://blog.randblues.pro/
 
 paginate:         5
 

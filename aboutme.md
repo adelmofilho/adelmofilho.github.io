@@ -6,15 +6,12 @@ subtitle:
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Sócio fundador da <strong><a href="https://www.llabsolutions.com/">LLAB Solutions</a></strong>, Startup direcionada em tecnologias de business intelligence e data science. Pesquisador do grupo em análises multivariadas aplicadas da Universidade Federal da Bahia.
+Sócio fundador da <strong><a href="https://www.llabsolutions.com/">LLAB Solutions</a></strong>, Startup direcionada em tecnologias de business intelligence e data science.
 </p>
 
 <p class="about-text">
 <span class="fa fa-graduation-cap about-icon"></span>
-Obtained my MSc in <strong>Bioinformatics</strong> from the University of British Columbia (supervised by the amazing
-<a href="https://twitter.com/JennyBryan" target="_blank">Jenny Bryan</a>) and my Bachelor of <strong>Computer Science</strong> from the University of Waterloo, Canada. My masters thesis project involved
-<a href="https://github.com/daattali/ddpcr" target="_blank">developing computational methods to automatically analyze
-droplet digital PCR</a> data.
+Sou graduando em engenharia química pela Federal da Bahia e pesquisador do grupo em análise multivariada aplicada. 
 </p>
 
 <p class="about-text">

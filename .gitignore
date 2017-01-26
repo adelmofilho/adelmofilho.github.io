@@ -2,8 +2,10 @@
 _site
 .sass-cache
 .vagrant
+.Rhistory
 
 # general
 .DS_Store
+.Rhistory
 Thumbs.db
 ehthumbs.db

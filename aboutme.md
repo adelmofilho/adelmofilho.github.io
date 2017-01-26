@@ -1,23 +1,18 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: 
 ---
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Currently an <a href="/shiny"><strong>R-Shiny consultant</strong></a>. Previously worked as a <strong>software engineer</strong> (Google, IBM, <a href="http://tagged.com" target="_blank">Tagged.com</a>) and <strong>web
-developer</strong> in tiny startups (<a href="http://wish.com" target="_blank">Wish.com</a>,
-<a href="http://makeupbee.com" target="_blank">MakeupBee.com</a>,
-<a href="http://glittr.com" target="_blank">glittr.com</a>,
-<a href="http://jauntr.com" target="_blank">jauntr.com</a>).
+Sócio fundador da <strong><a href="https://www.llabsolutions.com/">LLAB Solutions</a></strong>, Startup direcionada em tecnologias de business intelligence e data science. Pesquisador do grupo em análises multivariadas aplicadas da Universidade Federal da Bahia.
 </p>
 
 <p class="about-text">
 <span class="fa fa-graduation-cap about-icon"></span>
 Obtained my MSc in <strong>Bioinformatics</strong> from the University of British Columbia (supervised by the amazing
-<a href="https://twitter.com/JennyBryan" target="_blank">Jenny Bryan</a>) and my Bachelor of <strong>Computer Science</strong> from the
-University of Waterloo, Canada. My masters thesis project involved
+<a href="https://twitter.com/JennyBryan" target="_blank">Jenny Bryan</a>) and my Bachelor of <strong>Computer Science</strong> from the University of Waterloo, Canada. My masters thesis project involved
 <a href="https://github.com/daattali/ddpcr" target="_blank">developing computational methods to automatically analyze
 droplet digital PCR</a> data.
 </p>

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Oi, eu sou Adelmo
+subtitle: Oi, eu sou Adelmo!
 ---
 
 <span class="fa fa-briefcase about-icon"></span> Sócio fundador da <strong><a href="https://www.llabsolutions.com/">LLAB Solutions</a></strong>, Startup direcionada em tecnologias de business intelligence e data science.

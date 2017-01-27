@@ -1,8 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: 
-css: "/css/aboutme.css"
+subtitle: asd
 ---
 
 <p class="about-text">

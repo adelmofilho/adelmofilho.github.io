@@ -4,15 +4,8 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-<span class="fa fa-briefcase about-icon"></span>
+<span class="fa fa-briefcase about-icon"></span> Sócio fundador da <strong><a href="https://www.llabsolutions.com/">LLAB Solutions</a></strong>, Startup direcionada em tecnologias de business intelligence e data science.
 
-My name is Inigo Montoya. I have the following qualities:
+<span class="fa fa-graduation-cap about-icon"></span> Sou graduando em engenharia química pela Federal da Bahia e pesquisador do [grupo em análise multivariada aplicada](https://gamaufba.wordpress.com/). Desenvolvo cursos em R e sempre que posso colaboro com as disciplinas de estatística da universidade agregando a programação em R ao conteúdo delas.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+<span class="fa fa-heart about-icon"></span> Blues, R&B, Jazz e chá mate.

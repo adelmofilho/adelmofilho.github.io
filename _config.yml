@@ -17,7 +17,7 @@ description: A quasi-Engineering-Statistic-Code Blog
 navbar-links:
   About Me: "aboutme"
   Links:
-    - LLAB Startup: "llabsolutions.com"
+    - LLAB Startup: "https://llabsolutions.com"
     - Grupo GAMA: "https://gamaufba.wordpress.com/"
   
 

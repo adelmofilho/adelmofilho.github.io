@@ -16,11 +16,9 @@ description: A Pseudo-Engineering-Statistic-Code Blog
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Shiny: "http://deanattali.com"
-  Recursos:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
+  Links:
+    - LLAB Startup: "llabsolutions.com"
+    - Grupo GAMA: "https://gamaufba.wordpress.com/"
   
 
 # Image to show in the navigation bar - image must be a square (width = height)

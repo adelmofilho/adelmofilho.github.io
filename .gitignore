@@ -1,5 +1,11 @@
+# project
+_site
+.sass-cache
+.vagrant
+.Rhistory
+
+# general
 .DS_Store
 .Rhistory
-.RData
-.Rproj.user
-packrat/lib*/
+Thumbs.db
+ehthumbs.db

@@ -1,6 +1,6 @@
 # --- General options --- #
 
-url: "http://blog.randblues.pro/"   # url is the full website URL
+url: "http://adelmofilho.github.io/"   # url is the full website URL
 baseurl: ""                         # baseurl is the website's URL without the hostname
 
 # Of course don't forget to change the username and projectname to YOUR username and project

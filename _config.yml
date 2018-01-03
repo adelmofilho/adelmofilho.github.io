@@ -1,6 +1,6 @@
 # --- General options --- #
 
-url: "http://adelmofilho.github.io/"   # url is the full website URL
+url: "adelmofilho.github.io/"   # url is the full website URL
 baseurl: ""                         # baseurl is the website's URL without the hostname
 
 # Of course don't forget to change the username and projectname to YOUR username and project
@@ -9,7 +9,7 @@ encoding: UTF-8
 title: adelmofilho.github.io
 
 # Short description of your site
-description: A quasi-Engineering-Statistic-Code Blog
+description: Estatística | Programação em R | Educação
 
 # --- Navigation bar options --- #
 
@@ -18,7 +18,7 @@ navbar-links:
   About Us: "aboutme"
   Links:
     
-    - Grupo GAMA: "gamma.ufba.br"
+    - Grupo GAMA: "http://www.gamma.ufba.br"
   
 
 # Image to show in the navigation bar - image must be a square (width = height)

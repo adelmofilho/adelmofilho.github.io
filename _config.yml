@@ -6,7 +6,7 @@ baseurl: ""                         # baseurl is the website's URL without the h
 # Of course don't forget to change the username and projectname to YOUR username and project
 encoding: UTF-8
 # Name of website
-title: R and Blues
+title: adelmofilho.github.io
 
 # Short description of your site
 description: A quasi-Engineering-Statistic-Code Blog
@@ -15,10 +15,10 @@ description: A quasi-Engineering-Statistic-Code Blog
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About Us: "aboutme"
   Links:
     
-    - Grupo GAMA: "https://gamaufba.wordpress.com/"
+    - Grupo GAMA: "gamma.ufba.br"
   
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -77,7 +77,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "blog.randblues.pro"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "adelmofilho.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments

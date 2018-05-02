@@ -14,6 +14,4 @@ layout: page
 
 <span class="fa fa-graduation-cap about-icon"></span> Sou graduando em engenharia química pela Federal da Bahia e pesquisador do [grupo em análise multivariada aplicada](gamma.ufba.br).
 
-<span class="fa fa-cogs about-icon"></span> 
-
 <span class="fa fa-heart about-icon"></span> Blues, Jazz e chá mate.

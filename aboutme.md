@@ -1,10 +1,10 @@
 ---
-layout: page
-title: About me
+title: "About me"
 subtitle: Oi, eu sou Adelmo!
+layout: page
 ---
 
-<span class="fa fa-briefcase about-icon"></span> Sócio fundador da <strong>LLAB Solutions</strong>, Startup direcionada em tecnologias de business intelligence e data science.
+<span class="fa fa-briefcase about-icon"></span> Consultor freelancer com experiência em análise de dados, business intelligence e modelagem estatística para tomada de decisões.
 
 <span class="fa fa-graduation-cap about-icon"></span> Sou graduando em engenharia química pela Federal da Bahia e pesquisador do [grupo em análise multivariada aplicada](https://gamaufba.wordpress.com/). Desenvolvo cursos em R e sempre que posso colaboro com as disciplinas de estatística da universidade agregando a programação em R ao conteúdo delas.
 

@@ -1,15 +1,15 @@
 # --- General options --- #
 
-url: "adelmofilho.github.io/"   # url is the full website URL
-baseurl: ""                         # baseurl is the website's URL without the hostname
+# Base URL
 
-# Of course don't forget to change the username and projectname to YOUR username and project
-encoding: UTF-8
-# Name of website
-title: adelmofilho.github.io
+url: "http://blog.adelmofilho.com"   
+baseurl: ""                          
 
-# Short description of your site
-description: Estatística | Programação em R | Educação
+# General
+
+title: adelmofilho.github.io                             # Name of website
+description: Estatística | Programação em R | Educação   # Short description of your site
+encoding: UTF-8                                          # Encoding
 
 # --- Navigation bar options --- #
 
@@ -32,14 +32,14 @@ avatar: "/img/avatar-icon.png"
 author:
   name: Adelmo Filho
   email: "adelmo.aguiar.filho@gmail.com"
-  facebook: adelmo.aguiar.filho  # eg. daattali
+  facebook: adelmo.filho.90857  # eg. daattali
   github: adelmofilho    # eg. daattali
-  twitter: yourname   # eg. daattali
+  twitter: AdelmoFilho42   # eg. daattali
   reddit: yourname    # eg. daattali
   google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
   linkedin: adelmoaguiarfilho  # eg. daattali
   xing: yourname      # eg. daattali
-  stackoverflow: yourlink  # eg. "3943160/daattali"
+  stackoverflow: "users/7311764/adelmo-filho"
   snapchat: yourname  # eg. daattali
   instagram: yourname # eg. daattali
   youtube: yourlink   # eg. user/daattali or channel/daattali
@@ -57,7 +57,7 @@ footer-links-active:
   reddit: false
   linkedin: true
   xing: false
-  stackoverflow: false
+  stackoverflow: true
   snapchat: false
   instagram: false
   youtube: false
@@ -73,7 +73,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "adelmofilho.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "blog.adelmofilho.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments

@@ -12,7 +12,7 @@ No fim de abril foi lançado o [ubuntu 18](http://releases.ubuntu.com/18.04/) (b
 A instalação seguiu com o seguinte fluxo:
 
 ```
-# Atualização do pacotes e instalação das versões mais novas papel toalha
+# Atualização do pacotes e instalação das versões mais novas
 
 sudo apt-get update && sudo apt-get upgrade
 

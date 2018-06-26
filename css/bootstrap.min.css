@@ -36,7 +36,14 @@ small{font-size:80%}
 
 sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
 
-sup{top:-.5em}sub{bottom:-.25em}img{border:0; width: 100%;}
+sup{top:-.5em}sub{bottom:-.25em}
+
+img. imgabout{
+  
+  width: 100%;
+}
+
+img{border:0;}
 
 svg:not(:root){overflow:hidden}
 

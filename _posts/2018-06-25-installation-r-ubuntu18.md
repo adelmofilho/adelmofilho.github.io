@@ -32,7 +32,7 @@ sudo gdebi rstudio-xenial-1.1.453-amd64.deb
 
 # Instalação de pacotes
 
-sudo su - -c "R -e \"install.packages(c('tidyverse', 'ggplot2', 'shiny', 'rmarkdown', leaflet'), repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages(c('tidyverse', 'ggplot2', 'shiny'), repos='http://cran.rstudio.com/')\""
 ```
 
 Nada muito complicado! Na instalação de outros pacotes, houveram algumas bibliotecas do ubuntu que precisaram ser instaladas, mas, felizmente, estes são informados no console do R/Rstudio.

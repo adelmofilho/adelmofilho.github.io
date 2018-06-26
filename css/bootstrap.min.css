@@ -38,7 +38,7 @@ sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
 
 sup{top:-.5em}sub{bottom:-.25em}
 
-img .imgabout{
+img.imgabout{
   
   width: 100%;
 }
@@ -63,7 +63,7 @@ button[disabled],html input[disabled]{cursor:default}
 
 button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
 
-img .gitbtn{
+img.gitbtn{
   width: 42%; 
 }
 

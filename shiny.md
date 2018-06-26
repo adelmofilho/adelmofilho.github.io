@@ -11,7 +11,7 @@ title: Shiny Applications
     <div class="galleryItems">
       
       <div class="galleryItem">
-        <a href="https://adelmofilho.shinyapps.io/testet/"><img class="galleryItemImage" src="img/ttest.jpg"/></a>
+        <a href="https://adelmofilho.shinyapps.io/testet/"><img class="galleryItemImage" src="www.github.com/adelmofilho/adelmofilho.github.io/img/ttest.jpg"/></a>
         <a href="https://adelmofilho.shinyapps.io/testet/" class="galleryItemLabel">Test t-Student</a>
         <div class="galleryItemDescription">Como realizar o teste t de Student?</div>
       </div>

@@ -8,7 +8,7 @@ title: Shiny Applications
     <div class="galleryItems">
     
     <div class="galleryItem">
-        <a href="http://apps.adelmofilho.com/shiny/3LBirds/"><img class="galleryItemImage" src="http://adelmofilho.github.io/img/3lbirds-img.png"></a>
+        <a href="http://apps.adelmofilho.com/shiny/3LBirds/"><img class="galleryItemImage" src="http://adelmofilho.github.io/img/3lbirds-img.png"/></a>
         <a href="http://apps.adelmofilho.com/shiny/3LBirds/" class="galleryItemLabel">3LBirds</a>
         <div class="galleryItemDescription">ShinyApp for Tweets Analysis</div>
       </div>

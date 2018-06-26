@@ -8,7 +8,6 @@ title: Shiny Applications
 <div class="bandContent gallerySection">
     <div class="gallerySectionTitle">Análise Descritiva de Dados e Inferência Estatística</div>
     <div class="galleryIntro"></div>
-    <div class="galleryItems">
       
       <div class="galleryItem">
         <a href="https://adelmofilho.shinyapps.io/testet/"><img class="galleryItemImage" src="http://adelmofilho.github.io/img/ttest.jpg"/></a>
@@ -22,4 +21,5 @@ title: Shiny Applications
         <a href="http://162.243.21.217:3838/mapeaR/" class="galleryItemLabel">PARMS 2015</a>
         <div class="galleryItemDescription">Visualizador dos resultados do PARMS 2015.</div>
       </div>
+      
  </div>

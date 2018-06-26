@@ -40,7 +40,7 @@ sup{top:-.5em}sub{bottom:-.25em}
 
 img.imgabout{
   
-  width: 100%;
+  width: 100% !important;
 }
 
 img{border:0;}

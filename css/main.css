@@ -1173,3 +1173,69 @@ article[role=main] {
   font-style: italic;
   font-size: 16px;
 }
+
+.gallerySection, .formatSection {
+  margin-bottom: 2em;
+}
+
+.gallerySection .gallerySectionTitle, .formatSection .formatSectionTitle {
+  font-size: 25px;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+.formatSection .formatSectionTitle {
+  margin-bottom: 10px;
+}
+
+.gallerySection .galleryIntro {
+  margin-bottom: 10px;
+}
+
+.gallerySection .galleryItems {
+  display: flex;
+ 
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.gallerySection .galleryItems .galleryItem {
+  width: 23%;
+
+  border: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.gallerySection .galleryItems .galleryItem:hover {
+
+}
+
+.gallerySection .galleryItems .galleryItem .galleryItemLabel {
+  display: block;
+  cursor: pointer;
+  border-top: 1px solid #f0f0f0;
+  padding: 10px 10px 5px 10px;
+  text-align: center;
+}
+
+.gallerySection .galleryItems .galleryItem .galleryItemImage {
+  width: 100%;
+  height: auto;
+}
+
+.gallerySection .galleryItems .galleryItem .galleryItemDescription {
+  font-size: 12px;
+  padding: 0px 10px 10px 10px;
+  font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px){
+  .gallerySection .galleryItems .galleryItem {
+    width: 100%;
+  }
+  .formatTable .formatName {
+    width: 150px;
+  }
+

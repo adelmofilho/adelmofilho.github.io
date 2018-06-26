@@ -8,7 +8,7 @@ baseurl: ""
 # General
 
 title: Hope Clouds Observation                           # Name of website
-description: Estatística | Programação em R | Educação   # Short description of your site
+description: Data Science Blog                           # Short description of your site
 encoding: UTF-8                                          # Encoding
 
 # --- Navigation bar options --- #

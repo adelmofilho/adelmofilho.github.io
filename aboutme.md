@@ -10,6 +10,6 @@ subtitle: Oi, eu sou Adelmo!
 
 <p><img src="https://i.imgur.com/xmhFSgW.png" class="imgabout" align="center"></p>
 
-<span class="fa fa-graduation-cap about-icon"></span> Sou graduando em engenharia química pela Federal da Bahia e pesquisador no [Grupo de Pesquisas em Análise Multivariada e Modelagem Aplicada](gamma.ufba.br).
+<span class="fa fa-graduation-cap about-icon"></span> Sou graduando em engenharia química pela Federal da Bahia e pesquisador no [Grupo de Pesquisas em Análise Multivariada e Modelagem Aplicada](www.gamma.ufba.br).
 
 <span class="fa fa-heart about-icon"></span> Blues, R&B e chá mate.

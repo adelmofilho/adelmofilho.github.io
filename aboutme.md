@@ -8,7 +8,7 @@ subtitle: Oi, eu sou Adelmo!
 
 <span class="fa fa-building about-icon"></span>  Liderei e colaborei em projetos de empresas de diferentes segmentos.
 
-<p><img src="https://i.imgur.com/xmhFSgW.png" class="imgabout" align="center"></p>
+<p><img class="imgabout" src="https://i.imgur.com/xmhFSgW.png" align="center"></p>
 
 <span class="fa fa-graduation-cap about-icon"></span> Sou graduando em engenharia química pela Federal da Bahia e pesquisador no [Grupo de Pesquisas em Análise Multivariada e Modelagem Aplicada](www.gamma.ufba.br).
 

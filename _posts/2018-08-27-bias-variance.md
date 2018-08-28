@@ -1,5 +1,10 @@
 ---
 layout: post
+title: Bias-Variance Tradeoff
+subtitle: A statistical war of tug
+bigimg: /img/87L.gif
+tags: [r, rstudio, bias, variance, statistics, machine-learning]
+comments: true
 draft: true
 output:
   html_document:

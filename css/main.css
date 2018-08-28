@@ -461,6 +461,7 @@ footer .theme-by {
 
 .blog-post :first-child {
   margin-top: 0;
+  text-align: justify;
 }
 
 .blog-post a.btn {

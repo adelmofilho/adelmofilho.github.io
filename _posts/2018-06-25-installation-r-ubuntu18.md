@@ -1,5 +1,6 @@
 ---
 layout: post
+draft: false
 title: Instalando R e RStudio no Ubuntu 18
 subtitle: Bionic Beaver meets R
 bigimg: /img/2018-06-26-img1.png

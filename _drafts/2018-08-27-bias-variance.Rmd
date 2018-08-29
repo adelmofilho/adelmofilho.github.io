@@ -99,7 +99,7 @@ $$E((y - f^*(x_0))^2) = Erro_{irredutível} + Variância + (Bias)^2$$
 
 ## Interpretação dos termos da equação do bias-variância
 
-O bias - $[f(x) - E(f^*(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $f^*(x_0)$, mas da esperança (média) de modelos propostos - $E(f^*(x_0)).
+O bias - $[f(x) - E(f^*(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $f^*(x_0)$, mas da esperança (média) de modelos propostos - $E(f^*(x_0))$.
 
 **E o que é a esperança de um modelo?**
 

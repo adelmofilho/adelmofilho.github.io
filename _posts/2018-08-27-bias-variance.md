@@ -14,4 +14,4 @@ draft: true
 
 $$E[]=\int_{-\infty}^\infty x f(x)dx$$
 
-x
+xy

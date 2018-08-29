@@ -13,4 +13,4 @@ output: html_document
 > 
 > Para além da fundamentação téorica, apresento neste post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
-$$E[X]=\int_{-\infty}^\infty x f(x)dx$$
+$$E[]=\int_{-\infty}^\infty x f(x)dx$$

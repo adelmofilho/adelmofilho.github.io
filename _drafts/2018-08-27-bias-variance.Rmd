@@ -126,6 +126,19 @@ Certo! Até agora, verificamos como decompor o erro esperado nas suas parcelas d
 
 ## Noção intuitiva do dilema do bias-variância
 
+Digamos que possuimos o conjunto de dados apresentado na figura a seguir. Nossa variável de interesse $Y$ é uma função linear da preditora $x$.
+
+```{r fig.width = 8,fig.height = 3}
+
+library(tidyverse)
+library(ggplot2)
+
+cars %>% 
+  filter(dist < 80) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12))
+```
 
 
 

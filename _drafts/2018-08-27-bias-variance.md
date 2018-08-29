@@ -17,7 +17,6 @@ output:
 > 
 > Para além da fundamentação téorica, apresento neste post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
-\
 
 ## Revisão de estatística
 
@@ -53,7 +52,7 @@ Para facilitar a decomposição do bias-variância que veremos a seguir, vamos o
 
 $$E\left ( X^2  \right ) = Var(X) + \left ( E\left ( X   \right )  \right )^2$$
   
-## Decomposição do erro esperado em bias-variância
+## Decomposição do erro esperado
 
 Dada uma variável $y^*$ cuja predição é desejada, iremos assumir a existência de um modelo idealizado $f(x)$ capaz de explicar integralmente o comportamento desta variável.
 
@@ -64,8 +63,7 @@ Na prática, $y^*$ está sujeita à sua própria variabilidade, de forma que exp
 $$y = f(x) + \sigma_y$$
 Apesar de desconhecermos $f(x)$ é possível predizer os valores de $y$ através de modelos matemáticos empirícos baseados em dados, o qual denominaremos $\widehat{f}(x)$. O objetivo de toda modelagem é obter uma função $\widehat{f}(x)$ cujos valores preditos sejam os mais próximos possíveis de $y$ para um dado vetor de preditores $x = [x_1, x_2, ... x_p]$.
 
-Vamos supor que para medir o quão "próximo" são os valores de $y$ e $\widehat{f}(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - \widehat{f}(x_0))^2$.
-Observe que estamos avaliando a função em um único ponto $x_0$.
+Vamos supor que para medir o quão "próximo" são os valores de $y$ e $\widehat{f}(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - \widehat{f}(x_0))^2$, neste caso, nosso erro esperado. Observe que estamos avaliando a função em um único ponto $x_0$.
 
 É fato que para cada conjunto de dados utilizado obteremos um diferente valor de $\widehat{f}(x_0)$ e, de forma equivalente, um diferente valor de $y$. Para compensar essa variabilidade e obter um valor representativo podemos trabalhar com a esperança estatística da quantidade quadrática que estamos avaliando.
 
@@ -121,6 +119,46 @@ O último termo de nossa equação - erro irredutível - é a própria variabili
 
 **Tá... e o onde está o tradeoff?**
 
+Certo! Até agora, verificamos como decompor o erro esperado nas suas parcelas de bias, variância e erro irredutível. Para enxergar o dilema (tradeoff) existente, passemos para um exemplo intuitivo!
+
+
+## Noção intuitiva do dilema do bias-variância
+
+Digamos que possuimos o conjunto de dados apresentado na figura a seguir. Nossa variável de interesse $Y$ é uma função linear da preditora $x$.
+
+
+```r
+library(tidyverse)
+```
+
+```
+## ── Attaching packages ───────────────────
+```
+
+```
+## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
+## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
+## ✔ readr   1.1.1     ✔ forcats 0.3.0
+```
+
+```
+## ── Conflicts ─── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+```
+
+```r
+library(ggplot2)
+
+cars %>% 
+  filter(dist < 80) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12))
+```
+
+![](2018-08-27-bias-variance_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 
 

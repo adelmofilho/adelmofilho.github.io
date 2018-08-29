@@ -10,6 +10,8 @@ comments: true
 
 No fim de abril foi lançado o [ubuntu 18](http://releases.ubuntu.com/18.04/) (bionic beaver). Um mês depois estava na [Campus Party Bahia](http://brasil.campus-party.org/cpbahia/) e precisei formatar meu computador. Após caçar um pendrive bootavel (e achar!), a prioridade foi instalar o R/Rstudio e continuar os trabalhos.
 
+$$X^2$$
+
 A instalação seguiu com o seguinte fluxo:
 
 ```

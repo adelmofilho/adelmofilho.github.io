@@ -19,6 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 > 
 > Para além da fundamentação téorica, apresento neste post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
+\
+
 ## Revisão de estatística
 
 Dois conceitos são chave na teória de probabilidades e no desenvolvimento do dilema do bias-variância são a [**esperança matemática**](https://pt.wikipedia.org/wiki/Valor_esperado) (valor esperado) e a [**variância**](https://pt.wikipedia.org/wiki/Vari%C3%A2ncia).
@@ -53,7 +55,7 @@ Para facilitar a decomposição do bias-variância que veremos a seguir, vamos o
 
 $$E\left ( X^2  \right ) = Var(X) + \left ( E\left ( X   \right )  \right )^2$$
   
-## Dilema do bias-variância
+## Decomposição do erro esperado em bias-variância
 
 Dada uma variável $y^*$ cuja predição é desejada, iremos assumir a existência de um modelo idealizado $f(x)$ capaz de explicar integralmente o comportamento desta variável.
 
@@ -62,60 +64,60 @@ $$y^* = f(x)$$
 Na prática, $y^*$ está sujeita à sua própria variabilidade, de forma que expandimos a equação acima para a forma:
 
 $$y = f(x) + \sigma_y$$
-Apesar de desconhecermos $f(x)$ é possível predizer os valores de $y$ através de modelos matemáticos empirícos baseados em dados, o qual denominaremos $f^*(x)$. O objetivo de toda modelagem é obter uma função $f^*(x)$ cujos valores preditos sejam os mais próximos possíveis de $y$ para um dado vetor de preditores $x = [x_1, x_2, ... x_p]$.
+Apesar de desconhecermos $f(x)$ é possível predizer os valores de $y$ através de modelos matemáticos empirícos baseados em dados, o qual denominaremos $\widehat{f}(x)$. O objetivo de toda modelagem é obter uma função $\widehat{f}(x)$ cujos valores preditos sejam os mais próximos possíveis de $y$ para um dado vetor de preditores $x = [x_1, x_2, ... x_p]$.
 
-Vamos supor que para medir o quão "próximo" são os valores de $y$ e $\widehat{f}(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - f^*(x_0))^2$.
+Vamos supor que para medir o quão "próximo" são os valores de $y$ e $\widehat{f}(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - \widehat{f}(x_0))^2$.
 Observe que estamos avaliando a função em um único ponto $x_0$.
 
-É fato que para cada conjunto de dados utilizado obteremos um diferente valor de $f^*(x_0)$ e, de forma equivalente, um diferente valor de $y$. Para compensar essa variabilidade e obter um valor representativo podemos trabalhar com a esperança estatística da quantidade quadrática que estamos avaliando.
+É fato que para cada conjunto de dados utilizado obteremos um diferente valor de $\widehat{f}(x_0)$ e, de forma equivalente, um diferente valor de $y$. Para compensar essa variabilidade e obter um valor representativo podemos trabalhar com a esperança estatística da quantidade quadrática que estamos avaliando.
 
-$$E(\epsilon) = E((y - f^*(x_0))^2)$$
+$$E(\epsilon) = E((y - \widehat{f}(x_0))^2)$$
 
 Expandindo a quantidade acima, chegamos a seguinte expressão:
 
-$$E((y - f^*(x_0))^2) = E(y^2 + (f^*(x_0))^2 - 2 \cdot y \cdot f^*(x_0))$$
+$$E((y - \widehat{f}(x_0))^2) = E(y^2 + (\widehat{f}(x_0))^2 - 2 \cdot y \cdot \widehat{f}(x_0))$$
 
-$$E((y - f^*(x_0))^2) = E(y^2) + E(f^*(x_0))^2) - 2 \cdot E(y \cdot f^*(x_0))$$
+$$E((y - \widehat{f}(x_0))^2) = E(y^2) + E(\widehat{f}(x_0))^2) - 2 \cdot E(y \cdot \widehat{f}(x_0))$$
 
 Utilizando a transformação quanto a variância apresentada na seção 1, podemos expandir os termos com a esperança da variável ao quadrado para a forma:
 
-$$E((y - f^*(x_0))^2) = Var(y) + (E(y))^2 + Var(f^*(x_0))) + (E(f^*(x_0)))^2 - 2 \cdot E(y \cdot f^*(x_0))$$
+$$E((y - \widehat{f}(x_0))^2) = Var(y) + (E(y))^2 + Var(\widehat{f}(x_0))) + (E(\widehat{f}(x_0)))^2 - 2 \cdot E(y \cdot \widehat{f}(x_0))$$
 
 Rearranjamos os termos para fins de praticidade dos próximos passos:
 
-$$E((y - f^*(x_0))^2) = Var(y) + Var(f^*(x_0))) + [(E(y))^2 + (E(f^*(x_0)))^2 - 2 \cdot E(y \cdot f^*(x_0))]$$
+$$E((y - \widehat{f}(x_0))^2) = Var(y) + Var(\widehat{f}(x_0))) + [(E(y))^2 + (E(\widehat{f}(x_0)))^2 - 2 \cdot E(y \cdot \widehat{f}(x_0))]$$
 
 A expressão acima pode ter seu último termo simplificado pelo conceito de produto notável para a forma:
 
-$$E((y - f^*(x_0))^2) = Var(y) + Var(f^*(x_0)) + [E(y) - E(f^*(x_0))]^2$$
+$$E((y - \widehat{f}(x_0))^2) = Var(y) + Var(\widehat{f}(x_0)) + [E(y) - E(\widehat{f}(x_0))]^2$$
 
 Dado que $y = f(x) + \sigma_y$, a esperança de $y$ - $E(y)$ - é igual ao próprio $f(x)$ visto que se espera que a esperança, o valor médio, de $\sigma_y$ - $E(\sigma_y)$ - seja igual a zero. Por outro lado, a variância de $y$ - $Var(y)$ é igual ao próprio $\sigma_y$, uma vez que se espera que $f(x)$ tenha variância nula por ser o modelo idealizado. Desta forma, o erro esperado toma a seguinte expressão:
 
-$$E((y - f^*(x_0))^2) = \sigma_y + Var(f^*(x_0)) + [f(x) - E(f^*(x_0))]^2$$ 
+$$E((y - \widehat{f}(x_0))^2) = \sigma_y + Var(\widehat{f}(x_0)) + [f(x) - E(\widehat{f}(x_0))]^2$$ 
 
 **A expressão acima é o que a literatura indica como a decomposição em bias-variância do erro esperado.**
 
-$$E((y - f^*(x_0))^2) = {Erro_{irredutível}} + Variância + (Bias)^2$$
+$$E((y - \widehat{f}(x_0))^2) = Erro_{irredutível} + Variância + (Bias)^2$$
 
 ## Interpretação dos termos da equação do bias-variância
 
-O bias - $[f(x) - E(f^*(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $f^*(x_0)$, mas da esperança (média) de modelos propostos - $E(f^*(x_0))$.
+O bias - $[f(x) - E(\widehat{f}(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $\widehat{f}(x_0)$, mas da esperança (média) de modelos propostos - $E(\widehat{f}(x_0))$.
 
 **E o que é a esperança de um modelo?**
 
-O termo $E(f^*(x_0))$ corresponde ao valor médio de diferentes modelos $f(x)$ aplicados no ponto $x_0$.
+O termo $E(\widehat{f}(x_0))$ corresponde ao valor médio de diferentes modelos $f(x)$ aplicados no ponto $x_0$.
 
 Por esta razão que o bias-variância é **simulado**. 
 
-Na prática teremos um único banco de dados, obteremos um determinado $f^*(x)$ e teremos uma estimativa do erro esperado. 
+Na prática teremos um único banco de dados, obteremos um determinado $\widehat{f}(x)$ e teremos uma estimativa do erro esperado. 
 
 Não é possível decompor o erro esperado em termos do bias e da variância com um único modelo construido. Por esta razão, simulamos diferentes bancos de dados para a construção de diferentes modelos e a obtenção de diferentes estimativas pontuais.
 
-A diferença entre o valor do modelo perfeito em um ponto $x_0$ e o valor médio de diferentes modelos $f^*(x)$ no mesmo ponto é o que matemáticamente denomina-se como bias.
+A diferença entre o valor do modelo perfeito em um ponto $x_0$ e o valor médio de diferentes modelos $\widehat{f}(x)$ no mesmo ponto é o que matemáticamente denomina-se como bias.
 
 **E a variância?**
 
-A variância segue o mesmo princípio, sua estimativa passa pela construção de diferentes modelos vindo de diferentes bancos de dados, a aplicação destes modelos em um ponto $x_0$ e então a estimativa da variância para cada valor de $f^*(x_0)$.
+A variância segue o mesmo princípio, sua estimativa passa pela construção de diferentes modelos vindo de diferentes bancos de dados, a aplicação destes modelos em um ponto $x_0$ e então a estimativa da variância para cada valor de $\widehat{f}(x_0)$.
 
 O último termo de nossa equação - erro irredutível - é a própria variabilidade de $y$ e nos fornece uma importante conclusão: Nenhum modelo pode ter erro esperado menor que a variabilidade da variável predita.
 
@@ -239,3 +241,12 @@ resume %>%
   geom_line() + geom_point()
 ```
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>

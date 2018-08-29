@@ -207,13 +207,14 @@ plot4 <- cars %>%
 
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
-
+    
 ![](/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 Analisando os gráficos acima vemos que conforme aumentamos o grau do polinômio, ou seja, a complexidade do modelo, obtemos uma curva mais aderente aos dados - dizemos, desta forma, que conforme aumentamos a complexidade do modelo, reduzimos o bias associado ao modelo.
 
 Experimentemos agora, gerar outros dados vindo do mesmo banco de dados `cars` e observar o comportamento dos modelos polinomiais - alteremos para `set.seed(43)` no código anterior.
 
+<details><summary>Show Code</summary>
 
 ```r
 set.seed(43)
@@ -270,6 +271,8 @@ plot4 <- cars %>%
 
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
+
+</details>
 
 ![](/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 

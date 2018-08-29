@@ -162,8 +162,8 @@ plot1 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 1), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 1), se = FALSE) + xlim(0, 25) + ylim(0,70)
 
 set.seed(42)
 
@@ -175,8 +175,8 @@ plot2 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 3), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 3), se = FALSE) + xlim(0, 25) + ylim(0,70)
 
 set.seed(42)
 
@@ -188,8 +188,8 @@ plot3 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 5), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 5), se = FALSE) + xlim(0, 25) + ylim(0,70)
 
 set.seed(42)
 
@@ -201,8 +201,8 @@ plot4 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 7), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 7), se = FALSE) + xlim(0, 25) + ylim(0,70)
 
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
@@ -222,8 +222,8 @@ plot1 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 1), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 1), se = FALSE) + xlim(0, 25) + ylim(0,70)
 
 set.seed(43)
 
@@ -235,8 +235,8 @@ plot2 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 3), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 3), se = FALSE) + xlim(0, 25) + ylim(0,70)
 
 set.seed(43)
 
@@ -248,8 +248,8 @@ plot3 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 5), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 5), se = FALSE) + xlim(0, 25) + ylim(0,70)
 
 set.seed(43)
 
@@ -261,13 +261,15 @@ plot4 <- cars %>%
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
-  stat_smooth(aes(x = speed, y = dist), method = "lm",
-              formula = y ~ poly(x, 7), se = FALSE)
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 7), se = FALSE)  + xlim(0, 25) + ylim(0,70)
 
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
 
 Compare o gráfico acima com o gerado anteriormente.
+
+Observe que conforme se aumenta o grau do polinômio (complexidade do modelo) **menos** o modelo ajustado é similar ao equivalente na primeira figura - dizemos, neste caso, que a variância entre os modelo aumenta conforme a complexidade.
 
 
 

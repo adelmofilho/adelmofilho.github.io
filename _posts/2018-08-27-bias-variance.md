@@ -6,7 +6,6 @@ bigimg: /img/87L.gif
 tags: [r, rstudio, bias, variance, statistics, machine-learning]
 comments: true
 draft: true
-output: html_document
 ---
 
 > Praticamente, todo livro de statistical / machine learning trata da apresentação do [dilema do bias-variância](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) e utiliza sua inerente decomposição na discussão das técnicas de validação cruzada e sintonia de hiperparâmetros. 

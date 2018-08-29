@@ -138,7 +138,7 @@ cars %>%
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12))
 ```
 
-![](2018-08-27-bias-variance_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+![](_posts/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 
 

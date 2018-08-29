@@ -97,7 +97,7 @@ $$E((y - \widehat{f}(x_0))^2) = \sigma_y + Var(\widehat{f}(x_0)) + [f(x) - E(\wi
 
 $$E((y - \widehat{f}(x_0))^2) = Erro_{irredutível} + Variância + (Bias)^2$$
 
-## Interpretação dos termos da equação do bias-variância
+## Interpretação dos termos da decomposição
 
 O bias - $[f(x) - E(\widehat{f}(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $\widehat{f}(x_0)$, mas da esperança (média) de modelos propostos - $E(\widehat{f}(x_0))$.
 
@@ -128,13 +128,21 @@ Certo! Até agora, verificamos como decompor o erro esperado nas suas parcelas d
 
 Digamos que possuimos o conjunto de dados apresentado na figura a seguir. Nossa variável de interesse $Y$ é uma função linear da preditora $x$.
 
+```{r}
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(ggplot2))
+```
+
 ```{r fig.width = 8,fig.height = 3}
 
-library(tidyverse)
-library(ggplot2)
+set.seed(42)
 
 cars %>% 
   filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12))

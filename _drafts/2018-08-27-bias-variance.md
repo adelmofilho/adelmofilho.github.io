@@ -62,7 +62,7 @@ Na prática, $y^*$ está sujeita à sua própria variabilidade, de forma que exp
 $$y = f(x) + \sigma_y$$
 Apesar de desconhecermos $f(x)$ é possível predizer os valores de $y$ através de modelos matemáticos empirícos baseados em dados, o qual denominaremos $f^*(x)$. O objetivo de toda modelagem é obter uma função $f^*(x)$ cujos valores preditos sejam os mais próximos possíveis de $y$ para um dado vetor de preditores $x = [x_1, x_2, ... x_p]$.
 
-Vamos supor que para medir o quão "próximo" são os valores de $y$ e $f^*(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - f^*(x_0))^2$.
+Vamos supor que para medir o quão "próximo" são os valores de $y$ e $\widehat{f}(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - f^*(x_0))^2$.
 Observe que estamos avaliando a função em um único ponto $x_0$.
 
 É fato que para cada conjunto de dados utilizado obteremos um diferente valor de $f^*(x_0)$ e, de forma equivalente, um diferente valor de $y$. Para compensar essa variabilidade e obter um valor representativo podemos trabalhar com a esperança estatística da quantidade quadrática que estamos avaliando.
@@ -93,7 +93,7 @@ $$E((y - f^*(x_0))^2) = \sigma_y + Var(f^*(x_0)) + [f(x) - E(f^*(x_0))]^2$$
 
 **A expressão acima é o que a literatura indica como a decomposição em bias-variância do erro esperado.**
 
-$$E((y - f^*(x_0))^2) = Erro_{irredutível} + Variância + (Bias)^2$$
+$$E((y - f^*(x_0))^2) = {Erro_{irredutível}} + Variância + (Bias)^2$$
 
 ## Interpretação dos termos da equação do bias-variância
 
@@ -237,6 +237,3 @@ resume %>%
   geom_line() + geom_point()
 ```
 
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>

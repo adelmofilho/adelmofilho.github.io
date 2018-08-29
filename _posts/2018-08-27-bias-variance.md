@@ -130,6 +130,7 @@ Digamos que possuimos o conjunto de dados apresentado na figura a seguir. Nossa 
 ```r
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(gridExtra))
 ```
 
 
@@ -154,7 +155,7 @@ Podemos a partir do conjunto de dados acima propor diferentes modelos polinomiai
 ```r
 set.seed(42)
 
-cars %>% 
+plot1 <- cars %>% 
   filter(dist < 80) %>% 
   group_by(speed) %>% 
   summarise(dist = mean(dist)) %>% 
@@ -164,9 +165,116 @@ cars %>%
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
   stat_smooth(aes(x = speed, y = dist), method = "lm",
               formula = y ~ poly(x, 1), se = FALSE)
+
+set.seed(42)
+
+plot2 <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 3), se = FALSE)
+
+set.seed(42)
+
+plot3 <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 5), se = FALSE)
+
+set.seed(42)
+
+plot4 <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 7), se = FALSE)
+
+grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
 
-![](2018-08-27-bias-variance_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
+Analisando os gráficos acima vemos que conforme aumentamos o grau do polinômio, ou seja, a complexidade do modelo, obtemos uma curva mais aderente aos dados - dizemos, desta forma, que conforme aumentamos a complexidade do modelo, reduzimos o bias associado ao modelo.
+
+Experimentemos agora, gerar outros dados vindo do mesmo banco de dados `cars` e observar o comportamento dos modelos polinomiais - alteremos para `set.seed(43)` no código anterior.
+
+
+```r
+set.seed(43)
+
+plot1 <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 1), se = FALSE)
+
+set.seed(43)
+
+plot2 <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 3), se = FALSE)
+
+set.seed(43)
+
+plot3 <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 5), se = FALSE)
+
+set.seed(43)
+
+plot4 <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 7), se = FALSE)
+
+grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
+```
+
+![](/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
+Compare o gráfico acima com o gerado anteriormente.
+
 
 
 

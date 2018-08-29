@@ -1,35 +1,241 @@
 ---
 layout: post
-draft: true
-title: Crônicas 1
-subtitle: R² negativo ?
-bigimg: /img/path.jpg
+title: Bias-Variance Tradeoff Simulation - 1
+subtitle: A statistical war of tug
+bigimg: /img/87L.gif
+tags: [r, rstudio, bias, variance, statistics, machine-learning]
 comments: true
+draft: true
+output:
+  html_document:
+    keep_md: true
 ---
 
-Com o coeficiente de determinação (R²) medimos a aderência do modelo aos dados experimentais na forma de uma proporção da variabilidade dos dados que é explicada pelo modelo. Já o coeficiente de determinação ajustado (R² adj), penaliza essa aderência do modelo pelo seu número de parâmetros, uma aplicação direta do [principio da parcimônia](https://en.wikipedia.org/wiki/Occam%27s_razor). Nenhuma novidade até aí. 
 
-O problema surgiu quando a criatura me mostrou um output do `summary()` em R com o valor do R² ajustado negativo. A primeira reação foi realmente de dizer "seu modelo é ruim, vamos investigar os dados e propor um modelo melhor". A segunda reação foi entender essa loucura. A equação do R² é apresentada abaixo, onde `n` é o número de observações e `p` o número de parâmetros do modelo.
 
-$$R^2_{adj} = 1 - \frac{n-1}{n - (p+1)}\left ( 1 - R^2 \right )$$
+> Praticamente, todo livro de statistical / machine learning trata da apresentação do [dilema do bias-variância](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) e utiliza sua inerente decomposição na discussão das técnicas de validação cruzada e sintonia de hiperparâmetros. 
+> 
+> Para além da fundamentação téorica, apresento neste post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
-A equação da forma que é escrita deixa claro que é possível obter valores negativos, motivados por um número grande de parâmetros, um pequeno número de observações ou um R² pequeno. Respondida essa pergunta, vem a curiosidade de entender o que isto pode significar em termos práticos. Para isso, modificando a equação anterior para a condição em que o R² ajustado é igual ou menor a zero, encontramos as seguintes expressões.
+## Revisão de estatística
 
-$$1 - \frac{n-1}{n - (p+1)}\left ( 1 - R^2 \right ) \leqslant 0$$
+Dois conceitos são chave na teória de probabilidades e no desenvolvimento do dilema do bias-variância são a [**esperança matemática**](https://pt.wikipedia.org/wiki/Valor_esperado) (valor esperado) e a [**variância**](https://pt.wikipedia.org/wiki/Vari%C3%A2ncia).
 
-$$\frac{n-1}{p}  \leqslant  \frac{1}{R^2}$$
+A esperança estatística é definida matemáticamente como a integral em todo intervalo real do produto da variável aleatória $x$ pela sua probabilidade de ocorrência.
 
-O interessante aqui é observar a razão `(n-1)/p`. Seu numerador `n-1` representa o número de graus de liberdade do conjunto de dados que quando dividido pelo número de parâmetros é, na realidade, uma medida do grau de informação adicionado ao modelo.
+$$E[X]=\int_{-\infty}^\infty x f(x)dx$$
 
-Era comum nas aulas de estatística e de aprendizado de máquina, a regra prática de que para cada parâmetro adicionado ao modelo deveriamos adicionar 4 a 5 observações ao conjunto de dados. E não é que encontramos um expressão com esta razão definida? 
+Tratando-se de uma variável $x$ discreta, a integral assume a forma de um somátorio.
 
-E se assumirmos que desejamos modelos com um R² de no mínimo 80%? 
+$$E[X]=\sum_{i=1}^{\infty} x_i p(x_i)$$
 
-Para que o R² ajustado seja numericamente superior a zero, nesse caso, iremos precisar de uma razão `(n-1)/p` superior à ... 5.
+A análise da equação acima nos permite identificar que a esperança de uma variável discreta corresponde a sua média aritmética, uma vez que $p(x)$ pode ser expresso como a razão entre o número de observações de um determinado $x_i$ e o número total de observações.
 
-<p><img src="https://noliquidificador.files.wordpress.com/2012/07/brain-explode.jpg" alt="É isso mesmo amigos!" align="center"></p>
+A variância é definida matematicamente como a esperança do quadrado da diferença entre a variável e seu valor esperado.
 
-Pequenos prazeres da estatística.
+$$Var(X) = E\left [ \left ( X - E\left (  X \right )  \right )^2  \right ]$$
+
+A expansão dos termos da equação acima, nos leva a seguinte expressão:
+
+$$Var(X) =  E\left [ \left ( X^2 - 2 \cdot X \cdot E\left (  X \right ) + \left ( E\left ( X   \right )  \right )^2 \right )  \right ]$$
+
+E ao aplicarmos o operador esperança no polinômio acima e utilizando a sua [propriedade cumulativa](https://pt.wikipedia.org/wiki/Valor_esperado) chegamos a seguinte expressão:
+
+$$Var(X) = E\left ( X^2  \right ) - 2 \cdot E\left (X \cdot E\left (  X \right )   \right ) + E\left ( E\left ( X   \right )  \right )^2$$
+
+Sendo a esperança de uma variável X uma constante, a esperança dela equivalente à própria.
+
+$$Var(X) = E\left ( X^2  \right ) - 2 \cdot \left (E\left (  X \right )   \right )^2 + \left ( E\left ( X   \right )  \right )^2 = E\left ( X^2  \right ) - \left ( E\left ( X   \right )  \right )^2$$
+
+Para facilitar a decomposição do bias-variância que veremos a seguir, vamos organizar a equação acima da seguinte forma:
+
+$$E\left ( X^2  \right ) = Var(X) + \left ( E\left ( X   \right )  \right )^2$$
+
+## Dilema do bias-variância
+
+Dada uma variável $y^*$ cuja predição é desejada, iremos assumir a existência de um modelo idealizado $f(x)$ capaz de explicar integralmente o comportamento desta variável.
+
+$$y^* = f(x)$$
+
+Na prática, $y^*$ está sujeita à sua própria variabilidade, de forma que expandimos a equação acima para a forma:
+
+$$y = f(x) + \sigma_y$$
+Apesar de desconhecermos $f(x)$ é possível predizer os valores de $y$ através de modelos matemáticos empirícos baseados em dados, o qual denominaremos $f^*(x)$. O objetivo de toda modelagem é obter uma função $f^*(x)$ cujos valores preditos sejam os mais próximos possíveis de $y$ para um dado vetor de preditores $x = [x_1, x_2, ... x_p]$.
+
+Vamos supor que para medir o quão "próximo" são os valores de $y$ e $f^*(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - f^*(x_0))^2$.
+Observe que estamos avaliando a função em um único ponto $x_0$.
+
+É fato que para cada conjunto de dados utilizado obteremos um diferente valor de $f^*(x_0)$ e, de forma equivalente, um diferente valor de $y$. Para compensar essa variabilidade e obter um valor representativo podemos trabalhar com a esperança estatística da quantidade quadrática que estamos avaliando.
+
+$$E(\epsilon) = E((y - f^*(x_0))^2)$$
+
+Expandindo a quantidade acima, chegamos a seguinte expressão:
+
+$$E((y - f^*(x_0))^2) = E(y^2 + (f^*(x_0))^2 - 2 \cdot y \cdot f^*(x_0))$$
+
+$$E((y - f^*(x_0))^2) = E(y^2) + E(f^*(x_0))^2) - 2 \cdot E(y \cdot f^*(x_0))$$
+
+Utilizando a transformação quanto a variância apresentada na seção 1, podemos expandir os termos com a esperança da variável ao quadrado para a forma:
+
+$$E((y - f^*(x_0))^2) = Var(y) + (E(y))^2 + Var(f^*(x_0))) + (E(f^*(x_0)))^2 - 2 \cdot E(y \cdot f^*(x_0))$$
+
+Rearranjamos os termos para fins de praticidade dos próximos passos:
+
+$$E((y - f^*(x_0))^2) = Var(y) + Var(f^*(x_0))) + [(E(y))^2 + (E(f^*(x_0)))^2 - 2 \cdot E(y \cdot f^*(x_0))]$$
+
+A expressão acima pode ter seu último termo simplificado pelo conceito de produto notável para a forma:
+
+$$E((y - f^*(x_0))^2) = Var(y) + Var(f^*(x_0)) + [E(y) - E(f^*(x_0))]^2$$
+
+Dado que $y = f(x) + \sigma_y$, a esperança de $y$ - $E(y)$ - é igual ao próprio $f(x)$ visto que se espera que a esperança, o valor médio, de $\sigma_y$ - $E(\sigma_y)$ - seja igual a zero. Por outro lado, a variância de $y$ - $Var(y)$ é igual ao próprio $\sigma_y$, uma vez que se espera que $f(x)$ tenha variância nula por ser o modelo idealizado. Desta forma, o erro esperado toma a seguinte expressão:
+
+$$E((y - f^*(x_0))^2) = \sigma_y + Var(f^*(x_0)) + [f(x) - E(f^*(x_0))]^2$$ 
+
+**A expressão acima é o que a literatura indica como a decomposição em bias-variância do erro esperado.**
+
+$$E((y - f^*(x_0))^2) = Erro_{irredutível} + Variância + (Bias)^2$$
+
+## Interpretação dos termos da equação do bias-variância
+
+O bias - $[f(x) - E(f^*(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $f^*(x_0)$, mas da esperança (média) de modelos propostos - $E(f^*(x_0))$.
+
+**E o que é a esperança de um modelo?**
+
+O termo $E(f^*(x_0))$ corresponde ao valor médio de diferentes modelos $f(x)$ aplicados no ponto $x_0$.
+
+Por esta razão que o bias-variância é **simulado**. 
+
+Na prática teremos um único banco de dados, obteremos um determinado $f^*(x)$ e teremos uma estimativa do erro esperado. 
+
+Não é possível decompor o erro esperado em termos do bias e da variância com um único modelo construido. Por esta razão, simulamos diferentes bancos de dados para a construção de diferentes modelos e a obtenção de diferentes estimativas pontuais.
+
+A diferença entre o valor do modelo perfeito em um ponto $x_0$ e o valor médio de diferentes modelos $f^*(x)$ no mesmo ponto é o que matemáticamente denomina-se como bias.
+
+**E a variância?**
+
+A variância segue o mesmo princípio, sua estimativa passa pela construção de diferentes modelos vindo de diferentes bancos de dados, a aplicação destes modelos em um ponto $x_0$ e então a estimativa da variância para cada valor de $f^*(x_0)$.
+
+O último termo de nossa equação - erro irredutível - é a própria variabilidade de $y$ e nos fornece uma importante conclusão: Nenhum modelo pode ter erro esperado menor que a variabilidade da variável predita.
+
+**Tá... e o onde está o tradeoff?**
+
+
+
+
+
+
+```r
+library(tidyverse)
+
+
+set.seed(42)
+
+fun <- function(x) x^2
+
+ref <- tibble(x = seq(0,1,0.1)) %>% 
+  mutate(y = fun(x))
+
+data_sim <- function(n = 50){
+  
+  x = runif(n = n, min = 0, max = 1)
+  y = fun(x) + rnorm(n = n, mean = 0, sd = 0.2)
+  
+  data = tibble::tibble(x, y)
+  return(data)
+}
+
+dados = data.frame(modelo = NA, x = NA, y = NA, pred = NA)
+
+for (i in 1:500) {
+  
+  sim <- data_sim()
+  
+model0 <- lm(y ~ 1, data = sim) %>% 
+  predict(select(ref, x))
+
+model1 <- lm(y ~ poly(x, degree = 1), data = sim) %>%
+  predict(select(ref, x))
+
+model2 <- lm(y ~ poly(x, degree = 2), data = sim) %>%
+  predict(select(ref, x))
+
+model3 <- lm(y ~ poly(x, degree = 3), data = sim) %>%
+  predict(select(ref, x))
+
+model4 <- lm(y ~ poly(x, degree = 4), data = sim) %>%
+  predict(select(ref, x))
+
+model5 <- lm(y ~ poly(x, degree = 5), data = sim) %>%
+  predict(select(ref, x))
+
+model6 <- lm(y ~ poly(x, degree = 6), data = sim) %>%
+  predict(select(ref, x))
+
+model7 <- lm(y ~ poly(x, degree = 7), data = sim) %>%
+  predict(select(ref, x))
+
+model8 <- lm(y ~ poly(x, degree = 8), data = sim) %>%
+  predict(select(ref, x))
+
+eps <- rnorm(n = 11, mean = 0, sd = 0.2)
+
+library(magrittr)
+
+dados %<>% 
+  rbind(data.frame(modelo = 0, x = select(ref, x), 
+                   select(ref, y)+eps, pred = model0))  %>% 
+  rbind(data.frame(modelo = 1, x = select(ref, x),
+                   select(ref, y)+eps, pred = model1)) %>% 
+  rbind(data.frame(modelo = 2, x = select(ref, x),
+                   select(ref, y)+eps, pred = model2)) %>% 
+  rbind(data.frame(modelo = 3, x = select(ref, x),
+                   select(ref, y)+eps, pred = model3)) %>% 
+  rbind(data.frame(modelo = 4, x = select(ref, x),
+                   select(ref, y)+eps, pred = model4)) %>% 
+  rbind(data.frame(modelo = 5, x = select(ref, x),
+                   select(ref, y)+eps, pred = model5)) %>% 
+  rbind(data.frame(modelo = 6, x = select(ref, x),
+                   select(ref, y)+eps, pred = model6)) %>% 
+  rbind(data.frame(modelo = 7, x = select(ref, x),
+                   select(ref, y)+eps, pred = model7)) %>% 
+  rbind(data.frame(modelo = 8, x = select(ref, x),
+                   select(ref, y)+eps, pred = model8))
+}
+
+dados %<>% as.tibble() %>% na.omit()
+
+var <- dados %>% 
+  group_by(modelo, x) %>% 
+  summarise(varfx = var(pred)) %>% 
+  group_by(modelo) %>% 
+  summarise(varf = mean(varfx))
+
+bias <- dados %>% 
+  group_by(modelo, x) %>% 
+  summarise(meanf = mean(pred)) %>% 
+  mutate(bias2 = (meanf - fun(x))^2) %>% 
+  group_by(modelo) %>% 
+  summarise(bias2f = mean(bias2))
+
+mse <- dados %>% 
+  group_by(modelo, x) %>% 
+  mutate(error = (pred - y)^2) %>%
+  group_by(modelo) %>% 
+  summarise(meanmse = mean(error))
+
+resume <- bias %>% 
+  bind_cols(var %>% select(varf)) %>% 
+  bind_cols(mse %>% select(meanmse)) %>% 
+  mutate(eps = meanmse - bias2f - varf) %>% 
+  select(modelo, bias2f, varf, eps, meanmse)
+
+resume
+
+resume %>% 
+  reshape2::melt(id.var = "modelo") %>% 
+  ggplot(aes(x = modelo, y = value, col = variable)) +
+  geom_line() + geom_point()
+```
 
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

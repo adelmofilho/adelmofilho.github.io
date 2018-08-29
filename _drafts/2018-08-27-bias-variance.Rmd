@@ -15,7 +15,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-> Praticamente, todo livro de statistical / machine learning trata da apresentação do [dilema do bias-variância](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) e utiliza sua inerente decomposição na discussão das técnicas de validação cruzada e sintonia de hiperparâmetros. 
+> Praticamente, todo livro de machine learning trata da apresentação do [dilema do bias-variância](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) e utiliza sua inerente decomposição na discussão das técnicas de validação cruzada e sintonia de hiperparâmetros. 
 > 
 > Para além da fundamentação téorica, apresento neste post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
@@ -134,7 +134,7 @@ suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(ggplot2))
 ```
 
-```{r fig.width = 8,fig.height = 3}
+```{r fig.width = 8,fig.height = 3, collapse = FALSE}
 
 set.seed(42)
 
@@ -147,6 +147,24 @@ cars %>%
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12))
 ```
+
+Podemos a partir do conjunto de dados acima propor diferentes modelos polinomiais, digamos que ajustaremos os modelos de primeira ordem (linear), terceira ordem e quinta ordem e nona ordem. O perfil de cada um destes modelos é apresentado a seguir.
+
+```{r}
+set.seed(42)
+
+cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 1), se = FALSE)
+```
+
 
 
 

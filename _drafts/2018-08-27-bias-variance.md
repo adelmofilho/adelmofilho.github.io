@@ -13,7 +13,7 @@ output:
 
 
 
-> Praticamente, todo livro de statistical / machine learning trata da apresentação do [dilema do bias-variância](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) e utiliza sua inerente decomposição na discussão das técnicas de validação cruzada e sintonia de hiperparâmetros. 
+> Praticamente, todo livro de machine learning trata da apresentação do [dilema do bias-variância](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) e utiliza sua inerente decomposição na discussão das técnicas de validação cruzada e sintonia de hiperparâmetros. 
 > 
 > Para além da fundamentação téorica, apresento neste post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
@@ -95,7 +95,7 @@ $$E((y - \widehat{f}(x_0))^2) = \sigma_y + Var(\widehat{f}(x_0)) + [f(x) - E(\wi
 
 $$E((y - \widehat{f}(x_0))^2) = Erro_{irredutível} + Variância + (Bias)^2$$
 
-## Interpretação dos termos da equação do bias-variância
+## Interpretação dos termos da decomposição
 
 O bias - $[f(x) - E(\widehat{f}(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $\widehat{f}(x_0)$, mas da esperança (média) de modelos propostos - $E(\widehat{f}(x_0))$.
 
@@ -128,37 +128,46 @@ Digamos que possuimos o conjunto de dados apresentado na figura a seguir. Nossa 
 
 
 ```r
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(ggplot2))
 ```
 
-```
-## ── Attaching packages ───────────────────
-```
-
-```
-## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
-## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
-## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
-## ✔ readr   1.1.1     ✔ forcats 0.3.0
-```
-
-```
-## ── Conflicts ─── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-```
 
 ```r
-library(ggplot2)
+set.seed(42)
 
 cars %>% 
   filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
   ggplot(aes(x = speed, y = dist)) +
   geom_point() + labs(x = "x", y = "y") + 
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12))
 ```
 
-![](2018-08-27-bias-variance_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+![](2018-08-27-bias-variance_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
+Podemos a partir do conjunto de dados acima propor diferentes modelos polinomiais, digamos que ajustaremos os modelos de primeira ordem (linear), terceira ordem e quinta ordem e nona ordem. O perfil de cada um destes modelos é apresentado a seguir.
+
+
+```r
+set.seed(42)
+
+cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",
+              formula = y ~ poly(x, 1), se = FALSE)
+```
+
+![](2018-08-27-bias-variance_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
 
 
 

@@ -52,7 +52,7 @@ $$Var(X) = E\left ( X^2  \right ) - 2 \cdot \left (E\left (  X \right )   \right
 Para facilitar a decomposição do bias-variância que veremos a seguir, vamos organizar a equação acima da seguinte forma:
 
 $$E\left ( X^2  \right ) = Var(X) + \left ( E\left ( X   \right )  \right )^2$$
-
+  
 ## Dilema do bias-variância
 
 Dada uma variável $y^*$ cuja predição é desejada, iremos assumir a existência de um modelo idealizado $f(x)$ capaz de explicar integralmente o comportamento desta variável.

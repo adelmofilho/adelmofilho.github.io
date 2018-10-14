@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 > Praticamente, todo livro de machine learning trata da apresentação do [dilema do bias-variância](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) e utiliza sua inerente decomposição na discussão das técnicas de validação cruzada e sintonia de hiperparâmetros. 
 > 
-> Para além da fundamentação téorica, apresento neste post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
+> Para além da fundamentação téorica, apresento neste post e no próximo post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
 
 ## Revisão de estatística
@@ -128,14 +128,14 @@ Certo! Até agora, verificamos como decompor o erro esperado nas suas parcelas d
 
 Digamos que possuimos o conjunto de dados apresentado na figura a seguir. Nossa variável de interesse $Y$ é uma função linear da preditora $x$.
 
-```{r}
+```{r, echo=FALSE}
 
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(gridExtra))
 ```
 
-```{r fig.width = 8,fig.height = 3, collapse = FALSE}
+```{r fig.width = 8,fig.height = 3, collapse = FALSE, fig.align="center"}
 
 set.seed(42)
 
@@ -151,7 +151,7 @@ cars %>%
 
 Podemos a partir do conjunto de dados acima propor diferentes modelos polinomiais, digamos que ajustaremos os modelos de primeira ordem (linear), terceira ordem e quinta ordem e nona ordem. O perfil de cada um destes modelos é apresentado a seguir.
 
-```{r}
+```{r, fig.align="center"}
 set.seed(42)
 
 plot1 <- cars %>% 
@@ -207,11 +207,37 @@ plot4 <- cars %>%
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
 
-Analisando os gráficos acima vemos que conforme aumentamos o grau do polinômio, ou seja, a complexidade do modelo, obtemos uma curva mais aderente aos dados - dizemos, desta forma, que conforme aumentamos a complexidade do modelo, reduzimos o bias associado ao modelo.
+Analisando os gráficos acima vemos que conforme aumentamos o grau do polinômio, ou seja, a complexidade do modelo, obtemos uma curva mais aderente aos dados - dizemos, desta forma, que conforme aumentamos a complexidade do modelo, reduzimos o bias associado ao modelo. 
+
+Esta observação se torna mais clara, se ao invés de poucos pontos, povoassemos todo o espaço da variável preditora. Neste caso, apesar do último modelo ser de grau 7, seu comportamento seria equivalente ao de uma reta, portanto, se aproximando do modelo ideal linear.
+
+```{r, fig.width = 8,fig.height = 3,warning=FALSE, fig.align="center"}
+set.seed(42)
+
+dc <- cars %>% 
+  filter(dist < 80) %>% 
+  group_by(speed) %>% 
+  summarise(dist = mean(dist)) %>% 
+  sample_n(10)
+
+lm(dist ~ speed, data = dc) %>% 
+  predict(data.frame(speed = seq(0,25,0.01))) %>% 
+  as_tibble() %>% 
+  rename(dist = value) %>% 
+  mutate(dist = dist + rnorm(length(seq(0,25,0.01))),0,0.2) %>% 
+  mutate(speed =  seq(0,25,0.01)) %>% 
+  filter(dist > 0) %>% 
+  ggplot(aes(x = speed, y = dist)) +
+  geom_point() + labs(x = "x", y = "y") + 
+  theme(axis.text = element_text(family = "serif", face = "bold", size = 12)) +
+  stat_smooth(aes(x = speed, y = dist), method = "lm",na.rm = TRUE,
+              formula = y ~ poly(x, 7), se = FALSE) + xlim(0, 25) + ylim(0,70)
+
+```
 
 Experimentemos agora, gerar outros dados vindo do mesmo banco de dados `cars` e observar o comportamento dos modelos polinomiais - alteremos para `set.seed(43)` no código anterior.
 
-```{r}
+```{r, fig.align="center"}
 set.seed(43)
 
 plot1 <- cars %>% 
@@ -271,15 +297,13 @@ Compare o gráfico acima com o gerado anteriormente.
 
 Observe que conforme se aumenta o grau do polinômio (complexidade do modelo) **menos** o modelo ajustado é similar ao equivalente na primeira figura - dizemos, neste caso, que a variância entre os modelo aumenta conforme a complexidade.
 
+Com base nesta abordagem intuitiva fica claro que o bias reduz com a complexidade do modelo e o inverso ocorre com a variância. O erro irredutível é constante, e o erro esperado corresponde a soma destes três últimos termos. Estes fatos podem ser resumidos na figura a seguir, resultado de uma simulação de bias-variância que abordaremos no próximo post.
 
+```{r, eval = TRUE, echo = FALSE, warning=FALSE, fig.align="center"}
 
+suppressPackageStartupMessages(library(tidyverse))
 
-
-
-```{r, eval=FALSE}
-
-library(tidyverse)
-
+suppressPackageStartupMessages(library(magrittr))
 
 set.seed(42)
 
@@ -332,7 +356,6 @@ model8 <- lm(y ~ poly(x, degree = 8), data = sim) %>%
 
 eps <- rnorm(n = 11, mean = 0, sd = 0.2)
 
-library(magrittr)
 
 dados %<>% 
   rbind(data.frame(modelo = 0, x = select(ref, x), 
@@ -382,7 +405,7 @@ resume <- bias %>%
   mutate(eps = meanmse - bias2f - varf) %>% 
   select(modelo, bias2f, varf, eps, meanmse)
 
-resume
+# resume
 
 resume %>% 
   reshape2::melt(id.var = "modelo") %>% 

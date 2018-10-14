@@ -142,7 +142,7 @@ cars %>%
   theme(axis.text = element_text(family = "serif", face = "bold", size = 12))
 ```
 
-<img src="2018-08-27-bias-variance_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 Podemos a partir do conjunto de dados acima propor diferentes modelos polinomiais, digamos que ajustaremos os modelos de primeira ordem (linear), terceira ordem e quinta ordem e nona ordem. O perfil de cada um destes modelos é apresentado a seguir.
 

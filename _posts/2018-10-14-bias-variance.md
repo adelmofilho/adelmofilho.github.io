@@ -17,6 +17,7 @@ output:
 > 
 > Para além da fundamentação téorica, apresento neste post e no próximo post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
+<br>
 
 ## Revisão de estatística
 
@@ -51,6 +52,8 @@ $$Var(X) = E\left ( X^2  \right ) - 2 \cdot \left (E\left (  X \right )   \right
 Para facilitar a decomposição do bias-variância que veremos a seguir, vamos organizar a equação acima da seguinte forma:
 
 $$E\left ( X^2  \right ) = Var(X) + \left ( E\left ( X   \right )  \right )^2$$
+
+<br>
   
 ## Decomposição do erro esperado
 
@@ -95,6 +98,8 @@ $$E((y - \widehat{f}(x_0))^2) = \sigma_y + Var(\widehat{f}(x_0)) + [f(x) - E(\wi
 
 $$E((y - \widehat{f}(x_0))^2) = Erro_{irredutível} + Variância + (Bias)^2$$
 
+<br>
+
 ## Interpretação dos termos da decomposição
 
 O bias - $[f(x) - E(\widehat{f}(x_0)]$ - corresponde ao grau de próximidade do modelo proposto ao modelo ideal - $f(x)$. Observe, contudo, que não tratamos diretamente do modelo proposto $\widehat{f}(x_0)$, mas da esperança (média) de modelos propostos - $E(\widehat{f}(x_0))$.
@@ -121,6 +126,7 @@ O último termo de nossa equação - erro irredutível - é a própria variabili
 
 Certo! Até agora, verificamos como decompor o erro esperado nas suas parcelas de bias, variância e erro irredutível. Para enxergar o dilema (tradeoff) existente, passemos para um exemplo intuitivo!
 
+<br>
 
 ## Noção intuitiva do dilema do bias-variância
 

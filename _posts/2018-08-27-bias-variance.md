@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bias-Variance Tradeoff Simulation - 1
+title: Bias-Variance Tradeoff Simulation
 subtitle: A statistical war of tug
 bigimg: /img/87L.gif
 tags: [r, rstudio, bias, variance, statistics, machine-learning]
@@ -203,7 +203,7 @@ plot4 <- cars %>%
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
 
-<img src="2018-08-27-bias-variance_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 Analisando os gráficos acima vemos que conforme aumentamos o grau do polinômio, ou seja, a complexidade do modelo, obtemos uma curva mais aderente aos dados - dizemos, desta forma, que conforme aumentamos a complexidade do modelo, reduzimos o bias associado ao modelo. 
 
@@ -233,7 +233,7 @@ lm(dist ~ speed, data = dc) %>%
               formula = y ~ poly(x, 7), se = FALSE) + xlim(0, 25) + ylim(0,70)
 ```
 
-<img src="2018-08-27-bias-variance_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 Experimentemos agora, gerar outros dados vindo do mesmo banco de dados `cars` e observar o comportamento dos modelos polinomiais - alteremos para `set.seed(43)` no código anterior.
 
@@ -294,7 +294,7 @@ plot4 <- cars %>%
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
 
-<img src="2018-08-27-bias-variance_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 Compare o gráfico acima com o gerado anteriormente.
 
@@ -302,7 +302,7 @@ Observe que conforme se aumenta o grau do polinômio (complexidade do modelo) **
 
 Com base nesta abordagem intuitiva fica claro que o bias reduz com a complexidade do modelo e o inverso ocorre com a variância. O erro irredutível é constante, e o erro esperado corresponde a soma destes três últimos termos. Estes fatos podem ser resumidos na figura a seguir, resultado de uma simulação de bias-variância que abordaremos no próximo post.
 
-<img src="2018-08-27-bias-variance_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({

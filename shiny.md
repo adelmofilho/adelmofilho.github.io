@@ -3,6 +3,15 @@ layout: page
 title: Shiny Application
 ---
 
+
+<div class="band full">
+  <div class="bandContent pageTitle">Virtual Statistics Library</div>
+  <div class="bandContent pageIntro">Learn about statistics iteratively!</div>
+  
+  <div class="bandContent gallerySection">
+    <div class="gallerySectionTitle">Descriptive Analysis of Data and Statistics inference</div>
+    <div class="galleryIntro"></div>
+
 <div class="galleryItems">
 
 <div class="galleryItem">
@@ -16,5 +25,12 @@ title: Shiny Application
   <a href="http://162.243.21.217:3838/mapeaR/" class="galleryItemLabel">PARMS 2015</a>
   <div class="galleryItemDescription">Visualizador dos resultados do PARMS 2015.</div>
 </div>
+
+</div>
+
+    </div>
+  </div>
+
+
 
 </div>

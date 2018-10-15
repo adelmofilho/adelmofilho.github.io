@@ -5,28 +5,27 @@ title: Shiny Application
 
 
 <div class="band full">
-  <div class="bandContent pageTitle">Virtual Statistics Library</div>
-  <div class="bandContent pageIntro">Learn about statistics iteratively!</div>
-  
-  <div class="bandContent gallerySection">
-    <div class="gallerySectionTitle">Descriptive Analysis of Data and Statistics inference</div>
-    <div class="galleryIntro"></div>
 
-<div class="galleryItems">
+	<div class="bandContent pageTitle">Virtual Statistics Library</div>
+	<div class="bandContent pageIntro">Learn about statistics iteratively!</div>
 
-<div class="galleryItem">
-  <a href="https://adelmofilho.shinyapps.io/testet/"><img class="galleryItemImage" src="/img/ttest.jpg"/></a>
-  <a href="https://adelmofilho.shinyapps.io/testet/" class="galleryItemLabel">Test t-Student</a>
-  <div class="galleryItemDescription">Como realizar o teste t de Student?</div>
-</div>
+	<div class="bandContent gallerySection">
+	<div class="gallerySectionTitle">Descriptive Analysis of Data and Statistics inference</div>
+	<div class="galleryIntro"></div>
 
-<div class="galleryItem">
-  <a href="https://adelmofilho.shinyapps.io/mapeaR/"><img class="galleryItemImage" src="/img/parms.PNG"/></a>
-  <a href="http://162.243.21.217:3838/mapeaR/" class="galleryItemLabel">PARMS 2015</a>
-  <div class="galleryItemDescription">Visualizador dos resultados do PARMS 2015.</div>
-</div>
+	<div class="galleryItems">
 
-</div>
+	<div class="galleryItem">
+	  <a href="https://adelmofilho.shinyapps.io/testet/"><img class="galleryItemImage" src="/img/ttest.jpg"/></a>
+	  <a href="https://adelmofilho.shinyapps.io/testet/" class="galleryItemLabel">Test t-Student</a>
+	  <div class="galleryItemDescription">Como realizar o teste t de Student?</div>
+	</div>
 
+	<div class="galleryItem">
+	  <a href="https://adelmofilho.shinyapps.io/mapeaR/"><img class="galleryItemImage" src="/img/parms.PNG"/></a>
+	  <a href="http://162.243.21.217:3838/mapeaR/" class="galleryItemLabel">PARMS 2015</a>
+	  <div class="galleryItemDescription">Visualizador dos resultados do PARMS 2015.</div>
+	</div>
+	</div>
     </div>
   </div>

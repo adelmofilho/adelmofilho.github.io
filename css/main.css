@@ -1186,6 +1186,12 @@ article[role=main] {
   font-weight: 300;
 }
 
+#pageContent .pageTitle {
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 0%;
+}
+
 .formatSection .formatSectionTitle {
   margin-bottom: 10px;
 }

@@ -6,9 +6,6 @@ title: Shiny Application
 
 <div class="band full">
 
-	
-	<div class="bandContent pageIntro">Learn about statistics iteratively!</div>
-
 	<div class="bandContent gallerySection">
 	<div class="gallerySectionTitle">Descriptive Analysis of Data and Statistics inference</div>
 	<div class="galleryIntro"></div>
@@ -27,5 +24,4 @@ title: Shiny Application
 	  <div class="galleryItemDescription">Visualizador dos resultados do PARMS 2015.</div>
 	</div>
 	
-    </div>
   </div>

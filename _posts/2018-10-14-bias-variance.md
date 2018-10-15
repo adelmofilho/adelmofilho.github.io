@@ -17,7 +17,6 @@ output:
 > 
 > Para além da fundamentação téorica, apresento neste post e no próximo post um framework básico para decomposição do bias, variância e do erro irredutível independente do modelo preditivo utilizado - Ao final chegaremos aos famosos gráficos de decomposição do bias-variance apresentados nos livros, mas que comumente não possuem explicação quanto sua construção.
 
-<br>
 
 ## Revisão de estatística
 

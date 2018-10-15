@@ -7,7 +7,7 @@ title: Shiny Application
 <div class="band full">
 
 	<div class="bandContent gallerySection">
-	<div class="gallerySectionTitle">Descriptive Analysis of Data and Statistics inference</div>
+	<div class="gallerySectionTitle"></div>
 	<div class="galleryIntro"></div>
 
 	<div class="galleryItems">

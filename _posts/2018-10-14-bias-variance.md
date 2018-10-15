@@ -63,7 +63,8 @@ $$y^* = f(x)$$
 Na prática, $y^*$ está sujeita à sua própria variabilidade, de forma que expandimos a equação acima para a forma:
 
 $$y = f(x) + \sigma_y$$
-Apesar de desconhecermos $f(x)$ é possível predizer os valores de $y$ através de modelos matemáticos empirícos baseados em dados, o qual denominaremos $\widehat{f}(x)$. O objetivo de toda modelagem é obter uma função $\widehat{f}(x)$ cujos valores preditos sejam os mais próximos possíveis de $y$ para um dado vetor de preditores $x = [x_1, x_2, ... x_p]$.
+
+Apesar de desconhecermos $f(x)$, é possível predizer os valores de $y$ através de modelos matemáticos empirícos baseados em dados, o qual denominaremos $\widehat{f}(x)$. O objetivo de toda modelagem é obter uma função $\widehat{f}(x)$ cujos valores preditos sejam os mais próximos possíveis de $y$ para um dado vetor de preditores $x = [x_1, x_2, ... x_p]$.
 
 Vamos supor que para medir o quão "próximo" são os valores de $y$ e $\widehat{f}(x_0)$ utilizaremos uma medida quadrática tal como o erro quadrático, isto é $(y - \widehat{f}(x_0))^2$, neste caso, nosso erro esperado. Observe que estamos avaliando a função em um único ponto $x_0$.
 

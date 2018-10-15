@@ -30,7 +30,3 @@ title: Shiny Application
 
     </div>
   </div>
-
-
-
-</div>

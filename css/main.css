@@ -1239,6 +1239,14 @@ article[role=main] {
     text-align: center;
 }
 
+#pageContent .pageIntro {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 500px){
   .gallerySection .galleryItems .galleryItem {
     width: 100%;

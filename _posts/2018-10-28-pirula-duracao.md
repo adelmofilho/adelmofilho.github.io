@@ -224,27 +224,7 @@ dados_prep <- dados %>%
   mutate(total = segundo/60 + minuto + hora*60)
 ```
 
-```
-## Warning in if_else(grepl("H", duration, fixed = TRUE), true =
-## as.numeric(sub(".*PT *(.*?) *H.*", : NAs introduzidos por coerção
-```
-
-```
-## Warning in if_else(grepl("M", duration, fixed = TRUE), true =
-## as.numeric(sub(".*H *(.*?) *M.*", : NAs introduzidos por coerção
-```
-
-```
-## Warning in if_else(is.na(minuto), true = as.numeric(sub(".*PT *(.*?)
-## *M.*", : NAs introduzidos por coerção
-```
-
-```
-## Warning in if_else(grepl("S", duration, fixed = TRUE), true =
-## as.numeric(sub(".*M *(.*?) *S.*", : NAs introduzidos por coerção
-```
-
-Finalmente, para termos uma conjunto de dados representativa do pirula-normal (CNTP!) removemos os vídeos de Live e com participação de convidados
+Finalmente, para termos uma conjunto de dados representativa do pirula-normal (nas CNTP!) removemos os vídeos de Live e com participação de convidados.
 
 
 ```r
@@ -272,8 +252,12 @@ dados_clean %>%
 
 O uso da mediana, pode, neste caso, ser uma alternativa razoável e que nos levaria ao pirula de duração igual a 19.7833333 minutos. Valor próximo ao registrado na literatura (vide Twitter hahahhahaha).
 
+<center>
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr">Até onde fizeram o cálculo de todos os meus vídeos, 1 pirula = 20 minutos de duração, e não meia hora como dizem por aí. Calúnias!!</p>&mdash; Pirula #120K (@Pirulla25) <a href="https://twitter.com/Pirulla25/status/836207898527150080?ref_src=twsrc%5Etfw">February 27, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</center>
 
 A série temporal da duração do vídeo, contudo, revela uma tendência crescente, com o passar do tempo, da duração dos vídeos e da variabilidade deles.
 

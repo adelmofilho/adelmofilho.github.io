@@ -34,7 +34,7 @@ Bem... eram 11h da noite quando me deparei com o seguinte comentário em um dos 
 
 <center>
 
-![](wwww/img2.png)
+![](img/img2.png)
 </center>
 
 Então veio a ideia menos razoável do momento.
@@ -62,7 +62,7 @@ Então!
 
 <center>
 
-![](wwww/img3.png)
+![](img/img3.png)
 
 
 </center>
@@ -181,7 +181,7 @@ O Código como um todo está disponível no seguinte [Gist](https://gist.github.
 **3h da manhã**
 
 <center>
-![](https://pbs.twimg.com/media/DqCX1voXQAEG875.jpg)
+![](/img/img4.jpg)
 </center>
 
 <br><br>

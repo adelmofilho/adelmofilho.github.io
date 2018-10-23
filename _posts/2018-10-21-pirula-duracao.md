@@ -248,7 +248,7 @@ dados_clean %>%
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-<img src="post_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+<img src="2018-10-21-pirula-duracao_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
 O uso da mediana, pode, neste caso, ser uma alternativa razoável e que nos levaria ao pirula de duração igual a 19.7833333 minutos. Valor próximo ao registrado na literatura (vide Twitter hahahhahaha).
 
@@ -270,7 +270,7 @@ dados_clean %>%
   ylab("Duração do Vídeo (minutos")
 ```
 
-<img src="post_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="2018-10-21-pirula-duracao_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 É interessante notar no gráfico de correlação abaixo que o número de views do vídeo possui baixa correlação a duração do vídeo - o que pode indicar que a audiência não treme quando vê aquele video de +45 minutos. A correlação positiva e alta (algo discutível) das visualizações com o número de likes e comentários pode estar relacionada apenas ao maior número de pessoas que consumiu o vídeo e procurou interagir ou ao fato de que vídeos maiores despertam maior interação do público - Pontos a serem investigados!
 
@@ -282,7 +282,7 @@ dados_clean %>%
   GGally::ggpairs()
 ```
 
-<img src="post_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="2018-10-21-pirula-duracao_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 Finalmente, avaliamos a hipótese temporal mais detalhadamente. A imagem abaixo apresenta a mediana da duração dos vídeos agregada por ano. Podemos observar, mais claramente, como o pirula de duração varia ao longo dos anos e seus valores em anos anteriores não são mais representativos.
 
@@ -296,7 +296,7 @@ dados_clean %>%
   geom_line() + geom_point(size = 0.3) + geom_label(aes(label = round(media, 1)))
 ```
 
-<img src="post_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
+<img src="2018-10-21-pirula-duracao_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
 
 Por esta razão, o pirula de duração não deve ser encarado com uma constante física e, por ainda não estar estabilizado, seu valor está atrelado ao ano de publicação dos vídeos. 
 

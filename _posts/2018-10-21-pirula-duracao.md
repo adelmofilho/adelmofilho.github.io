@@ -4,7 +4,7 @@ title: Quanto vale um pirula?
 bigimg: /img/pirula.gif
 tags: [r, rstudio, youtube, statistics, API]
 comments: true
-draft: true
+draft: false
 output:
   html_document:
     keep_md: true
@@ -181,15 +181,13 @@ O Código como um todo está disponível no seguinte [Gist](https://gist.github.
 
 **3h da manhã**
 
-</center>
+<center>
 
 <img src="/img/img4.jpg" style="display: block; margin: auto;" />
 
 </center>
 
 <br><br>
-
-
 
 Após a extração os dados tinham a seguinte cara.
 

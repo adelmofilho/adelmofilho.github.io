@@ -187,7 +187,7 @@ O Código como um todo está disponível no seguinte [Gist](https://gist.github.
 
 </center>
 
-<br><br>
+<br>
 
 Após a extração os dados tinham a seguinte cara.
 
@@ -260,7 +260,7 @@ dados_clean %>%
 
 <img src="/figs/2018-10-21-pirula-duracao_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
-O uso da mediana, pode, neste caso, ser uma alternativa razoável e que nos levaria ao pirula de duração igual a 19.7833333 minutos. Valor próximo ao registrado na literatura (vide Twitter hahahhahaha).
+O uso da mediana, pode, neste caso, ser uma alternativa razoável e que nos levaria ao pirula de duração igual a 19.8 minutos. Valor próximo ao registrado na literatura (vide Twitter hahahhahaha).
 
 <center>
 

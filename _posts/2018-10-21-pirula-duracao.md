@@ -50,7 +50,7 @@ A informação prinicipal a ser extraída dos vídeos é a duração total deles
 
 O pacote [**tuber**](https://cran.r-project.org/web/packages/tuber/tuber.pdf) realiza função de cliente para o API do youtube, facilitando em muito o nosso trabalho.
 
-Para isso devemos criar uma chave de aplicação na plataforma de [desenvolvedores do google](https://developers.google.com/youtube/v3/getting-started), ativar o [API do youtube](https://developers.google.com/youtube/v3/) e então via tuber::yt_oauth informar a chave gerada.
+Para isso, devemos criar uma chave de aplicação na plataforma de [desenvolvedores do google](https://developers.google.com/youtube/v3/getting-started), ativar o [API do youtube](https://developers.google.com/youtube/v3/) e então via tuber::yt_oauth informar a chave gerada.
 
 
 ```r
@@ -97,7 +97,7 @@ url <- paste0("https://www.googleapis.com/youtube/v3/search?",
 channel_info <- fromJSON(url, simplify = FALSE)
 ```
 
-A url é formada pela id do canal, a chave da API e os argumentos: part (informações a serem extraídas), maxResults, e type (filtro entre videos ou playlists).
+A url é formada pela id do canal, a chave da API e os argumentos: `part` (informações a serem extraídas), `maxResults`, e `type` (filtro entre videos ou playlists).
 
 O objeto `channel_info` acumula informações gerais tanto do canal, quanto de um único vídeo do canal (maxResults=1).
 
@@ -189,7 +189,7 @@ O Código como um todo está disponível no seguinte [Gist](https://gist.github.
 
 <br>
 
-Após a extração os dados tinham a seguinte cara.
+Após a extração, os dados tinham a seguinte cara.
 
 
 ```r
@@ -215,7 +215,7 @@ dados %>%
 ## # ... with 410 more rows
 ``` 
 
-Para trabalhar com a data de publicação (`time`) e a duração do vídeo (`duration`) convertemos a primeira na classe dttm (datatime) e extraimos via regex o tempo em segundos da segunda variável.
+Para trabalhar com a data de publicação (`time`) e a duração do vídeo (`duration`), convertemos a primeira na classe dttm (datatime) e extraimos via regex o tempo em segundos da segunda variável.
 
 
 ```r
@@ -282,7 +282,9 @@ dados_clean %>%
 
 <img src="/figs/2018-10-21-pirula-duracao_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
-É interessante notar no gráfico de correlação abaixo que o número de views do vídeo possui baixa correlação a duração do vídeo - o que pode indicar que a audiência não treme quando vê aquele video de +45 minutos. A correlação positiva e alta (algo discutível) das visualizações com o número de likes e comentários pode estar relacionada apenas ao maior número de pessoas que consumiu o vídeo e procurou interagir ou ao fato de que vídeos maiores despertam maior interação do público - Pontos a serem investigados!
+É interessante notar no gráfico de correlação abaixo que o número de views do vídeo possui baixa correlação com a duração do vídeo - o que pode indicar que a audiência não treme quando vê aquele video de +45 minutos. 
+
+A correlação positiva e alta (algo discutível) das visualizações com o número de likes e comentários pode estar relacionada apenas ao maior número de pessoas que consumiu o vídeo e procurou interagir ou ao fato de que vídeos maiores despertam maior interação do público - Pontos a serem investigados!
 
 
 ```r

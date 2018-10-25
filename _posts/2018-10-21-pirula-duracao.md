@@ -97,7 +97,7 @@ url <- paste0("https://www.googleapis.com/youtube/v3/search?",
 channel_info <- fromJSON(url, simplify = FALSE)
 ```
 
-A url é formada pela id do canal, a chave da API e os argumentos: part (informações a serem extraídas), maxResults, e type (filtro entre videos ou playlists).
+A url é formada pela id do canal, a chave da API e os argumentos: `part` (informações a serem extraídas), `maxResults`, e `type` (filtro entre videos ou playlists).
 
 O objeto `channel_info` acumula informações gerais tanto do canal, quanto de um único vídeo do canal (maxResults=1).
 

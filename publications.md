@@ -7,7 +7,6 @@ title: Publicações
 <div class="band full">
 
 	<br>
-	<br>
 
 	<div class="bandContent gallerySection">
 	<div class="gallerySectionTitle"></div>

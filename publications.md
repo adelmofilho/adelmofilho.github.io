@@ -10,7 +10,7 @@ title: Publicações
 	<br>
 
 	<div class="bandContent gallerySection">
-	<div class="gallerySectionTitle"><center>Para mais publicações: <a href="bit.ly/adelmo_lattes">Lattes</a></center></div>
+	<div class="gallerySectionTitle"></div>
 	<br>
 	<div class="galleryIntro"></div>
 
@@ -86,4 +86,9 @@ title: Publicações
 
 		</div>
 				</div>
-							  </div>
+
+				<br>
+
+				<div class="gallerySectionTitle"><center>Para mais publicações: <a href="https://bit.ly/adelmo_lattes">Lattes</a></center></div>
+				
+											  </div>

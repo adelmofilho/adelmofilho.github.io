@@ -15,9 +15,9 @@ encoding: UTF-8                                          # Encoding
 
 # List of links in the navigation bar
 navbar-links:
-  Projects: "projects"
   Publications: "publications"
   ShinyApps: "shiny"
+  GAMMA: "http://gamma.ufba.br/"
   About:
     - Blog: "aboutblog"
     - Author: "aboutme"
@@ -56,7 +56,7 @@ footer-links-active:
   rss: false
   facebook: true
   email: true
-  twitter: false
+  twitter: true
   google-plus: false
   github: true
   reddit: false
@@ -73,8 +73,8 @@ footer-links-active:
 share-links-active:
   twitter: true
   facebook: true
-  google: false
-  linkedin: false
+  google: true
+  linkedin: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer

@@ -1209,10 +1209,9 @@ article[role=main] {
 
 .gallerySection .galleryItems .galleryItem {
   width: 30%;
-
   border: 1px solid #f0f0f0;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 4%;
 }
 
 .gallerySection .galleryItems .galleryItem .galleryItemLabel {

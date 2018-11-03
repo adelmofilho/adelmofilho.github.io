@@ -13,15 +13,15 @@ title: Publicações
 	<div class="galleryItems">
 
 	<div class="galleryItem">
-	  <a href="https://adelmofilho.shinyapps.io/testet/"><img class="galleryItemImage" src="/img/ttest.jpg"/></a>
-	  <a href="https://adelmofilho.shinyapps.io/testet/" class="galleryItemLabel">Test t-Student</a>
-	  <div class="galleryItemDescription">Como realizar o teste t de Student?</div>
+	  <a href="http://dx.doi.org/10.1016/j.chemosphere.2018.04.178"><img class="galleryItemImage" src="/img/paper1.jpg"/></a>
+	  <a href="http://dx.doi.org/10.1016/j.chemosphere.2018.04.178" class="galleryItemLabel">CHEMOSPHERE (2018)</a>
+	  <div class="galleryItemDescription">Plant and soil responses to hydrothermally converted sewage sludge</div>
 	</div>
 
 	<div class="galleryItem">
-	  <a href="https://adelmofilho.shinyapps.io/mapeaR/"><img class="galleryItemImage" src="/img/parms.PNG"/></a>
-	  <a href="http://162.243.21.217:3838/mapeaR/" class="galleryItemLabel">PARMS 2015</a>
-	  <div class="galleryItemDescription">Visualizador dos resultados do PARMS 2015.</div>
+	  <a href="http://dx.doi.org/10.1007/s10653-017-9995-5"><img class="galleryItemImage" src="/img/paper2.jpg"/></a>
+	  <a href="http://dx.doi.org/10.1007/s10653-017-9995-5" class="galleryItemLabel">ENVIRONMENTAL GEOCHEMISTRY AND HEALTH (2017)</a>
+	  <div class="galleryItemDescription">Effect of biosolid hydrochar on toxicity to earthworms and brine shrimp</div>
 	</div>
 
 	<div class="galleryItem">

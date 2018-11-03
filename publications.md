@@ -68,7 +68,7 @@ title: Publicações
 	<div class="galleryItem">
 	  <a href="http://seruff.weebly.com/"><img class="galleryItemImage" src="/img/congresso1.png"/></a>
 	  <a href="http://seruff.weebly.com/" class="galleryItemLabel">II Seminário Internacional de Estatística com R (2018)</a>
-	  <div class="galleryItemDescription">Modelagem preditiva do tipo de acidente veicular na BR-101 no estado da Bahia por Gradient Boosted Trees<div>
+	  <div class="galleryItemDescription">Modelagem preditiva do tipo de acidente veicular na BR-101 no estado da Bahia por Gradient Boosted Trees</div>
 	</div>
 
 	<div class="galleryItem">

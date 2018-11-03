@@ -10,7 +10,7 @@ title: Publicações
 	<br>
 
 	<div class="bandContent gallerySection">
-	<div class="gallerySectionTitle"><center>Para mais publicações [Lattes](bit.ly/adelmo_lattes)</center></div>
+	<div class="gallerySectionTitle"><center>Para mais publicações: <a href="bit.ly/adelmo_lattes">Lattes</a></center></div>
 	<br>
 	<div class="galleryIntro"></div>
 

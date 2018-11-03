@@ -11,7 +11,7 @@ title: Publicações
 
 	<div class="bandContent gallerySection">
 	<div class="gallerySectionTitle"></div>
-	<div class="galleryIntro"></div>
+	<div class="galleryIntro"> Mais em bit.ly/adelmo_lattes</div>
 
 	<div class="galleryItems">
 

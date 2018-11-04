@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Sobre o Blog
+subtitle: Ou, a inesperada falta de sono nas madrugadas
 ---
 
 <blockquote>
@@ -40,5 +41,12 @@ Claro, haverão textos mais técnicos, o que não significa ter que segregar os 
 
 <div class="tenor-gif-embed" data-postid="10903575" data-share-method="host" data-width="100%" data-aspect-ratio="1.7913669064748199"><a href="https://tenor.com/view/cdc-choquedecultura-choque-de-cultura-gif-10903575"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
+Obrigado por chegar até aqui! E não esqueçam as palavras do filosófo.
 
-<div class="tenor-gif-embed" data-postid="10186824" data-share-method="host" data-width="100%" data-aspect-ratio="1.1180555555555556"><a href="https://tenor.com/view/falha-de-cobertura-choque-cultura-gif-10186824"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<br>
+
+<center>
+
+<img src="/img/decartes.jpg" width="100%" style="display: block; margin: auto;" />
+
+</center>

@@ -4,8 +4,6 @@ title: Sobre o Blog
 subtitle: Ou, a inesperada falta de sono nas madrugadas
 ---
 
-<br>
-
 <blockquote>
 <div align="right">She stared at him. He senses truth! Could he be the one? Could he truly be the one? She extinguished the excitement, reminding herself: <b>"Hope clouds observation"</b></div>
 <br>

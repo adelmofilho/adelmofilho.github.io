@@ -17,7 +17,9 @@ Curiosamente, este blog nasceu no [dia da toalha](https://pt.wikipedia.org/wiki/
 
 Lá, conheci [@kierisi](https://twitter.com/kierisi) da [Teaching Trust](http://www.teachingtrust.org/) que além de me fazer criar um twitter me deu o insight de tirar da gaveta o projeto do blog.
 
+<center>
 
 <blockquote class="twitter-tweet" data-lang="pt"><p lang="en" dir="ltr">making friends in Brazil! @AdelmoFilho4 and I have spent the morning trading memes 😂 <a href="https://t.co/Bd7BXxhhf2">pic.twitter.com/Bd7BXxhhf2</a></p>&mdash; Jesse Mostipak (@kierisi) <a href="https://twitter.com/kierisi/status/999255507385888768?ref_src=twsrc%5Etfw">23 de maio de 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+</center>

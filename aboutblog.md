@@ -4,13 +4,13 @@ title: Sobre o Blog
 subtitle: Ou, a inesperada falta de sono nas madrugadas
 ---
 
+<br>
+
 <blockquote>
 <div align="right">She stared at him. He senses truth! Could he be the one? Could he truly be the one? She extinguished the excitement, reminding herself: <b>"Hope clouds observation"</b></div>
 <br>
 <div align="right"><b>Reverend Mother Gaius Helen Mohiam (Dune, 1965)</b></div>
 </blockquote>
-
-<br>
 
 Curiosamente, este blog nasceu no [dia da toalha](https://pt.wikipedia.org/wiki/Dia_da_Toalha), logo após o [II Seminário Internacional de Estatística com R](https://ser2018.weebly.com/).
 
@@ -41,9 +41,9 @@ Claro, haverão textos mais técnicos, o que não significa ter que segregar os 
 
 <div class="tenor-gif-embed" data-postid="10903575" data-share-method="host" data-width="100%" data-aspect-ratio="1.7913669064748199"><a href="https://tenor.com/view/cdc-choquedecultura-choque-de-cultura-gif-10903575"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-Obrigado por chegar até aqui! E não esqueçam as palavras do filosófo.
+Obrigado por chegar até aqui! 
 
-<br>
+E não esqueçam as palavras do filosófo.
 
 <center>
 

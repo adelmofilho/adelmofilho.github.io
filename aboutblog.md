@@ -17,13 +17,22 @@ Lá, conheci [@kierisi](https://twitter.com/kierisi) da [Teaching Trust](http://
 
 <center>
 
-<blockquote class="twitter-tweet" data-lang="pt"><p lang="en" dir="ltr">making friends in Brazil! @AdelmoFilho4 and I have spent the morning trading memes 😂 <a href="https://t.co/Bd7BXxhhf2">pic.twitter.com/Bd7BXxhhf2</a></p>&mdash; Jesse Mostipak (@kierisi) <a href="https://twitter.com/kierisi/status/999255507385888768?ref_src=twsrc%5Etfw">23 de maio de 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="pt"><p lang="en" dir="ltr">making friends in Brazil! @AdelmoFilho42 and I have spent the morning trading memes 😂 <a href="https://t.co/Bd7BXxhhf2">pic.twitter.com/Bd7BXxhhf2</a></p>&mdash; Jesse Mostipak (@kierisi) <a href="https://twitter.com/kierisi/status/999255507385888768?ref_src=twsrc%5Etfw">23 de maio de 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </center>
 
 A ideia foi de usar esse espaço para contribuir com a comunidade de ciência de dados e programação em R. 
 
-<iframe src="https://giphy.com/embed/3ohc11HR5Z6u1YRK3m" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3ohc11HR5Z6u1YRK3m" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 E, claro, salvar meus chucks de código em algum lugar fácil pra copiar e colar!
+
+Pra ser sincero... Esse não é meu primeiro blog. Já foram muitas tentivas de tornar o hábito de escrever uma rotina. Já Tentei falar de música, cinema, escrever com outras pessoas. Mas, faltava algo pra dar certo.
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3o75215O7rqt3trGPC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+Por isso, decidi trocar aquele tutorial e texto do tipo "[como acender uma fogueira com a luz da lua **usando R**](https://what-if.xkcd.com/145/) para passar a contar histórias usando dados, estatística e programação.
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/xUOxfh0FW33JpeFdzq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+

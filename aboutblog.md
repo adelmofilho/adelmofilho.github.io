@@ -36,14 +36,9 @@ Por isso, decidi trocar aquele tutorial e texto do tipo "[como acender uma fogue
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/xUOxfh0FW33JpeFdzq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
-Claro, haverão textos mais técnicos, o que não significa ter que segregar os públicos. Como no [Guia do mochileiro das Galáxias](https://pt.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy), não é um PhD que lhe torna apto para ler o livro, mas quanto mais estudamos e lemos, mais piadas pegamos.
+Claro, haverão textos mais técnicos, o que não significa ter que segregar os públicos. Como no [Guia do mochileiro das Galáxias](https://pt.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy), não é um PhD que lhe torna apto para ler o livro, mas quanto mais estudarmos e lermos, mais piadas iremos captar.
 
-<div class="tenor-gif-embed" data-postid="10903575" data-share-method="host" data-width="100%" data-aspect-ratio="1.7913669064748199"><a href="https://tenor.com/view/cdc-choquedecultura-choque-de-cultura-gif-10903575"></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-
+<div class="tenor-gif-embed" data-postid="10903575" data-share-method="host" data-width="100%" data-aspect-ratio="1.7913669064748199"><a href="https://tenor.com/view/cdc-choquedecultura-choque-de-cultura-gif-10903575"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 
-
-
-
-<div class="tenor-gif-embed" data-postid="10186824" data-share-method="host" data-width="100%" data-aspect-ratio="1.1180555555555556"><a href="https://tenor.com/view/falha-de-cobertura-choque-cultura-gif-10186824"></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<div class="tenor-gif-embed" data-postid="10186824" data-share-method="host" data-width="100%" data-aspect-ratio="1.1180555555555556"><a href="https://tenor.com/view/falha-de-cobertura-choque-cultura-gif-10186824"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>

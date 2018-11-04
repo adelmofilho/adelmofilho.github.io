@@ -22,7 +22,8 @@ Lá, conheci [@kierisi](https://twitter.com/kierisi) da [Teaching Trust](http://
 
 </center>
 
-A ideia foi de usar esse espaço para contribuir com a comunidade de ciência de dados e programação em R. E, claro, salvar meus chucks de código em algum lugar fácil pra copiar e colar!
+A ideia foi de usar esse espaço para contribuir com a comunidade de ciência de dados e programação em R. 
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3ohc11HR5Z6u1YRK3m" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/choquedecultura-tvquase-3ohc11HR5Z6u1YRK3m">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/3ohc11HR5Z6u1YRK3m" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
+E, claro, salvar meus chucks de código em algum lugar fácil pra copiar e colar!

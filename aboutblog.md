@@ -3,8 +3,6 @@ layout: page
 title: Sobre o Blog
 ---
 
-<br>
-
 <blockquote>
 <div align="right">She stared at him. He senses truth! Could he be the one? Could he truly be the one? She extinguished the excitement, reminding herself: "Hope clouds observation"</div>
 <br>
@@ -15,7 +13,7 @@ title: Sobre o Blog
 
 Curiosamente, este blog nasceu no [dia da toalha](https://pt.wikipedia.org/wiki/Dia_da_Toalha), logo após o [II Seminário Internacional de Estatística com R](https://ser2018.weebly.com/).
 
-Lá, conheci [@kierisi](https://twitter.com/kierisi) da [Teaching Trust](http://www.teachingtrust.org/) que além de me fazer criar um twitter me deu o insight de tirar da gaveta o projeto do blog.
+Lá, conheci [@kierisi](https://twitter.com/kierisi) da [Teaching Trust](http://www.teachingtrust.org/), que além de me fazer criar um twitter, me deu o insight de tirar da gaveta o projeto do blog.
 
 <center>
 
@@ -23,3 +21,8 @@ Lá, conheci [@kierisi](https://twitter.com/kierisi) da [Teaching Trust](http://
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </center>
+
+A ideia foi de usar esse espaço para contribuir com a comunidade de ciência de dados e programação em R. E, claro, salvar meus chucks de código em algum lugar fácil pra copiar e colar!
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3ohc11HR5Z6u1YRK3m" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/choquedecultura-tvquase-3ohc11HR5Z6u1YRK3m">via GIPHY</a></p>
+

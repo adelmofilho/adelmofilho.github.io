@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Shiny Application
+title: Shiny Applications
 ---
 
 

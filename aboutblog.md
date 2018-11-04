@@ -30,9 +30,9 @@ E, claro, salvar meus chucks de código em algum lugar fácil pra copiar e colar
 
 Pra ser sincero... Esse não é meu primeiro blog. Já foram muitas tentivas de tornar o hábito de escrever uma rotina. Já Tentei falar de música, cinema, escrever com outras pessoas. Mas, faltava algo pra dar certo.
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3o75215O7rqt3trGPC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<div style="width:80%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3o75215O7rqt3trGPC" width="80%" height="80%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
-Por isso, decidi trocar aquele tutorial e texto do tipo "[como acender uma fogueira com a luz da lua **usando R**](https://what-if.xkcd.com/145/) para passar a contar histórias usando dados, estatística e programação.
+Por isso, decidi trocar aquele tutorial e texto do tipo "[como acender uma fogueira com a luz da lua **usando R**](https://what-if.xkcd.com/145/), para passar a contar histórias usando dados, estatística e programação.
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/xUOxfh0FW33JpeFdzq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 

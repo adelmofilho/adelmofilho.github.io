@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Análise exploratória de dados
-subtitle: A statistical war of tug
+subtitle: “All you need to paint is a few tools, a little instruction, and a vision in your mind.”
 bigimg: /img/bob.gif
 tags: [r, rstudio, bias, EDA, exploratory, graphs]
 comments: true

@@ -1,0 +1,28 @@
+---
+layout: post
+title: Enviando e-mails com R
+subtitle: A statistical war of tug
+bigimg: /img/mail.gif
+tags: [r, rstudio, mailR, sendmailR]
+comments: true
+draft: true
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>

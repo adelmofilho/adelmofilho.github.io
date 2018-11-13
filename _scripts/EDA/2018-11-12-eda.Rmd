@@ -1,0 +1,17 @@
+---
+layout: post
+title: Análise exploratória de dados
+subtitle: A statistical war of tug
+bigimg: /img/bob.gif
+tags: [r, rstudio, bias, EDA, exploratory, graphs]
+comments: true
+draft: true
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+

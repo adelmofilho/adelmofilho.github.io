@@ -1,0 +1,22 @@
+"0","dados_clean <- dados %>% 
+  dplyr::as_tibble() %>% 
+  purrr::set_names(~sub('Count', '', .x)) %>% 
+  mutate(time = lubridate::ymd(time)) %>% 
+  mutate(hora = if_else(grepl(""H"", duration, fixed=TRUE), 
+                        true = as.numeric(sub("".*PT *(.*?) *H.*"", ""\\1"", duration)), 
+                        false = 0)) %>% 
+  mutate(minuto = if_else(grepl(""M"", duration, fixed=TRUE), 
+                        true = as.numeric(sub("".*H *(.*?) *M.*"", ""\\1"", duration)), 
+                        false = 0)) %>% 
+  mutate(minuto = if_else(is.na(minuto), 
+                        true = as.numeric(sub("".*PT *(.*?) *M.*"", ""\\1"", duration)), 
+                        false = as.numeric(minuto))) %>% 
+  mutate(segundo = if_else(grepl(""S"", duration, fixed=TRUE), 
+                        true = as.numeric(sub("".*M *(.*?) *S.*"", ""\\1"", duration)), 
+                        false = 0)) %>% 
+  mutate(total = segundo/60 + minuto + hora*60)
+"
+"2","NAs introduzidos por coerção"
+"2","NAs introduzidos por coerção"
+"2","NAs introduzidos por coerção"
+"2","NAs introduzidos por coerção"

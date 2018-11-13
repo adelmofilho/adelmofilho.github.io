@@ -1,0 +1,4 @@
+"0","dados_clean %>% "
+"0","  select(total, view, like, dislike, comment) %>% "
+"0","  mutate_all(as.numeric) %>% "
+"0","  GGally::ggpairs()"

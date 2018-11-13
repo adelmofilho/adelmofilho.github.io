@@ -4,8 +4,6 @@ title: Sobre o Blog
 subtitle: Ou, a inesperada falta de sono nas madrugadas
 ---
 
-<br>
-
 <blockquote>
 <div align="right">She stared at him. He senses truth! Could he be the one? Could he truly be the one? She extinguished the excitement, reminding herself: <b>"Hope clouds observation"</b></div>
 <br>
@@ -37,13 +35,15 @@ Por isso, decidi trocar aquele tutorial e texto do tipo "[como acender uma fogue
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/xUOxfh0FW33JpeFdzq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
-Claro, haverão textos mais técnicos, o que não significa ter que segregar os públicos. Como no [Guia do mochileiro das Galáxias](https://pt.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy), não é um PhD que lhe torna apto para ler o livro, mas quanto mais estudarmos e lermos, mais piadas iremos captar.
+Claro, haverão textos mais técnicos, o que não significa ter que segregar os públicos. 
+
+Como no [Guia do mochileiro das Galáxias](https://pt.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy), não é um PhD que lhe torna apto para ler o livro, mas quanto mais estudarmos e lermos, mais piadas iremos captar.
 
 <div class="tenor-gif-embed" data-postid="10903575" data-share-method="host" data-width="100%" data-aspect-ratio="1.7913669064748199"><a href="https://tenor.com/view/cdc-choquedecultura-choque-de-cultura-gif-10903575"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 Obrigado por chegar até aqui! 
 
-E não esqueçam as palavras do filosófo.
+E não se esqueçam das palavras do filosófo.
 
 <center>
 

@@ -15,3 +15,4 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Recentemente, tive a mesma discussão com três pessoas diferentes, em locais diferentes e com contextos diferentes.

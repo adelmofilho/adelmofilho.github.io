@@ -45,7 +45,6 @@ duration <- function(time){
   
 }
 
-key     <- "AIzaSyBQyA88Cb1SNzHVfrQq7OL5rb9cujL9Lh4"
 channel <- "UCdGpd0gNn38UKwoncZd9rmA"
 
 url <- paste0("https://www.googleapis.com/youtube/v3/search?",

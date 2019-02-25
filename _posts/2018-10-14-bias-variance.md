@@ -299,7 +299,6 @@ plot4 <- cars %>%
 
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
 ```
-
 <img src="/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 Compare o gráfico acima com o gerado anteriormente.
@@ -307,6 +306,154 @@ Compare o gráfico acima com o gerado anteriormente.
 Observe que conforme se aumenta o grau do polinômio (complexidade do modelo) **menos** o modelo ajustado é similar ao equivalente na primeira figura - dizemos, neste caso, que a variância entre os modelo aumenta conforme a complexidade.
 
 Com base nesta abordagem intuitiva fica claro que o bias reduz com a complexidade do modelo e o inverso ocorre com a variância. O erro irredutível é constante, e o erro esperado corresponde a soma destes três últimos termos. Estes fatos podem ser resumidos na figura a seguir, resultado de uma simulação de bias-variância que abordaremos no próximo post.
+
+**Edit:** O gráfico abaixo é gerado pelo código a seguir! Bons estudos galera!
+
+```r
+
+# Carregamento de pacotes do R
+
+library(tidyverse)
+library(magrittr)
+
+# Controle da seed do número aleatório para garantir reprodutibilidade dos resultados
+
+set.seed(42)
+
+# Criação do modelo perfeito
+
+fun <- function(x) x^2
+
+# Definição do dominio de avaliação do bias-variance
+
+ref <- tibble(x = seq(0,1,0.1)) %>% 
+  mutate(y = fun(x))
+
+# Criação de uma função para simular uma amostragem real
+
+  # - 50 observações
+  # - Dentro do dominio de x (0 a 1)
+
+data_sim <- function(n = 50){
+  
+  x = runif(n = n, min = 0, max = 1)
+  y = fun(x) + rnorm(n = n, mean = 0, sd = 0.2)
+  
+  data = tibble::tibble(x, y)
+  return(data)
+}
+
+# Objeto para armazenar os resultados do que vem a seguir
+
+dados = data.frame(modelo = NA, x = NA, y = NA, pred = NA)
+
+# Construção e predição de 500 moddelos de diferentes graus polinomiais
+
+  # Cada modelo recebe o mesmo conjunto de dados por i-teração
+  # A cada i-teração o conjunto de dados é alterado pela função 'data_sim()'
+
+for (i in 1:500) {
+  
+  sim <- data_sim()
+  
+model0 <- lm(y ~ 1, data = sim) %>% 
+  predict(select(ref, x))
+
+model1 <- lm(y ~ poly(x, degree = 1), data = sim) %>%
+  predict(select(ref, x))
+
+model2 <- lm(y ~ poly(x, degree = 2), data = sim) %>%
+  predict(select(ref, x))
+
+model3 <- lm(y ~ poly(x, degree = 3), data = sim) %>%
+  predict(select(ref, x))
+
+model4 <- lm(y ~ poly(x, degree = 4), data = sim) %>%
+  predict(select(ref, x))
+
+model5 <- lm(y ~ poly(x, degree = 5), data = sim) %>%
+  predict(select(ref, x))
+
+model6 <- lm(y ~ poly(x, degree = 6), data = sim) %>%
+  predict(select(ref, x))
+
+model7 <- lm(y ~ poly(x, degree = 7), data = sim) %>%
+  predict(select(ref, x))
+
+model8 <- lm(y ~ poly(x, degree = 8), data = sim) %>%
+  predict(select(ref, x))
+
+# Geração de um ruído branco para adição aos resultados preditos pelos modelos
+
+eps <- rnorm(n = 11, mean = 0, sd = 0.2)
+
+# Armazenamento dos resultados e adição do ruido branco criado acima
+
+dados %<>% 
+  rbind(data.frame(modelo = 0, x = select(ref, x), 
+                   select(ref, y)+eps, pred = model0))  %>% 
+  rbind(data.frame(modelo = 1, x = select(ref, x),
+                   select(ref, y)+eps, pred = model1)) %>% 
+  rbind(data.frame(modelo = 2, x = select(ref, x),
+                   select(ref, y)+eps, pred = model2)) %>% 
+  rbind(data.frame(modelo = 3, x = select(ref, x),
+                   select(ref, y)+eps, pred = model3)) %>% 
+  rbind(data.frame(modelo = 4, x = select(ref, x),
+                   select(ref, y)+eps, pred = model4)) %>% 
+  rbind(data.frame(modelo = 5, x = select(ref, x),
+                   select(ref, y)+eps, pred = model5)) %>% 
+  rbind(data.frame(modelo = 6, x = select(ref, x),
+                   select(ref, y)+eps, pred = model6)) %>% 
+  rbind(data.frame(modelo = 7, x = select(ref, x),
+                   select(ref, y)+eps, pred = model7)) %>% 
+  rbind(data.frame(modelo = 8, x = select(ref, x),
+                   select(ref, y)+eps, pred = model8))
+}
+
+# Apresentação dos resultados
+
+dados %<>% as.tibble() %>% na.omit()
+
+# Variância em função da ordem do modelo
+
+var <- dados %>% 
+  group_by(modelo, x) %>% 
+  summarise(varfx = var(pred)) %>% 
+  group_by(modelo) %>% 
+  summarise(varf = mean(varfx))
+
+# Bias em função da ordem do modelo
+
+bias <- dados %>% 
+  group_by(modelo, x) %>% 
+  summarise(meanf = mean(pred)) %>% 
+  mutate(bias2 = (meanf - fun(x))^2) %>% 
+  group_by(modelo) %>% 
+  summarise(bias2f = mean(bias2))
+
+# Erro médio em função da ordem do modelo
+
+mse <- dados %>% 
+  group_by(modelo, x) %>% 
+  mutate(error = (pred - y)^2) %>%
+  group_by(modelo) %>% 
+  summarise(meanmse = mean(error))
+
+# Combinação dos resultados
+
+resume <- bias %>% 
+  bind_cols(var %>% select(varf)) %>% 
+  bind_cols(mse %>% select(meanmse)) %>% 
+  mutate(eps = meanmse - bias2f - varf) %>% 
+  select(modelo, bias2f, varf, eps, meanmse)
+
+# Geração do gráfico
+
+resume %>% 
+  reshape2::melt(id.var = "modelo") %>% 
+  ggplot(aes(x = modelo, y = value, col = variable)) +
+  geom_line() + geom_point()
+```
 
 <img src="/figs/2018-08-27-bias-variance_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 

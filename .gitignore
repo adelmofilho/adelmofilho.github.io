@@ -9,3 +9,6 @@ _site
 .Rhistory
 Thumbs.db
 ehthumbs.db
+
+
+.Rproj.user/

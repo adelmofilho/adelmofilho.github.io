@@ -4,7 +4,7 @@ subtitle: Oi, eu sou Adelmo!
 layout: page
 ---
 
-<span class="fa fa-briefcase about-icon"></span>  Atuo como Cientista de dados no Itaú-Unibanco.
+<span class="fa fa-briefcase about-icon"></span>  Atuo como Cientista de dados no Analytics Center of Excellence (ACE) do Itaú-Unibanco 
 
 <span class="fa fa-graduation-cap about-icon"></span> Sou fundador e pesquisador no [Grupo de Pesquisas em Análise Multivariada e Modelagem Aplicada](www.gamma.ufba.br) da Universidade Federal da Bahia.
 

@@ -16,8 +16,9 @@ encoding: UTF-8                                          # Encoding
 # List of links in the navigation bar
 navbar-links:
   Blog: ""
-  Publications: "publications"
-  ShinyApps: "shiny"
+  Papers: "publications"
+  Packages: "packages"
+  Shiny: "shiny"
   GAMMA: "http://gamma.ufba.br/"
   About:
     - Blog: "aboutblog"

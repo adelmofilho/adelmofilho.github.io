@@ -17,7 +17,8 @@ encoding: UTF-8                                          # Encoding
 navbar-links:
   Blog: ""
   Papers: "publications"
-  Packages: "packages"
+  Packages:
+    - tenispolaR: "https://blog.adelmofilho.com/tenispolaR/"
   Shiny: "shiny"
   GAMMA: "http://gamma.ufba.br/"
   About:

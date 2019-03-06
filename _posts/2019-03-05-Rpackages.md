@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Quanto vale um pirula?
+title: Criando seu pacote R
+subtitle: RIP devtools
 bigimg: /img/pirula.gif
 tags: [r, rstudio, youtube, statistics, API]
 comments: true

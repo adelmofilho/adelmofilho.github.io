@@ -19,6 +19,7 @@ navbar-links:
   Papers: "publications"
   Packages:
     - tenispolaR: "https://blog.adelmofilho.com/tenispolaR/"
+    - kRypto: "http://blog.adelmofilho.com/kRypto/"
   Shiny: "shiny"
   GAMMA: "http://gamma.ufba.br/"
   About:

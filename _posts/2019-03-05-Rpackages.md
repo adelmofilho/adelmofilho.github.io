@@ -2,8 +2,8 @@
 layout: post
 title: Criando seu pacote R
 subtitle: RIP devtools
-bigimg: /img/pirula.gif
-tags: [r, rstudio, youtube, statistics, API]
+bigimg: /img/mickey.gif
+tags: [r, rstudio, packages, devtools, usethis]
 comments: true
 draft: true
 output:

@@ -11,23 +11,16 @@ output:
     keep_md: true
 ---
 
-Imagina um dia estranho!
+Instalar R, Shiny/RStudio Server em meu [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) (a.k.a Verônica) tem sido uma experiência ....
 
-A recepcionista do prédio em que trabalho liberou o acesso, porque já sabia meu RG de cabeça 😮 
 
-Meu pacote R não foi aprovado no CRAN porque esqueci de colocar uma palavra do título do pacote em caixa alta (DE NOVO!)
-
-Você chega em casa, seu dropbox avisa que 6060 arquivos foram excluídos (e qualquer lembrança desse fato não existe).
-
-E.. DO NADA...(NADA)
+<img src="/img/rasp1.png" style="display: block; margin: auto;" />
 
 [@pyspark2](https://twitter.com/pyspark2) aparece no zap com a missão: atualizar o R num Raspberry PI 3.
 
 
 
 
-
-procurar o gthub r-lib com o uv_fs_rename installain failed
 
 
 

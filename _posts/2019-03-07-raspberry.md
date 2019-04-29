@@ -31,8 +31,7 @@ Esse último ponto me rendeu um [pull request](https://github.com/rstudio/shiny-
 
 Certo dia [@pyspark2](https://twitter.com/pyspark2) aparece no zap com uma missão: Instalar o R 3.5 no Raspberry dele.  
 
-
-<div style="width:100%;height:0;padding-bottom:58%;position:relative;"><iframe src="https://giphy.com/embed/ly8G39g1ujpNm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<iframe src="https://giphy.com/embed/ly8G39g1ujpNm" width="480" height="278" frameBorder="0" class="giphy-embed" align="center" allowFullScreen></iframe>
 
 <p align="center">Fiquei no mínimo nervoso</p>
 

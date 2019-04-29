@@ -33,25 +33,26 @@ Esse último ponto, inclusive,  me rendeu um [pull request](https://github.com/r
 
 Certo dia [@pyspark2](https://twitter.com/pyspark2) aparece no zap com uma missão: Instalar o R 3.5 no Raspberry dele.  
 
-<div style="width:100%;height:0;padding-bottom:58%;position:relative;"><iframe src="https://giphy.com/embed/ly8G39g1ujpNm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p align="center"><p>Fiquei, no mínimo, nervoso</p>
+<div style="width:100%;height:0;padding-bottom:58%;position:relative;"><iframe src="https://giphy.com/embed/ly8G39g1ujpNm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><div align="center"><p align="center"><p>Fiquei, no mínimo, nervoso</p></div>
 
 
 Prontamente, tirei Verônica da gaveta, conectei todos os cabos e... FORMATEI O CARTÃO DE MEMÓRIA.
 
-<div align="center"><iframe src="https://giphy.com/embed/d10dMmzqCYqQ0" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p align="center">Lembrar que eu formatei aquele microSD ainda machuca</p></div>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/d10dMmzqCYqQ0" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><div align="center"><p align="center">Lembrar que eu formatei aquele microSD ainda machuca</p></div>
 
 Bem... esse foi o inicio de um mês, reaprendendo tudo que fiz no ano passado, descobrindo aspectos que deixei passar na primeira vez, e, finalmente, registrando tudo.
 
-<div align="center"><iframe src="https://giphy.com/embed/t3Mzdx0SA3Eis" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/t3Mzdx0SA3Eis" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 
+## Referências 
+
+https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source
 
 
+E se você chegou até aqui, meu muito obrigado!
 
-
-Se você chegou até aqui, meu muito obrigado!
-
-<div align="center"><iframe src="https://giphy.com/embed/5wWf7GW1AzV6pF3MaVW" width="480" height="278" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<div style="width:100%;height:0;padding-bottom:58%;position:relative;"><iframe src="https://giphy.com/embed/5wWf7GW1AzV6pF3MaVW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 
 

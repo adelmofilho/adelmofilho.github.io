@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Atualizando o R no seu Raspberry Pi 3
+title: Instalando um servidor Shiny-R em seu Raspberry Pi 3
 subtitle: Ai ele falou "Então é possível?"
 bigimg: /img/mickey.gif
 tags: [r, rstudio, packages, devtools, usethis]
@@ -11,13 +11,23 @@ output:
     keep_md: true
 ---
 
-Instalar R, Shiny/RStudio Server em meu [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) (a.k.a Verônica) tem sido uma experiência ....
-
+Instalar R, Shiny/RStudio Server em meu [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) (a.k.a Verônica) tem sido aquele tipo de experiência ....
 
 <img src="/img/rasp1.jpg" style="display: block; margin: auto;" />
 
+Em 2018, foi a primeira fez que fiz todo o ecossistema funcionar, e, realmente, (pra mim) foi bem complicado pelo fato de:
 
-![](/img/rasp1.jpg)
+1. O Shiny Server [não possui pré-compilados](https://www.rstudio.com/products/shiny/download-server/) para distribuições linux da arquitetura ARM (proocessor do Raspberry);
+
+2. Haviam pouquissimos tutoriais na internet (isso não mudou muito) e todos com suas particularidades;
+
+3. Eu era um completo NOOB em linux (isso não mudou muito);
+
+4. O código-fonte do Shiny Server possuia "incompatibilidades" com o Raspberry Pi 3 - Isso tornava a instalação do servidor um trabalho de formiguinha, já que era necessário entender o que deveria ser alterado em cada script.
+
+Esse último ponto me rendeu um [pull request](https://github.com/rstudio/shiny-server/pull/352) no github do [Shiny Server](https://github.com/rstudio/shiny-server) que me orgulho muito 😊
+
+## Chamado para Aventura
 
 [@pyspark2](https://twitter.com/pyspark2) aparece no zap com a missão: atualizar o R num Raspberry PI 3.
 

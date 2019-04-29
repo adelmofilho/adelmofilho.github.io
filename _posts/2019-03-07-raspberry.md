@@ -14,7 +14,10 @@ output:
 Instalar R, Shiny/RStudio Server em meu [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) (a.k.a Verônica) tem sido uma experiência ....
 
 
-<img src="/img/rasp1.png" style="display: block; margin: auto;" />
+<img src="/img/rasp1.jpg" style="display: block; margin: auto;" />
+
+
+![](/img/rasp1.jpg)
 
 [@pyspark2](https://twitter.com/pyspark2) aparece no zap com a missão: atualizar o R num Raspberry PI 3.
 

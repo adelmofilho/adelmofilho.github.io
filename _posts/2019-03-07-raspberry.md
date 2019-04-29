@@ -25,18 +25,32 @@ Em 2018, foi a primeira fez que fiz todo o ecossistema funcionar, e, realmente, 
 
 4. O código-fonte do Shiny Server possuia "incompatibilidades" com o Raspberry Pi 3 - Isso tornava a instalação do servidor um trabalho de formiguinha, já que era necessário entender o que deveria ser alterado em cada script.
 
-Esse último ponto me rendeu um [pull request](https://github.com/rstudio/shiny-server/pull/352) no github do [Shiny Server](https://github.com/rstudio/shiny-server) que me orgulho muito 😊 
+Esse último ponto, inclusive,  me rendeu um [pull request](https://github.com/rstudio/shiny-server/pull/352) no github do [Shiny Server](https://github.com/rstudio/shiny-server) que me orgulho muito 😊  
+
+
 
 ## Chamado para Aventura
 
 Certo dia [@pyspark2](https://twitter.com/pyspark2) aparece no zap com uma missão: Instalar o R 3.5 no Raspberry dele.  
 
-<iframe src="https://giphy.com/embed/ly8G39g1ujpNm" width="480" height="278" frameBorder="0" class="giphy-embed" align="center" allowFullScreen></iframe>
+<div align="center"><iframe src="https://giphy.com/embed/ly8G39g1ujpNm" width="480" height="278" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p align="center">Fiquei, no mínimo, nervoso</p></div>
 
-<p align="center">Fiquei no mínimo nervoso</p>
+Prontamente, tirei Verônica da gaveta, conectei todos os cabos e... FORMATEI O CARTÃO DE MEMÓRIA.
+
+<div align="center"><iframe src="https://giphy.com/embed/d10dMmzqCYqQ0" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p align="center">Lembrar que eu formatei aquele microSD ainda machuca</p></div>
+
+Bem... esse foi o inicio de um mês, reaprendendo tudo que fiz no ano passado, descobrindo aspectos que deixei passar na primeira vez, e, finalmente, registrando tudo.
+
+<div align="center"><iframe src="https://giphy.com/embed/t3Mzdx0SA3Eis" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 
 
+
+
+
+Se você chegou até aqui, meu muito obrigado!
+
+<div align="center"><iframe src="https://giphy.com/embed/5wWf7GW1AzV6pF3MaVW" width="480" height="278" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 
 

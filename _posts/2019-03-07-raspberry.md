@@ -2,7 +2,7 @@
 layout: post
 title: Instalando um servidor Shiny-R em seu Raspberry Pi 3
 subtitle: Ai ele falou "Então é possível?"
-bigimg: /img/mickey.gif
+bigimg: /img/rasp_header.jpg
 tags: [r, rstudio, packages, devtools, usethis]
 comments: true
 draft: true

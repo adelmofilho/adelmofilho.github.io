@@ -13,7 +13,7 @@ output:
 
 Instalar R, Shiny/RStudio Server em meu [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) (a.k.a Verônica) tem sido aquele tipo de experiência ....
 
-<img src="/img/rasp1.jpg" style="display: block; margin: auto;" />
+![](./img/rasp1.jpg)
 
 Em 2018, foi a primeira fez que fiz todo o ecossistema funcionar, e, realmente, (pra mim) foi bem complicado pelo fato de:
 
@@ -45,12 +45,56 @@ Bem... esse foi o inicio de um mês, reaprendendo tudo que fiz no ano passado, d
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/t3Mzdx0SA3Eis" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 
+## Do começo
+
+Eu não espero que você tenha instalado nada em seu Rpi.
+
+Por isso, o primeiro passo é baixar a imagem do sistema operacional bootavel.
+
+Minha recomendação e sistema operacional utilizado nesse post tutorial é o Raspbian Stretch que pode ser baixado [AQUI](https://www.raspberrypi.org/downloads/raspbian/)
+
+Seja o dowload direto ZIP ou por torrent, eu recomendo a imagem 
+*Raspbian Stretch with desktop and recommended software* por ter uma interface mínima e já ter alguns softwares inclusos.
+
+Após o download da imagem, se você estiver em um Windows utilize o programa [RUFUS](https://rufus.ie/) para criar um bootavel com o cartão microSD do seu Raspberry Pi. Se você estiver em um Linux você sabe o que fazer (eu confio!).
+
+![](./img/rufus.PNG "Tela do RUFUS")
+
+
+## Primeiros Passos no Pi
+
+Conecte o cartão microSD com a imagem bootavel em seu Raspberry Pi.
+
+## Uma configuração inicial
+
+A instalação  e compilação de alguns pacotes (DPLYR!!!) do R exige mais memória do que a disponível por padrão em seu Raspberry Pi.
+
+Vamos adicionar 4GB de memória swap para evitar qualquer problemas.  
+
+```
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=3072
+sudo /sbin/mkswap /var/swap.1
+sudo /sbin/swapon /var/swap.1
+sudo sh -c 'echo "/var/swap.1 swap swap defaults 0 0 " >> /etc/fstab'
+```
+
+## Instalando R
+
+
+
 ## Referências 
 
 https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source
 
+https://community.rstudio.com/t/setting-up-your-own-shiny-server-rstudio-server-on-a-raspberry-pi-3b/18982
 
-E se você chegou até aqui, meu muito obrigado!
+https://steemit.com/tutorial/@m4rk.h4nn4/how-to-install-and-run-shiny-server-on-the-raspberry-pi-3-and-raspian-jassie-lite
+
+https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
+
+http://herb.h.kobe-u.ac.jp/raspiinfo/rstudio_en.html
+
+## E se você chegou até aqui, meu muito obrigado!
 
 <div style="width:100%;height:0;padding-bottom:58%;position:relative;"><iframe src="https://giphy.com/embed/5wWf7GW1AzV6pF3MaVW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 

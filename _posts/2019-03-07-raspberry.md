@@ -97,14 +97,15 @@ vm.swappiness=10
 ```
 sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev \
        libpng-dev libjpeg-dev libcairo2-dev xvfb \
-       gdebi-core  libcurl4-openssl-dev  libssl-dev  \ 
-       libxml2-dev libudunits2-dev libgdal-dev \
        libbz2-dev libzstd-dev liblzma-dev \
        libcurl4-openssl-dev \
        texinfo texlive texlive-fonts-extra \
        screen wget openjdk-8-jdk
 ```
 
+```
+sudo apt-get -y install gdebi-core  libcurl4-openssl-dev  libssl-dev  libxml2-dev libudunits2-dev libgdal-dev
+```
 
 ```
 cd /usr/local/src

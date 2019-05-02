@@ -72,14 +72,58 @@ A instalação  e compilação de alguns pacotes (DPLYR!!!) do R exige mais mem�
 Vamos adicionar 4GB de memória swap para evitar qualquer problemas.  
 
 ```
-sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=3072
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=4096
 sudo /sbin/mkswap /var/swap.1
 sudo /sbin/swapon /var/swap.1
 sudo sh -c 'echo "/var/swap.1 swap swap defaults 0 0 " >> /etc/fstab'
 ```
 
+Conforme dica de [@andresrcs](https://twitter.com/andresrcs), adicionemos uma configuração para evitar o uso desnecessário de memoria SWAP. Abrindo o arquivo `sysctl.conf`:
+
+```
+sudo nano /etc/sysctl.conf
+```
+
+E adicionando o seguinte parâmetro na última linha do arquivo:
+
+```
+vm.swappiness=10
+```
+
 ## Instalando R
 
+
+
+```
+sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev \
+       libpng-dev libjpeg-dev libcairo2-dev xvfb \
+       gdebi-core  libcurl4-openssl-dev  libssl-dev  \ 
+       libxml2-dev libudunits2-dev libgdal-dev \
+       libbz2-dev libzstd-dev liblzma-dev \
+       libcurl4-openssl-dev \
+       texinfo texlive texlive-fonts-extra \
+       screen wget openjdk-8-jdk
+```
+
+
+```
+cd /usr/local/src
+sudo wget https://cran.rstudio.com/src/base/R-3/R-3.6.0.tar.gz
+sudo su
+tar zxvf R-3.6.0.tar.gz
+cd R-3.6.0
+./configure --with-cairo --with-jpeglib --enable-R-shlib --with-blas --with-lapack
+make
+make install
+cd ..
+rm -rf R-3.6.0*
+exit
+cd
+```
+
+```
+sudo su - -c "R -e \"install.packages('Rcpp', repos='http://cran.rstudio.com/')\""
+```
 
 
 ## Referências 

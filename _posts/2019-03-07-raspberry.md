@@ -131,6 +131,11 @@ sudo su - -c "R -e \"install.packages('tidyverse', repos='http://cran.rstudio.co
  https://cmake.org/files/
 
 ```
+sudo apt install nginx
+```
+
+
+```
 wget https://cmake.org/files/v3.14/cmake-3.14.3.tar.gz
 sudo tar xzf cmake-3.14.3.tar.gz
 cd cmake-3.14.3
@@ -206,6 +211,10 @@ sudo chown -R pi:shiny-apps .
 sudo chmod g+w .
 sudo chmod g+s .
 ```
+
+
+
+
 
 
 ## Referências 

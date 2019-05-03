@@ -211,11 +211,17 @@ sudo chown -R pi:shiny-apps .
 sudo chmod g+w .
 sudo chmod g+s .
 ```
+mkdir /srv/shiny-server/sample-apps
+sudo cp -r shiny-server/samples/sample-apps/* /srv/shiny-server/sample-apps
+sudo cp shiny-server/samples/welcome.html /srv/shiny-server/index.html
 
+sudo apt-get install pandoc
+sudo apt-get install pandoc-citeproc
 
+sudo cp /usr/bin/pandoc /opt/shiny-server/ext/pandoc/pandoc
+sudo cp /usr/bin/pandoc-citeproc /opt/shiny-server/ext/pandoc/pandoc-citeproc
 
-
-
+sudo systemctl restart shiny-server
 
 ## Referências 
 

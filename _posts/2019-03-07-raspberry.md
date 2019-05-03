@@ -132,12 +132,35 @@ sudo su - -c "R -e \"install.packages('tidyverse', repos='http://cran.rstudio.co
 
 ```
 wget https://cmake.org/files/v3.14/cmake-3.14.3.tar.gz
-tar xzf cmake-3.14.3.tar.gz
+sudo tar xzf cmake-3.14.3.tar.gz
 cd cmake-3.14.3
-./configure; make
+sudo ./configure
+sudo make
 sudo make install
 cd
 ```
+
+
+```
+git clone https://github.com/rstudio/shiny-server.git
+cd shiny-server
+DIR=`pwd`
+PATH=$DIR/bin:$PATH
+mkdir tmp
+cd tmp
+PYTHON=`which python`
+sudo cmake -DCMAKE_INSTALL_PREFIX=/opt -DPYTHON="$PYTHON" ../
+sudo make
+mkdir ../build
+sed -i '8s/.*/NODE_SHA256=7a2bb6e37615fa45926ac0ad4e5ecda4a98e2956e468dedc337117bfbae0ac68/' ../external/node/install-node.sh
+sed -i 's/linux-x64.tar.xz/linux-armv7l.tar.xz/' ../external/node/install-node.sh
+(cd .. && sudo ./external/node/install-node.sh)
+(cd .. && ./bin/npm --python="${PYTHON}" install --no-optional)
+(cd .. && ./bin/npm --python="${PYTHON}" rebuild)
+sudo make install
+
+```
+
 ## Referências 
 
 https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source

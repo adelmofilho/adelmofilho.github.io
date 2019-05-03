@@ -97,18 +97,17 @@ vm.swappiness=10
 ```
 sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev \
        libpng-dev libjpeg-dev libcairo2-dev xvfb \
+       gdebi-core  libcurl4-openssl-dev  libssl-dev  \ 
+       libxml2-dev libudunits2-dev libgdal-dev \
        libbz2-dev libzstd-dev liblzma-dev \
        libcurl4-openssl-dev \
        texinfo texlive texlive-fonts-extra \
        screen wget openjdk-8-jdk
 ```
 
-```
-sudo apt-get -y install gdebi-core  libcurl4-openssl-dev  libssl-dev  libxml2-dev libudunits2-dev libgdal-dev
-```
 
 ```
-cd /usr/local/src
+cd /usr/src
 sudo wget https://cran.rstudio.com/src/base/R-3/R-3.6.0.tar.gz
 sudo su
 tar zxvf R-3.6.0.tar.gz
@@ -123,10 +122,22 @@ cd
 ```
 
 ```
-sudo su - -c "R -e \"install.packages('Rcpp', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('Rcpp', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
+sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
+sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
+sudo su - -c "R -e \"install.packages('tidyverse', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
 ```
 
+ https://cmake.org/files/
 
+```
+wget https://cmake.org/files/v3.14/cmake-3.14.3.tar.gz
+tar xzf cmake-3.14.3.tar.gz
+cd cmake-3.14.3
+./configure; make
+sudo make install
+cd
+```
 ## Referências 
 
 https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source
@@ -138,6 +149,8 @@ https://steemit.com/tutorial/@m4rk.h4nn4/how-to-install-and-run-shiny-server-on-
 https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 
 http://herb.h.kobe-u.ac.jp/raspiinfo/rstudio_en.html
+
+https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-R-under-Unix_002dalikes
 
 ## E se você chegou até aqui, meu muito obrigado!
 

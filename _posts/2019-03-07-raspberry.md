@@ -126,6 +126,14 @@ sudo su - -c "R -e \"install.packages('Rcpp', repos='http://cran.rstudio.com/', 
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
 sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
 sudo su - -c "R -e \"install.packages('tidyverse', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
+sudo su - -c "R -e \"install.packages('Cairo', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('httpuv', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('mime', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('jsonlite', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('digest', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('htmltools', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('xtable', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('R6', repos='http://cran.rstudio.com/')\""
 ```
 
  https://cmake.org/files/
@@ -211,17 +219,11 @@ sudo chown -R pi:shiny-apps .
 sudo chmod g+w .
 sudo chmod g+s .
 ```
-mkdir /srv/shiny-server/sample-apps
-sudo cp -r shiny-server/samples/sample-apps/* /srv/shiny-server/sample-apps
-sudo cp shiny-server/samples/welcome.html /srv/shiny-server/index.html
 
-sudo apt-get install pandoc
-sudo apt-get install pandoc-citeproc
 
-sudo cp /usr/bin/pandoc /opt/shiny-server/ext/pandoc/pandoc
-sudo cp /usr/bin/pandoc-citeproc /opt/shiny-server/ext/pandoc/pandoc-citeproc
 
-sudo systemctl restart shiny-server
+
+
 
 ## Referências 
 

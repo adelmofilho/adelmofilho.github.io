@@ -172,7 +172,7 @@ sudo mkdir -p /etc/shiny-server
 cd
 sudo wget \
 https://raw.githubusercontent.com/rstudio/shiny-server/master/config/default.config \
--O /etc/init/shiny-server.conf
+-O /etc/shiny-server/shiny-server.conf
 sudo chmod 777 -R /srv
 # Configure shiny-server autostart 
 sudo nano /lib/systemd/system/shiny-server.service # Paste the following

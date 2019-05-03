@@ -219,7 +219,7 @@ sudo chown -R pi:shiny-apps .
 sudo chmod g+w .
 sudo chmod g+s .
 ```
-
+```
 mkdir /srv/shiny-server/sample-apps
 sudo cp -r shiny-server/samples/sample-apps/* /srv/shiny-server/sample-apps
 sudo cp shiny-server/samples/welcome.html /srv/shiny-server/index.html
@@ -234,7 +234,21 @@ sudo cp /usr/bin/pandoc-citeproc /opt/shiny-server/ext/pandoc/pandoc-citeproc
 
 sudo systemctl restart shiny-server
 
+```
 
+```
+sudo git clone https://github.com/rstudio/rstudio.git
+cd rstudio/dependencies/linux
+sudo su
+./install-dependencies-debian --exclude-qt-sdk
+apt-get install -y openjdk-8-jdk
+apt autoremove
+cd /home/pi/rstudio
+mkdir build
+cd build
+cmake .. -DRSTUDIO_TARGET=Server -DCMAKE_BUILD_TYPE=Debug
+make install
+```
 
 
 ## Referências 

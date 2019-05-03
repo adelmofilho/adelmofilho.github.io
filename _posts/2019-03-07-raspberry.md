@@ -151,15 +151,62 @@ cd tmp
 PYTHON=`which python`
 sudo cmake -DCMAKE_INSTALL_PREFIX=/opt -DPYTHON="$PYTHON" ../
 sudo make
-mkdir ../build
+sudo mkdir ../build
 sed -i '8s/.*/NODE_SHA256=7a2bb6e37615fa45926ac0ad4e5ecda4a98e2956e468dedc337117bfbae0ac68/' ../external/node/install-node.sh
 sed -i 's/linux-x64.tar.xz/linux-armv7l.tar.xz/' ../external/node/install-node.sh
 (cd .. && sudo ./external/node/install-node.sh)
 (cd .. && ./bin/npm --python="${PYTHON}" install --no-optional)
 (cd .. && ./bin/npm --python="${PYTHON}" rebuild)
 sudo make install
+```
 
 ```
+cd
+sudo ln -s /opt/shiny-server/bin/shiny-server /usr/bin/shiny-server
+sudo useradd -r -m shiny
+sudo mkdir -p /var/log/shiny-server
+sudo mkdir -p /srv/shiny-server
+sudo mkdir -p /var/lib/shiny-server
+sudo chown shiny /var/log/shiny-server
+sudo mkdir -p /etc/shiny-server
+cd
+sudo wget \
+https://raw.githubusercontent.com/rstudio/shiny-server/master/config/default.config \
+-O /etc/init/shiny-server.conf
+sudo chmod 777 -R /srv
+# Configure shiny-server autostart 
+sudo nano /lib/systemd/system/shiny-server.service # Paste the following
+    #!/usr/bin/env bash
+    [Unit]
+    Description=ShinyServer
+    [Service]
+    Type=simple
+    ExecStart=/usr/bin/shiny-server
+    Restart=always
+    # Environment="LANG=en_US.UTF-8"
+    ExecReload=/bin/kill -HUP $MAINPID
+    ExecStopPost=/bin/sleep 5
+    RestartSec=1
+    [Install]
+    WantedBy=multi-user.target
+
+sudo chown shiny /lib/systemd/system/shiny-server.service
+sudo systemctl daemon-reload
+sudo systemctl enable shiny-server
+sudo systemctl start shiny-server
+```
+
+
+```
+sudo groupadd shiny-apps
+sudo usermod -aG shiny-apps pi
+sudo usermod -aG shiny-apps shiny
+cd /srv/shiny-server
+sudo chown -R pi:shiny-apps .
+sudo chmod g+w .
+sudo chmod g+s .
+```
+
 
 ## Referências 
 

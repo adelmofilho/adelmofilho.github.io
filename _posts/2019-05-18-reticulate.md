@@ -55,7 +55,7 @@ Dentro do RStudio, instalamos e carregamos o pacote `reticulate` conforme comand
 
 
 ```r
-#install.packages('reticulate')
+install.packages('reticulate')
 ```
 
 A reticulação do python dentro do RStudio pode ser feita via terminal ou através dos chunks do `R Notebook` e `RMarkdown`.
@@ -68,10 +68,6 @@ Abra um novo arquivo (Rmarkdown ou R Notebook) e crie um novo chunk R.
 
 ```r
 library(reticulate)
-```
-
-```
-## Warning: package 'reticulate' was built under R version 3.5.3
 ```
 
 Em seguida, vamos localizar as versões do python instaladas em sua máquina através do comando `py_discovery_config`.
@@ -131,7 +127,9 @@ Caso não esteja usando o `conda`, a criação da virtual env pode ser realizada
 
 ## Removendo virtual envs
 
+
 > Parte da jornada é o fim (Stark, 2019)
+
 
 A descontinuidade do python 2 está marcada para janeiro de 2020. De certo da importância do fato, o uso do python 3 é preferível. Vamos, então, remover a virtual env criada com o python 2.
 
@@ -161,6 +159,7 @@ conda_remove("r-py2")
 ```
 
 Caso não esteja usando o `conda`, a remoção de v-envs é realizada pelo comando `virtualenv_remove`.
+
 
 ## Populando nosso virtual environment
 

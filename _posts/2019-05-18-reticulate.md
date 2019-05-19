@@ -34,7 +34,7 @@ Para usuários Linux, é possível instalar o python por ambas opções sem perd
 
 O `conda` é tanto um gerenciador de pacotes, quanto gerenciador de virtual environments. Instruções para instalação do conda pode ser encontradas [no tutorial do digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
 
-Seu equivalente é o `pip`, mas assume apenas o papel de gerenciador de pacotes. Para criar virtual environments em combinação com o `pip` é necessário instalar o pacote python-virtualenv. Para tanto entramos com os seguintes comandos no terminal.
+Seu equivalente é o `pip`, mas assume apenas o papel de gerenciador de pacotes. Para criar virtual environments em combinação com o `pip` é necessário instalar o pacote `python-virtualenv`. Para tanto entramos com os seguintes comandos no terminal.
 
 ```
 sudo apt-get install -y libpython-dev

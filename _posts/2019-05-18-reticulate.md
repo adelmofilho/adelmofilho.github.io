@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Instalando um servidor Shiny-R em seu Raspberry Pi 3
-subtitle: Ai ele falou "Então é possível?"
-bigimg: /img/rasp_header.jpg
+title: "Reticulando Python no RStudio [parte 1]"
+subtitle: "@alceufc que me perdoe"
+bigimg: /img/rpy.jpg
 tags: [r, rstudio, packages, devtools, usethis]
 comments: true
 draft: true
@@ -235,10 +235,6 @@ Uma mensagem de aviso aparecerá informando a versão / env do python que será 
 Neste primeiro post, conectamos o python através do pacote `reticulate` e verificamos as possibilildades de uso da IDE do RStudio com o python como kernel. 
 
 O pacote `reticulate` trabalha além disso, permitindo interações entre objetos criados no R ou no Python. Abordaremos esse tópico na parte 2 desse post. 
-
-E que esse seja mais um passo para trazer paz entre estes dois mundos, nos preparando para o verdadeiro inimigo.
-
-![](./img/rpy.jpg)
 
 Vejo vocês lá!
 

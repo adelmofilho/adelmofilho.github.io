@@ -13,7 +13,7 @@ output:
 
 ## Instalando Python em sua máquina
 
-A instalação do Python em máquinas Windows pode ser realizada via [Python Fundation](https://www.python.org/downloads/) ou [Ananconda](https://www.anaconda.com/distribution/). A última é preferível, pois permite o uso de virtual environments no Windows (discutiremos com mais detalhes virtual environments nesse post).
+A instalação do Python em máquinas Windows pode ser realizada via [Python Fundation](https://www.python.org/downloads/) ou [Ananconda](https://www.anaconda.com/distribution/). A última é preferível, pois permite o uso de virtual environments (envs) no Windows (discutiremos com mais detalhes sobre virtual environments nesse post).
 
 <br>
 
@@ -99,7 +99,7 @@ Neste momento, já podemos trabalhar com o python reticulado. Contudo, está nã
 
 Para tanto, se faz necessário criar um ambiente separado daquele compartilhado pelo python reticulado - um virtual environment (v-env).
 
-Caso esteja utilizando o `conda` para gerenciar seus pacotes e v-env, criamos um novo v-env pelo comando `conda_create`. No exemplo abaixo, vamos criar dois v-env, cada um com uma versão diferente do python.
+Caso esteja utilizando o `conda` para gerenciar seus pacotes e envs, criamos uma nova env pelo comando `conda_create`. No exemplo abaixo, vamos criar duas envs, cada um com uma versão diferente do python.
 
 Ajuste o path das versões distribuidas pelo conda conforme foi realizada a instalação em sua máquina.
 
@@ -155,14 +155,14 @@ conda_list()
 ## 3 C:\\Users\\Adelmo Filho\\Documents\\.conda\\envs\\r-py3\\python.exe
 ```
 
-E removemos a virtual-env `r-py2` pela função `conda_remove`.
+E removemos a env `r-py2` pela função `conda_remove`.
 
 
 ```r
 conda_remove("r-py2")
 ```
 
-Caso não esteja usando o `conda`, a remoção de v-envs é realizada pelo comando `virtualenv_remove`.
+Caso não esteja usando o `conda`, a remoção de envs é realizada pelo comando `virtualenv_remove`.
 
 <br>
 

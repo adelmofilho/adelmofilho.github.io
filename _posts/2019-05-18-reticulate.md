@@ -5,7 +5,7 @@ subtitle: "@alceufc que me perdoe"
 bigimg: /img/rpy.jpg
 tags: [r, rstudio, packages, reticulate, python]
 comments: true
-draft: true
+draft: false
 output:
   html_document:
     keep_md: true
@@ -48,10 +48,11 @@ sudo apt-get install python-virtualenv
 
 Neste post se espera a instalação da versões Python 2 e Python 3.
 
+<br>
 
 ## Instalando o reticulate
 
-Dentro do RStudio, instalamos e carregamos o pacote `reticulate` conforme comandos a seguir.
+Dentro do RStudio, instalamos o pacote `reticulate` conforme comandos a seguir.
 
 
 ```r
@@ -60,6 +61,7 @@ install.packages('reticulate')
 
 A reticulação do python dentro do RStudio pode ser feita via terminal ou através dos chunks do `R Notebook` e `RMarkdown`.
 
+<br>
 
 ## Reticulando em notebooks
 
@@ -112,9 +114,7 @@ conda_create(envname = "r-py3",
 ## [1] "C:\\Users\\Adelmo Filho\\Documents\\.conda\\envs\\r-py3\\python.exe"
 ```
 
-
-
-
+<br>
 
 ```r
 conda_create(envname = "r-py2", 
@@ -126,6 +126,8 @@ conda_create(envname = "r-py2",
 ```
 
 Caso não esteja usando o `conda`, a criação da virtual env pode ser realizada de forma equivalente utilizando a função `virtualenv_create` com o argumento `conda` da função `conda_create` substituido pelo argumento `python`, o qual deve apontar para o executável do path do executável do python.
+
+<br>
 
 ## Removendo virtual envs
 
@@ -162,6 +164,7 @@ conda_remove("r-py2")
 
 Caso não esteja usando o `conda`, a remoção de v-envs é realizada pelo comando `virtualenv_remove`.
 
+<br>
 
 ## Populando nosso virtual environment
 
@@ -198,6 +201,8 @@ conda_install(envname = "r-py3",
               packages = c("scikit-learn"))
 ```
 
+<br>
+
 ## Nosso primeiro chunk python
 
 Crie um novo chunk python em seu R Notebook / Rmarkdown. Dentro dele, é possível escrever com a mesmo sintaxe e pacotes do python.
@@ -215,6 +220,8 @@ print("hello world")  # O que você esperava de um primeiro código em python?
 ## hello world
 ```
 
+<br>
+
 ## Escrevendo em python via console
 
 Outra ferramenta útil do pacote `reticulate` está em trocar o kernel do RStudio, tornando-o uma IDE para python. Para isto, entramos com o comando `reticulate::repl_python()` diretamente no console do RStudio. REPL vem da sigla [read–eval–print loop](https://en.m.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) e basicamente implica que estaremos trabalhando em um python shell.
@@ -230,6 +237,8 @@ Outra ferramenta útil do pacote `reticulate` está em trocar o kernel do RStudi
 ```
 
 Uma mensagem de aviso aparecerá informando a versão / env do python que será utilizada pelo Rstudio a partir deste momento. Caso se deseja retornar ao R, basta sair do shell com o comando `exit()`.
+
+<br>
 
 ## Próximos passos
 

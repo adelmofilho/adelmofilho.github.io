@@ -114,6 +114,8 @@ conda_create(envname = "r-py3",
 
 
 
+
+
 ```r
 conda_create(envname = "r-py2", 
              conda = "C:/ProgramData/Miniconda2/Scripts/conda.exe")

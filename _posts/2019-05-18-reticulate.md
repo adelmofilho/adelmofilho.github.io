@@ -228,7 +228,7 @@ Outra ferramenta útil do pacote `reticulate` está em trocar o kernel do RStudi
 
 
 ```r
-#reticulate::repl_python()
+reticulate::repl_python()
 ```
 
 ```
@@ -236,7 +236,7 @@ Outra ferramenta útil do pacote `reticulate` está em trocar o kernel do RStudi
 ## Reticulate 1.12 REPL -- A Python interpreter in R.
 ```
 
-Uma mensagem de aviso aparecerá informando a versão / env do python que será utilizada pelo Rstudio a partir deste momento. Caso se deseja retornar ao R, basta sair do shell com o comando `exit()`.
+Uma mensagem de aviso aparecerá informando a versão / env do python que será utilizada pelo Rstudio a partir deste momento. Caso se deseja retornar ao R, basta sair do shell com o comando `exit`.
 
 <br>
 

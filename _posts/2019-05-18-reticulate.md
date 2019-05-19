@@ -3,7 +3,7 @@ layout: post
 title: "Reticulando Python no RStudio [parte 1]"
 subtitle: "@alceufc que me perdoe"
 bigimg: /img/rpy.jpg
-tags: [r, rstudio, packages, devtools, usethis]
+tags: [r, rstudio, packages, reticulate, python]
 comments: true
 draft: true
 output:
@@ -235,6 +235,8 @@ Uma mensagem de aviso aparecerá informando a versão / env do python que será 
 Neste primeiro post, conectamos o python através do pacote `reticulate` e verificamos as possibilildades de uso da IDE do RStudio com o python como kernel. 
 
 O pacote `reticulate` trabalha além disso, permitindo interações entre objetos criados no R ou no Python. Abordaremos esse tópico na parte 2 desse post. 
+
+
 
 Vejo vocês lá!
 

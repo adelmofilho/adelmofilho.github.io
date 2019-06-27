@@ -27,7 +27,17 @@ Infelizmente, seja ao lidar com grandes volumes de dados, na implementação de 
 
 Quando se fala de infraestrutura (infra, pros íntimos), falamos de todo ferramental disponibilizado para o cientista de dados trabalhar. 
 
-Isso inclui, um servidor (local ou na cloud), softwares para processamento e armazenamento dos dados, ferramentas para modelagem e visualização, segurança, versionamento e backup.
+Isso inclui um servidor (físico ou na cloud), softwares para processamento e armazenamento dos dados, ferramentas para modelagem e visualização, segurança, versionamento e backup.
 
 ![](./img/infra.PNG)
 
+Como **não** sou da computação, sei que muitos conceitos e procedimentos que serão apresentados não são habituais para quem não é da área. 
+
+Por esta razão, vou elencar, ao longo do texto, referências auxiliares ao "porquê" e ao "porque" de fazermos o que vamos apresentar.
+
+## Levantando uma máquina
+
+
+
+
+![](./img/cloud.jpg)

@@ -92,9 +92,9 @@ vm.swappiness=10
 
 ## Instalando R
 
+Como a instalação do R será feita pela compilação do código fonte (a versão do R disponível nos repositórios deb ainda é a 3.4.3), instalaremos algumas bibliotecas linux para o sucesso do processo.
 
-
-
+Muitos destas bibliotecas não são mandatórias, mas permitirão a correta configuração de diversos pacotes R.
 
 ```
 sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev \
@@ -107,6 +107,9 @@ sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev \
        screen wget openjdk-8-jdk
 ```
 
+A instalação via código fonte tem sua documentação detalhada no no [manual de instalação e administração do R] (https://cran.r-project.org/doc/manuals/r-release/R-admin.html).
+
+No código abaixo (que leva o tempo de preparar um omelete para finalizar), o que há de diferencial são as [capabilidades](https://www.rdocumentation.org/packages/base/versions/3.6.0/topics/capabilities) que adicionamos (cairo, jpeg, shlib etc.) à instalação do R.
 
 ```
 cd /usr/src
@@ -123,6 +126,14 @@ exit
 cd
 ```
 
+Em seguida, fazemos a instalação de diferentes pacotes R. 
+
+Muitos deles estão listados para o correto funcionamento do shiny-server.
+
+A instalação via terminal, na síntaxe apresentada, não é a toa.
+
+Desta forma, garantimos que todos os usuários do servidor tenham acesso aos mesmos pacotes. Dica vindo do [@daattali](https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/).
+
 ```
 sudo su - -c "R -e \"install.packages('Rcpp', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
@@ -138,12 +149,19 @@ sudo su - -c "R -e \"install.packages('xtable', repos='http://cran.rstudio.com/'
 sudo su - -c "R -e \"install.packages('R6', repos='http://cran.rstudio.com/')\""
 ```
 
- https://cmake.org/files/
+Uma vez que o R está instalado (teste!), vamos passar a preparar o servidor shiny.
+
+Instalamos o [nginx](https://www.nginx.com/) para administrar nosso servidor.
 
 ```
 sudo apt install nginx
 ```
 
+O Shiny Server não possui suporte para a arquitetura do raspberry, o que nos obriga a compilar o código fonte disponivel no [github](https://github.com/rstudio/shiny-server/).
+
+Para a compilação, usaremos o [CMake](https://cmake.org/)!
+
+No código abaixo estamos utilizando a versão mais recente do CMake. Verifique, antes de rodar, se está continua sendo a mais recente pelo site https://cmake.org/files/ e faça as alterações diretamente no código.
 
 ```
 wget https://cmake.org/files/v3.14/cmake-3.14.3.tar.gz
@@ -155,6 +173,11 @@ sudo make install
 cd
 ```
 
+No próximo chuck de código tratamos de fazer o download do código fonte e configurar argumentos da instalação (diretórios e hash).
+
+Observe que podemos realizar a instalação em qualquer diretório de interesse pelo argumento `DCMAKE_INSTALL_PREFIX`. Optamos por selecionar o `/opt` por ser o diretório padrão das instalações pré-compiladas do shiny-server em outras distribuições deb.
+
+Esse é o momento ideal para lavar o banheiro, dormir ou encontrar um rôle pra passar o tempo. Realmente, demora!
 
 ```
 git clone https://github.com/rstudio/shiny-server.git
@@ -175,6 +198,12 @@ sed -i 's/linux-x64.tar.xz/linux-armv7l.tar.xz/' ../external/node/install-node.s
 sudo make install
 ```
 
+Nosso próximo passo é configurar o shiny server instalado, criando e dando permissões.
+
+Observe que estamos criando e dando permissões ao usuário `shiny` - usuário padrão do shiny.
+
+Finalmente, fazemos o download do arquivo padrão de configuração do shiny-server diretamente no diretório do servidor.
+
 ```
 cd
 sudo ln -s /opt/shiny-server/bin/shiny-server /usr/bin/shiny-server
@@ -189,28 +218,46 @@ sudo wget \
 https://raw.githubusercontent.com/rstudio/shiny-server/master/config/default.config \
 -O /etc/shiny-server/shiny-server.conf
 sudo chmod 777 -R /srv
-# Configure shiny-server autostart 
-sudo nano /lib/systemd/system/shiny-server.service # Paste the following
-    #!/usr/bin/env bash
-    [Unit]
-    Description=ShinyServer
-    [Service]
-    Type=simple
-    ExecStart=/usr/bin/shiny-server
-    Restart=always
-    # Environment="LANG=en_US.UTF-8"
-    ExecReload=/bin/kill -HUP $MAINPID
-    ExecStopPost=/bin/sleep 5
-    RestartSec=1
-    [Install]
-    WantedBy=multi-user.target
+```
 
+Finalizamos a configuração populando o arquivo `shiny-server.service`.
+
+```
+sudo nano /lib/systemd/system/shiny-server.service # Paste the following
+```
+
+Adicione as seguintes linhas de código no arquivo aberto e salve-o em seguida.
+
+```
+#!/usr/bin/env bash
+[Unit]
+Description=ShinyServer
+[Service]
+Type=simple
+ExecStart=/usr/bin/shiny-server
+Restart=always
+# Environment="LANG=en_US.UTF-8"
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStopPost=/bin/sleep 5
+RestartSec=1
+[Install]
+WantedBy=multi-user.target
+````
+
+Finalmente, podemos colocar nosso shiny-server para funcionar com os seguintes comandos:
+
+```
 sudo chown shiny /lib/systemd/system/shiny-server.service
 sudo systemctl daemon-reload
 sudo systemctl enable shiny-server
 sudo systemctl start shiny-server
 ```
 
+Neste momento, você já poderá acessar seu servidor via `localhost:8787`.
+
+# ADICIONAR A IMAGEM ESQUECE NÃO AMIGO
+
+Adicionamos o usuário `pi` (padrão do raspberry) e `shiny` (padrão do shiny-server) ao grupo `shiny-apps` e adicionamos demais permissões.
 
 ```
 sudo groupadd shiny-apps
@@ -221,58 +268,33 @@ sudo chown -R pi:shiny-apps .
 sudo chmod g+w .
 sudo chmod g+s .
 ```
+
+Na imagem acima, com certeza você observou alguns erros nos plots (que deveriam estar ok).
+
+Os exemplos (sample-apps) que viriam por padrão na instalação pré-compilada do shiny-server não são incorporados na pasta do servidor. Sanamos esta situação copiando eles diretamente do código fonte.
+
 ```
 mkdir /srv/shiny-server/sample-apps
 sudo cp -r shiny-server/samples/sample-apps/* /srv/shiny-server/sample-apps
 sudo cp shiny-server/samples/welcome.html /srv/shiny-server/index.html
+```
 
+Além disso as bibliotecas `pandoc` e `pandoc-citeproc`, que vem instalados por padrão pelo código-fonte do shiny, não são compativeis com a arquitetura do raspberry pi.
+
+Para contornar essa situação realizamos a instalação das bilbiotecas pelo apt-get e copiamos os arquivos diretamente da instalação nativa.
+
+```
 sudo apt-get install pandoc
 sudo apt-get install pandoc-citeproc
 
 sudo cp /usr/bin/pandoc /opt/shiny-server/ext/pandoc/pandoc
 sudo cp /usr/bin/pandoc-citeproc /opt/shiny-server/ext/pandoc/pandoc-citeproc
 
-
-
 sudo systemctl restart shiny-server
-
 ```
 
-```
-sudo git clone https://github.com/rstudio/rstudio.git
-cd rstudio/dependencies/linux
-sudo su
-./install-dependencies-debian --exclude-qt-sdk
-apt-get install -y openjdk-8-jdk
-apt autoremove
-cd /home/pi/rstudio
-mkdir build
-cd build
-cmake .. -DRSTUDIO_TARGET=Server -DCMAKE_BUILD_TYPE=Debug
-make install
-```
+Com estas 
 
-
-```
-cd
-useradd -r rstudio-server
-cp /usr/local/lib/rstudio-server/extras/init.d/debian/rstudio-server /etc/init.d/rstudio-server
-chmod +x /etc/init.d/rstudio-server 
-update-rc.d rstudio-server defaults
-ln -f -s /usr/local/lib/rstudio-server/bin/rstudio-server /usr/sbin/rstudio-server
-chmod 777 -R /usr/local/lib/R/site-library/
-mkdir -p /var/run/rstudio-server
-mkdir -p /var/lock/rstudio-server
-mkdir -p /var/log/rstudio-server
-mkdir -p /var/lib/rstudio-server
-rm -rf /home/pi/rstudio
-sudo nano /etc/init.d/rstudio-server
-# Modify your PATH for ussing the compiled version of R
-	# PATH=/usr/local/bin/:/sbin:/usr/sbin:/bin:/usr/bin
-systemctl daemon-reload
-rstudio-server start
-exit
-```
 
 ## Referências 
 

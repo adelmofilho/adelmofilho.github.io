@@ -3,7 +3,7 @@ layout: post
 title: "Criando seu bot no Telegram com Docker"
 subtitle: "Telegram não é só pra vazar mensagem"
 bigimg: /img/docker.gif
-tags: [r, rstudio, infra, hadoop, spark]
+tags: [r, rstudio, infra, hadoop, spark, docker, telegram, bot]
 comments: true
 draft: true
 output:
@@ -25,17 +25,17 @@ Extraindo direto da Wikipédia, temos que:
 
 > Docker is a set of coupled software-as-a-service and platform-as-a-service products that use operating-system-level virtualization to develop and deliver software in packages called containers.
 
-Ao passo que container são definidos como:
+Ao passo que containers são definidos como:
 
 > Containers are (software in packages) isolated from each other and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating-system kernel and are thus more lightweight than virtual machines. 
 
-Em outras palavras, a ideia do docker é compartimentar uma virtualização do sistema operacional contendo apenas as depedências (bibliotecas, configurações) necessárias para entregar determinado produto (API, serviço, ambiente).
+Em outras palavras, a ideia do docker é compartimentar uma virtualização do sistema operacional contendo apenas as dependências (bibliotecas, configurações) necessárias para entregar determinado produto (API, serviço, ambiente).
 
 Na época que li sobre Docker, minha grande dúvida não era o "o que é?", mas "por quê?"
 
 ## Por quê Docker?
 
-Imagine, você acordar certo dia e instalar um pacote/biblioteca/programa e verificar que algo deixou de funcionar como deveria.
+Imagine acordar certo dia e instalar um pacote/biblioteca/programa e verificar que algo deixou de funcionar como deveria.
 
 Não faltam exemplos:
 
@@ -43,11 +43,13 @@ Não faltam exemplos:
 
 - Atualizar a versão do R para a 3.6.0 e ver que [o método `runif()` não retorna mais os mesmos números para mesma seed](https://blog.revolutionanalytics.com/2019/05/whats-new-in-r-360.html)
 
-- Atualizar a versão do R para a 3.6.0 e [descobrir que é necessário adaptar a leitura dos .rds de versões anteriores](https://blog.revolutionanalytics.com/2019/05/whats-new-in-r-360.html) - imagina o susto de não conseguir abrir os resultados de sua pesquisa.
+- Atualizar a versão do R para a 3.6.0 e [descobrir que é necessário adaptar a leitura dos .rds de versões anteriores](https://blog.revolutionanalytics.com/2019/05/whats-new-in-r-360.html) - imagine o susto de não conseguir abrir os resultados de sua pesquisa.
 
 - Atualizar algum pacote e descobrir que determinada função não existe ou não opera mais como antigamente (saudade `devtools`)
 
-Caso usassemos docker, estas situações seriam sanadas, pois cada análise/produto estaria sendo realizada em um ambiente personalizado sem conflito com a necessidade das outras análises/produtos.
+Caso usássemos docker estas situações seriam sanadas. 
+
+Cada análise/produto estaria sendo realizada em um ambiente personalizado sem conflito com a necessidade das outras análises/produtos.
 
 Na linguagem do docker, esse ambiente é uma `imagem` - representada por um arquivo (`dockerfile`) que tem as instruções para criar o ambiente do zero (do kernel do sistema operacional para ser mais específico).
 
@@ -94,9 +96,7 @@ Primeiramente, baixe o Telegram na playstore de seu celular.
 
 Eu também recomendo instalar o Telegram Desktop.
 
-Para ambos os casos, entre em contato com o [@botfather](https://telegram.me/botfather) - o bot dos bots.
-
-Aquele que fornece para você sua chave de acesso (token) para controle de um novo bot.
+Para ambos os casos, entre em contato com o [@botfather](https://telegram.me/botfather) - o bot dos bots - aquele que fornece para você sua chave de acesso (token) para controle de um novo bot.
 
 
 Ao acessar o chat do @botfather, uma série de opções e comandos se abrirão.
@@ -163,9 +163,9 @@ Observe que o final da chave `R_TELEGRAM_BOT_` tem o mesmo nome que colocamos co
 
 ## Criando uma imagem Docker
 
-Veja, que até o momento, não falamos sobre instalar o R na máquina.
+Veja que. até o momento, não falamos sobre instalar o R na máquina.
 
-Como o que nos interessa, é que o container gerado pela imagem Docker tenha o R, não precisamos instalar o software na máquina em si.
+Como o que nos interessa é que o container gerado pela imagem Docker contenha o R, não precisamos instalar o software na máquina em si.
 
 Uma imagem docker é o produto da compilação do arquivo chamado `dockerfile`.
 
@@ -347,7 +347,7 @@ RUN apt-get update \
       libssl-dev
 ```
 
-Com isso adicionamos duas bibliotecas importantes para o pacote `telegram.bot` funcionar.
+Com isso, adicionamos duas bibliotecas importantes para o pacote `telegram.bot` funcionar.
 
 Em seguida, adicionamos:
 
@@ -401,7 +401,7 @@ Nesse caso, o nome escolhido para a imagem foi `mangabot`
 
 O momento chegou!
 
-No terminal entre com o seguinte comando:
+No terminal, entre com o seguinte comando:
 
 ```
 `sudo docker run --rm <nome>

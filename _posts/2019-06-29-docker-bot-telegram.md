@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Montando sua infraestrutura de ciência de dados [parte 1]"
-subtitle: "R + RStudio + Shiny + Git + Hadoop + Hive + Spark + Docker"
-bigimg: /img/Jnrg.gif
+title: "Criando seu bot no Telegram com Docker"
+subtitle: "Telegram não é só pra vazar mensagem"
+bigimg: /img/docker.gif
 tags: [r, rstudio, infra, hadoop, spark]
 comments: true
 draft: true
@@ -11,7 +11,7 @@ output:
     keep_md: true
 ---
 
-Eu to muito feliz!
+Eu tô muito feliz!
 
 Meses postergando estudar [docker](https://en.wikipedia.org/wiki/Docker_(software)), finalmente risquei essa tarefa do meu to-do.
 
@@ -63,24 +63,33 @@ Caso você não tenha, ou não tenha ideia do que estou falando, acesse os segui
 
 As referências são voltadas para os serviços da [DigitalOcean](https://www.digitalocean.com/), mas na prática caso deseje usar as instâncias linux da AWS ou Google Cloud - it´s up to you.
 
-### Instalando o docker
+### Instalando o Docker
 
-Acesse seu terminal linux e atualize seus repositórios inicialmente
+Acesse seu terminal linux e atualize seus repositórios inicialmente:
 
 ```
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-Em seguida entre com os seguintes comandos:
+Removemos qualquer instalação prévia do docker com o seguinte comando:
 
 ```
-sudo apt-get remove docker docker-engine docker.io #aadasdasdassds
+sudo apt-get remove docker docker-engine docker.io
+```
 
+Em seguida, instalamos e ativamos o docker em nossas máquinas:
+
+```
 sudo apt install docker.io
 
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
+
+Vamos agora criar nossa primeira imagem docker.
+
+### Criando uma imagem Docker
+
 
 
 ```

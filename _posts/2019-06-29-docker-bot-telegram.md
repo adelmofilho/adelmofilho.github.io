@@ -19,6 +19,8 @@ Nesse post quero abordar a criação de um container em docker para hospedar um 
 
 Vamos utilizar o pacote `telegram.bot` do R para isso!
 
+<p><img src="https://goto.docker.com/rs/929-FJL-178/images/Docker%20Horizontal%20Large.png" alt="@botfather initial chat" align="center"></p>
+
 ## O que é docker?
 
 Extraindo direto da Wikipédia, temos que:

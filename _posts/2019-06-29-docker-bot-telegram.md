@@ -5,7 +5,7 @@ subtitle: "Telegram não é só pra vazar mensagem"
 bigimg: /img/docker.gif
 tags: [r, rstudio, infra, hadoop, spark, docker, telegram, bot]
 comments: true
-draft: true
+draft: false
 output:
   html_document:
     keep_md: true
@@ -53,7 +53,7 @@ Caso usássemos docker estas situações seriam sanadas.
 
 Cada análise/produto estaria sendo realizada em um ambiente personalizado sem conflito com a necessidade das outras análises/produtos.
 
-Na linguagem do docker, esse ambiente é uma `imagem` - representada por um arquivo (`dockerfile`) que tem as instruções para criar o ambiente do zero (do kernel do sistema operacional para ser mais específico).
+Na linguagem do docker, esse ambiente é uma `compartimento` criada por uma `imagem`, a qual é representada por um arquivo (`dockerfile`) que possui as instruções para criar o ambiente do zero (do kernel do sistema operacional para ser mais específico).
 
 ## Esticando as mangas
 
@@ -90,7 +90,6 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-Vamos agora criar nossa primeira imagem docker.
 
 ## Montando nosso bot no Telegram
 
@@ -109,9 +108,9 @@ Escreva `/newbot` e responda as perguntas conformem forem aparecendo para ter ac
 
 <p><img src="https://i.imgur.com/8WMa8kU.png" alt="@botfather initial chat" align="center"></p>
 
-A partir desse momento nosso bot existe mas não possui qualquer comando associado a ele.
+A partir desse momento nosso bot existe, mas não possui qualquer comando associado à ele.
 
-No caso acima, o bot poderá ser encontrado pela @botAF_mangabot e seu nome de usuário será mangabot.
+No caso acima, o bot poderá ser encontrado pela `@botAF_mangabot` e seu nome de usuário será `mangabot`.
 
 ## Dando inteligência ao bot
 
@@ -329,9 +328,7 @@ Vamos adaptá-lo para nosso contexto!
 
 ## Escrevendo a imagem docker de nosso bot
 
-Vamos editar nosso `dockerfile`.
-
-Primeiro, removendo a seguinte linha:
+Vamos começar a editar nosso `dockerfile` removendo a seguinte linha:
 
 ```
 CMD ["R"]
@@ -339,9 +336,7 @@ CMD ["R"]
 
 Essa linha existia para que, quando o container fosse iniciado, uma sessão do R fosse aberta para trabalho.
 
-No nosso caso, o que desejamos é que nosso `bot.R` seja executado.
-
-Adicionamos nas últimas linhas o seguinte código:
+No nosso caso, o que desejamos é que nosso `bot.R` seja executado. Assim, adicionamos nas últimas linhas o seguinte código:
 
 ```
 RUN apt-get update \
@@ -365,7 +360,7 @@ Pulamos mais algumas linhas para adicionar o comando de instalação do pacote `
 RUN R -e "install.packages('telegram.bot', dependencies = TRUE)"
 ```
 
-Finalmente, informamos que o container, quando iniciado, deve executar o código `bot.R` através do RScript.
+E, finalmente, informamos que o container, quando iniciado, deve executar o código `bot.R` através do RScript.
 
 ```
 ENTRYPOINT ["Rscript", "bot.R"]
@@ -373,7 +368,7 @@ ENTRYPOINT ["Rscript", "bot.R"]
 
 Salve as edições e saia do arquivo.
 
-O arquivo finalizado pode ser encontrado em: https://gist.github.com/adelmofilho/2451563b93e2fcde8c76d2ba91291f5e
+O arquivo finalizado pode ser encontrado [Aqui](https://gist.github.com/adelmofilho/2451563b93e2fcde8c76d2ba91291f5e).
 
 ## Criando nossa imagem Docker
 

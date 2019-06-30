@@ -63,7 +63,7 @@ Caso você não tenha, ou não tenha ideia do que estou falando, acesse os segui
 
 As referências são voltadas para os serviços da [DigitalOcean](https://www.digitalocean.com/), mas na prática caso deseje usar as instâncias linux da AWS ou Google Cloud - it´s up to you.
 
-### Instalando o Docker
+## Instalando o Docker
 
 Acesse seu terminal linux e atualize seus repositórios inicialmente:
 
@@ -88,7 +88,7 @@ sudo systemctl enable docker
 
 Vamos agora criar nossa primeira imagem docker.
 
-### Montando nosso bot no Telegram
+## Montando nosso bot no Telegram
 
 Primeiramente, baixe o Telegram na playstore de seu celular.
 
@@ -111,7 +111,7 @@ A partir desse momento nosso bot existe mas não possui qualquer comando associa
 
 No caso acima, o bot poderá ser encontrado pela @botAF_mangabot e seu nome de usuário será mangabot.
 
-### Dando inteligência ao bot
+## Dando inteligência ao bot
 
 Para ilustrar a orquestração do bot via pacote `telegram.bot` vamos criar um script R com a função básica de todo bot: `/start`.
 
@@ -161,7 +161,7 @@ R_TELEGRAM_BOT_botname = <TOKEN>
 
 Observe que o final da chave `R_TELEGRAM_BOT_` tem o mesmo nome que colocamos como argumento na função `Updater` no código `bot.R` - Portanto, editável.
 
-### Criando uma imagem Docker
+## Criando uma imagem Docker
 
 Veja, que até o momento, não falamos sobre instalar o R na máquina.
 
@@ -325,7 +325,7 @@ Com ele, o R na versão 3.6.0 seria instalado juntamente com diversos pacotes li
 
 Vamos adaptá-lo para nosso contexto!
 
-### Criando a imagem docker de nosso bot
+## Escrevendo a imagem docker de nosso bot
 
 Vamos editar nosso `dockerfile`.
 
@@ -371,6 +371,71 @@ ENTRYPOINT ["Rscript", "bot.R"]
 
 Salve as edições e saia do arquivo.
 
-O arquivo finalizado pode ser encontrad
+O arquivo finalizado pode ser encontrado em: https://gist.github.com/adelmofilho/2451563b93e2fcde8c76d2ba91291f5e
 
-<script src="https://gist.github.com/adelmofilho/2451563b93e2fcde8c76d2ba91291f5e.js"></script>
+## Criando nossa imagem Docker
+
+Confira se você está na mesma pasta dos arquivos que criamos - e se todos eles estão na mesma pasta.
+
+Crie a sua imagem de nome `<nome>` através do seguinte comando:
+
+```
+sudo docker build -t <nome> .
+```
+
+Aguarde o processo de geração da imagem.
+
+Uma vez finalizada, confira a imagem criada pelo comando:
+
+```
+sudo docker image ls
+```
+
+O seguinte output é esperado:
+
+<p><img src="https://i.imgur.com/fB87fIT.png" alt="@botfather initial chat" align="center"></p>
+
+Nesse caso, o nome escolhido para a imagem foi `mangabot`
+
+## Iniciando um container Docker
+
+O momento chegou!
+
+No terminal entre com o seguinte comando:
+
+```
+`sudo docker run --rm <nome>
+```
+
+O argumento `--rm` faz com que o docker seja removido uma vez que for necessário sair dele.
+
+Uma vez que o container iniciar, você vai verificar que o terminal ficará inacessível.
+
+Nesse momento feche sua conexão com a máquina e inicie uma nova - o docker e seu bot estarão funcionando!
+
+<p><img src="https://i.imgur.com/syUarVw.png" alt="@botfather initial chat" align="center"></p>
+
+Para enxergar todos os container e seus status (rodando ou exited), entre com:
+
+```
+sudo docker ps -a
+```
+
+<p><img src="https://i.imgur.com/WqJ7tZG.png" alt="@botfather initial chat" align="center"></p>
+
+
+## Considerações finais
+
+One-day post! Great Job!
+
+A ideia nesse post foi de explorar o uso do Docker, utilizando a criação de bot para telegram como contexto.
+
+Nos próximos posts iremos abordar mais a temática dos bots e como eles podem facilitar nosso dia-a-dia.
+
+Obrigado pela leitura!
+
+## Referências adicionais
+
+- https://docs.docker.com/engine/reference/commandline/docker/
+- https://medium.com/tmobile-tech/using-docker-to-deploy-an-r-plumber-api-863ccf91516d
+- https://www.statworx.com/at/blog/running-your-r-script-in-docker/

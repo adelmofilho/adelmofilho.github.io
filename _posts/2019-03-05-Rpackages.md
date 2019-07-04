@@ -24,8 +24,99 @@ Hadley escreve em seu [livro](http://r-pkgs.had.co.nz/):
 
 E, digo, esta frase é mais problemática que indireta em whatsapp - tem que ler umas trocentas vezes pra pegar o sentido.
 
-,,,,,,,,,,,,,
 
+
+````
+# Criar pacote de funções em R
+
+## Pacotes necessários
+library(devtools)
+library(roxygen2)
+library(testthat)
+library(knitr)
+library(usethis)
+library(covr)
+library(testthat)
+
+# Configurações startup ------------------------------------------------------------------
+
+## Criar pacote:
+usethis::create_package("C:/Users/Adelmo Filho/Dropbox/HopeCO/kRypto")
+
+## Use GITHUB
+usethis::use_git(message = "Initial commit")
+
+usethis::browse_github_pat()
+
+usethis::edit_r_environ()
+
+  # GITHUB_PAT = a797f6aed18d22e2807d3a798b12956fdb9f74c7
+
+  # Deixar o Renviron com uma linha em branca no fim
+
+usethis::use_github(protocol = "https")
+
+usethis::use_github_links()
+
+usethis::use_data(cryptocurrency_list)
+
+## Definir Licença do pacote
+usethis::use_gpl3_license("tenispolaR")
+
+## Criar readme.md
+usethis::use_readme_md()
+
+## Definir as badges do pacote
+usethis::use_cran_badge()
+usethis::use_lifecycle_badge("stable")
+
+## Usar travis no pacote (logar no travis antes)  += Continuous integration
+usethis::use_travis(browse = interactive())
+usethis::use_coverage(type = c("codecov"))
+usethis::use_appveyor()
+
+## Criar o testthat para o pacote
+usethis::use_testthat()
+
+## Adicionar logo
+usethis::use_logo("C:/Users/Adelmo Filho/Documents/logo.png")
+
+
+# Configurações contínuas ----------------------------------------------------------------
+
+## Criar funções em scripts .R na pasta R
+usethis::use_r("encryption")
+
+## Selecionar os pacotes que serão instalados em paralelo
+usethis::use_package("testthat", type = "Suggests")
+usethis::use_package("stringi", type = "Imports")
+usethis::use_package("xml2", type = "Imports")
+usethis::use_package("rvest", type = "Imports")
+usethis::use_package("dplyr", type = "Imports")
+usethis::use_package("purrr", type = "Imports")
+usethis::use_package("stringr", type = "Imports")
+usethis::use_package("httr", type = "Imports")
+usethis::use_package("lubridate", type = "Imports")
+
+
+## Criar os arquivos para testthat
+usethis::use_test("listing")
+
+## Rodar a cada release
+
+# Restart R Session (Ctrl+Shift+F10)
+# Document Package (Ctrl+Shift+D)
+# Check Package (Ctrl+Shift+E)
+
+usethis::use_version()
+
+## Construir pacote
+devtools::build()
+
+## Criar site
+pkgdown::build_site()
+
+```
 
 
 <script type="text/x-mathjax-config">

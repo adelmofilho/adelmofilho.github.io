@@ -401,7 +401,7 @@ O momento chegou!
 No terminal, entre com o seguinte comando:
 
 ```
-`sudo docker run --rm <nome>
+sudo docker run --rm <nome>
 ```
 
 O argumento `--rm` faz com que o docker seja removido uma vez que for necessário sair dele.

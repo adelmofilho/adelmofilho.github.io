@@ -433,6 +433,6 @@ Obrigado pela leitura!
 
 ## Referências adicionais
 
-- https://docs.docker.com/engine/reference/commandline/docker/
-- https://medium.com/tmobile-tech/using-docker-to-deploy-an-r-plumber-api-863ccf91516d
-- https://www.statworx.com/at/blog/running-your-r-script-in-docker/
+- [Documentação Docker](https://docs.docker.com/engine/reference/commandline/docker/)
+- [Docker e Shiny](https://medium.com/tmobile-tech/using-docker-to-deploy-an-r-plumber-api-863ccf91516d)
+- [R e Docker](https://www.statworx.com/at/blog/running-your-r-script-in-docker/)

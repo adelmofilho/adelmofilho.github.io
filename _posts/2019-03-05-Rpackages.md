@@ -18,11 +18,16 @@ Experimente ver quantos pacotes temos disponíveis agora com o chunk de código 
 nrow(available.packages())
 ```
 
-Hadley escreve em seu [livro](http://r-pkgs.had.co.nz/): 
+Com essa quantidade de pacotes, não é díficil imaginar o quão diversa (em metodologia) foi a construção desses pacotes.
 
-> **pacotes são unidades fundamentais de códigos R reproduzíveis**
 
-E, digo, esta frase é mais problemática que indireta em whatsapp - tem que ler umas trocentas vezes pra pegar o sentido.
+
+
+
+
+
+
+
 
 
 

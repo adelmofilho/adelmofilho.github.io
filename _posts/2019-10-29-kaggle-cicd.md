@@ -25,7 +25,7 @@ Já observamos isso acontecendo nas squads tradicionais de [DevOps](https://en.w
 
 E a pergunta que nos resta é: `como pensar um MLOps, combinando os desafios do machine learning com as boas práticas de CICD que já existem?`
 
-<div style="width:100%;height:0;padding-bottom:46%;position:relative;"><iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY">via GIPHY</a></p>
+<div style="width:100%;height:0;padding-bottom:46%;position:relative;"><iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY"></a></p>
 
 Eu também não sei!
 

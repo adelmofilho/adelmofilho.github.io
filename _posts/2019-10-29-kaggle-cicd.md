@@ -25,7 +25,7 @@ Já observamos isso acontecendo nas squads tradicionais de [DevOps](https://en.w
 
 E a pergunta que nos resta é: `como pensar um MLOps, combinando os desafios do machine learning com as boas práticas de CICD que já existem?`
 
-<div style="align:center"><iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY"></a></p></div>
+<div style="align-text:center"><iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY"></a></p></div>
 
 Eu também não sei!
 
@@ -43,4 +43,9 @@ Do último ano prá cá, vimos como esse pensamento se estruturou na forma de di
 
 - [Itaú Unibanco: How we built a CI/CD Pipeline for machine learning with online training in Kubeflow](https://cloud.google.com/blog/products/ai-machine-learning/itau-unibanco-how-we-built-a-cicd-pipeline-for-machine-learning-with-online-training-in-kubeflow)
 
+Foi nesse cenário que junto com [@thalsin](https://www.linkedin.com/in/thales-lima-391372155) e [@eduardovelludo
+](https://www.linkedin.com/in/eduardo-prado-a775a5137/), decidimos tornar uma competição no [@Kaggle](https://twitter.com/kaggle) um simulacro do que esperariamos num cenário ideal de MLOps. 
 
+Os eventos a seguir datam de 1 semana.
+
+<iframe src="https://giphy.com/embed/j9djzcMmzg8ow" width="480" height="275" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/korea-north-headlines-j9djzcMmzg8ow"></a></p>

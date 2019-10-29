@@ -83,9 +83,29 @@ A primeira - e mais honesta - pergunta partiu dos cientistas.
 
 Por adotarmos python no projeto, o uso de [jupyter notebooks](https://jupyter.org/) era natural. Mas, a partir dessa decisão outras perguntas vinheram e dessas muito outras:
 
-> Trabalharemos num computador local ou em uma máquina na cloud? (cloud)
+```
+
+├── Trabalharemos em máquina local ou na cloud?
+│   └── Cloud
+│        ├── Cloud pública ou privada?
+│        │   ├── Cloud Pública
+│        │       ├── AWS, GCP ou Azure?
+│        │           ├── Qual delas oferece free tier mais vantajoso?
+│        │               ├── GCP
+│        │   
+├        ├── Quais serão os requisitos   
+│            ├──
+├── dist (or build)
+├── node_modules
+├── bower_components (if using bower)
+├── test
+├── Gruntfile.js/gulpfile.js
+├── README.md
+├── package.json
+├── bower.json (if using bower)
+└── .gitignore
+```
   
-  >> 
 
   >> drer  
 

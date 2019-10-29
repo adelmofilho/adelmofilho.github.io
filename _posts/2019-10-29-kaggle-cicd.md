@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Montando sua infraestrutura de ciência de dados [parte 2]"
-subtitle: "Segurança do Servidor"
-bigimg: /img/hs.gif
-tags: [r, rstudio, infra, hadoop, spark]
+title: "Montando seu pipeline de CICD do zero e outros contos de MLOps"
+subtitle: "A kaggle horror story"
+bigimg: /img/esteira.gif
+tags: [CICD, CI, CD, MLOps, kaggle, esteira, pipeline]
 comments: true
 draft: true
 output:

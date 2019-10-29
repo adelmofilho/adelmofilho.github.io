@@ -25,7 +25,7 @@ Já observamos isso acontecendo nas squads tradicionais de [DevOps](https://en.w
 
 E a pergunta que nos resta é: `como pensar um MLOps, combinando os desafios do machine learning com as boas práticas de CICD que já existem?`
 
-<div style="align-text:center"><iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY"></a></p></div>
+<div style="width:100%;height:0;padding-bottom:46%;position:relative;"><iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY">via GIPHY</a></p>
 
 Eu também não sei!
 
@@ -48,4 +48,4 @@ Foi nesse cenário que junto com [@thalsin](https://www.linkedin.com/in/thales-l
 
 Os eventos a seguir datam de 1 semana.
 
-<iframe src="https://giphy.com/embed/j9djzcMmzg8ow" width="480" height="275" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/korea-north-headlines-j9djzcMmzg8ow"></a></p>
+<div style="width:100%;height:0;padding-bottom:57%;position:relative;"><iframe src="https://giphy.com/embed/j9djzcMmzg8ow" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/korea-north-headlines-j9djzcMmzg8ow"></a></p>

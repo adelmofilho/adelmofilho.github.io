@@ -81,33 +81,39 @@ A primeira - e mais honesta - pergunta partiu dos cientistas.
 
 > Onde vamos trabalhar?
 
+Apesar de não ser uma questão de CICD, entedemos que a resposabilidade de criar o ambiente para a atuação do cientista caberia a Engenharia de Machine Learning, tanto pelas competências envolvidas, quanto pela facilidade a posteriori de adequar o ambiente de prototipação com o deploy.
+
 Por adotarmos python no projeto, o uso de [jupyter notebooks](https://jupyter.org/) era natural. Mas, a partir dessa decisão outras perguntas vinheram e dessas muito outras:
 
 ```
-
-├── Trabalharemos em máquina local ou na cloud?
-│   └── Cloud
-│        ├── Cloud pública ou privada?
-│        │   └── Cloud Pública
-│        │       └── AWS, GCP ou Azure?
-│        │           └── Qual delas oferece free tier mais vantajoso?
-│        │               └── GCP
-│        │   
-│        ├── Quais serão os requisitos da máquina?  
-│            ├── Alinhamento com o time de ciência de dados
-│            ├── Como garantir um ambiente sandbox ao cientista?
-│            │    └── Aplicação em containers
-│            ├── 
-│
-└── .gitignore
+└── Trabalharemos em máquina local ou na cloud?
+     └── Cloud
+         ├── Cloud pública ou privada?
+         │   └── Cloud Pública
+         │       └── AWS, GCP ou Azure?
+         │           └── Qual delas oferece free tier mais vantajoso?
+         │               └── GCP
+         │   
+         └── Quais serão os requisitos da máquina?  
+             ├── Alinhamento com cientistas de dados
+             ├── Como garantir um ambiente sandbox ao cientista?
+             │    └── Conteinerização das aplicações
+             └── Como garantir a contínua atualização dos requisitos?
+                   ├── Conteinerização das aplicações (dockerfile)
+                   └── Como tornar a atualização automatizada?
+                        └── Ferramentas de IaaC
+                             └── Qual delas é agnostica à cloud?
+                                  └── Terraform
 ```
-  
 
-  >> drer  
+### Infra as a Code
+
+<script src="https://gitlab.com/snippets/1908546.js"></script>
+
+### Ambiente de Prototipação
 
 
 
-## Ato 2 - 
 
 
 

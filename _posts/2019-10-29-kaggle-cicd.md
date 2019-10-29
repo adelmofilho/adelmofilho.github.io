@@ -73,7 +73,25 @@ A engenharia se preocuparia em testar e implementar diferentes tecnologias para 
 
 O time dos cientistas se preocuparia em testar diferentes soluções com a certeza de que a engenharia seria capaz de fornecer ferramental e adaptações na esteira de CICD para o deploy desejado.
 
+Tratamos esse processo de forma bem consciente, na forma de um "teatro" que pudesse simular uma interação real entre estes dois times, para que pudessemos visualizar possíveis pontos de atenção e atrito na construção deste MLOps.
+
 ## Ato 1 - The gathering of clouds
+
+A primeira - e mais honesta - pergunta partiu dos cientistas.
+
+> Onde vamos trabalhar?
+
+Por adotarmos python no projeto, o uso de [jupyter notebooks](https://jupyter.org/) era natural. Mas, a partir dessa decisão outras perguntas vinheram e dessas muito outras:
+
+> Trabalharemos num computador local ou em uma máquina na cloud? (cloud)
+  
+  >> 
+
+  >> drer  
+
+
+
+## Ato 2 - 
 
 
 

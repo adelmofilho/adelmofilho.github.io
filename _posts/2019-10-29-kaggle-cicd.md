@@ -25,13 +25,22 @@ Já observamos isso acontecendo nas squads tradicionais de [DevOps](https://en.w
 
 E a pergunta que nos resta é: `como pensar um MLOps, combinando os desafios do machine learning com as boas práticas de CICD que já existem?`
 
-<iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY"></a></p>
+<div style="width:100%"><iframe src="https://giphy.com/embed/AvAVxpOeUcxgY" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/question-AvAVxpOeUcxgY"></a></p></div>
 
 Eu também não sei!
 
-A boa noticia é que estamos todos tentando descobrir
+A boa noticia é que estamos todos tentando descobrir.
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1982_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"MLOps","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=MLOps","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
+Do último ano prá cá, vimos como esse pensamento se estruturou na forma de diversos textos procurando pensar sobre o tema. Entre os meus favoritos estão:
+
+- [Continuous Delivery for Machine Learning](https://martinfowler.com/articles/cd4ml.html)
+
+- [Continuous Delivery for ML Models](https://medium.com/onfido-tech/continuous-delivery-for-ml-models-c1f9283aa971)
+
+- [Deploy your machine learning pipelines](https://medium.com/@igorzabukovec/deploy-your-machine-learning-pipelines-28007b985202)
+
+- [Itaú Unibanco: How we built a CI/CD Pipeline for machine learning with online training in Kubeflow](https://cloud.google.com/blog/products/ai-machine-learning/itau-unibanco-how-we-built-a-cicd-pipeline-for-machine-learning-with-online-training-in-kubeflow)
 
 

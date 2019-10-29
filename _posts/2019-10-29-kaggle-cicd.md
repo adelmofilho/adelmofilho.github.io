@@ -43,9 +43,37 @@ Do último ano prá cá, vimos como esse pensamento se estruturou na forma de di
 
 - [Itaú Unibanco: How we built a CI/CD Pipeline for machine learning with online training in Kubeflow](https://cloud.google.com/blog/products/ai-machine-learning/itau-unibanco-how-we-built-a-cicd-pipeline-for-machine-learning-with-online-training-in-kubeflow)
 
-Foi nesse cenário que junto com [@thalsin](https://www.linkedin.com/in/thales-lima-391372155) e [@eduardovelludo
+E, foi nesse cenário que junto com [@thalsin](https://www.linkedin.com/in/thales-lima-391372155) e [@eduardovelludo
 ](https://www.linkedin.com/in/eduardo-prado-a775a5137/), decidimos tornar uma competição no [@Kaggle](https://twitter.com/kaggle) um simulacro do que esperariamos num cenário ideal de MLOps. 
 
-Os eventos a seguir datam de 1 semana.
+> Os eventos a seguir datam de 1 semana.
 
 <div style="width:100%;height:0;padding-bottom:57%;position:relative;"><iframe src="https://giphy.com/embed/j9djzcMmzg8ow" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/korea-north-headlines-j9djzcMmzg8ow"></a></p>
+
+
+## Prólogo 
+
+Com mais de 1200 times e dois meses para seu deadline, a competição kaggle [ASHRAE - Great Energy Predictor III](https://www.kaggle.com/c/ashrae-energy-prediction) tem como objetivo realizar a previsão do consumo de energia predial hora a hora baseado em medições climáticas, localização etc.
+
+De fato, um problema de regressão com grande potêncial de emsembling de modelos e feature engineering.
+
+Ao ingressarmos na competição, fizemos a escolha de nos separarmos em duas equipes: (1) cientista de dados - com foco no entendimento e modelagem do problema e (2) engenharia de machine learning - com foco em montar a esteira de "deploy" dos modelos criados.
+
+"deploy"
+
+Deploy entre aspas. 
+
+Diferente do deploy tradicional - em que realizamos requisições via API para escoragem de uma base ou observação - nosso deploy consiste em submeter o melhores modelos criados (base escorada) de forma automátizada para o Kaggle.
+
+E foi nesse primeiro entendimento da target de nosso problema de engenharia que surgiu a necessidade de alinhar muito bem, as entregas e requisitos de cada um dos times. 
+
+Apesar de estarmos buscando o mesmo desafio, as responsabilidades e atividades exigiriam focos completamente diferentes.
+
+A engenharia se preocuparia em testar e implementar diferentes tecnologias para a esteira de CICD com a certeza de que teria os inputs dos cientistas de dados em um formato especifico.
+
+O time dos cientistas se preocuparia em testar diferentes soluções com a certeza de que a engenharia seria capaz de fornecer ferramental e adaptações na esteira de CICD para o deploy desejado.
+
+## Ato 1 - The gathering of clouds
+
+
+

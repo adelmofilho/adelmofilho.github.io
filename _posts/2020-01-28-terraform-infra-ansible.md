@@ -26,7 +26,7 @@ Um bloco de notas com os comandos pra recuperar o servidor do zero...
 Um bloco de notas...
 
 <center>
-<img src="/img/pocoyo.jpg" height=220 style="display: block; margin: auto">
+<img src="/img/pocoyo.jpg" style="display: block; margin: auto">
 </center>
 
 <p align="center">O importante é a gente ir evoluindo, né?</p>
@@ -52,5 +52,7 @@ Todas as instruções para operacionalização do projeto estão em seu `README`
 <br>
 
 ## Infrastructure as a Code
+
+
 
 <br>

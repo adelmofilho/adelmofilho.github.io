@@ -25,6 +25,8 @@ Um bloco de notas com os comandos pra recuperar o servidor do zero...
 
 Um bloco de notas...
 
-<p align="center"><img src="../img/pocoyo.jpg" align="center" height=220/>
+<p align="center"><img src="/img/pocoyo.jpg" align="center" height=220/>
 </p>
+
+<p align="center">O importante é a gente ir evoluindo, né?</p>
 

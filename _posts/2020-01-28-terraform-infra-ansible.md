@@ -26,7 +26,7 @@ Um bloco de notas com os comandos pra recuperar o servidor do zero...
 Um bloco de notas...
 
 <center>
-<img src="/img/pocoyo.jpg" style="display: block; margin: auto">
+<img src="/img/pocoyo.jpg" style="display: block; margin: auto;height: 220px;">
 </center>
 
 <p align="center">O importante é a gente ir evoluindo, né?</p>
@@ -46,7 +46,7 @@ A ideia é reduzir o desgaste gerado na configuração dessas máquinas, já dis
 Todas as instruções para operacionalização do projeto estão em seu `README`. 
 
 <center>
-<blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr">Primeiro projetinho de 2020! <a href="https://twitter.com/hashtag/jojoprojects?src=hash&amp;ref_src=twsrc%5Etfw">#jojoprojects</a> <a href="https://twitter.com/hashtag/IaaC?src=hash&amp;ref_src=twsrc%5Etfw">#IaaC</a> <a href="https://twitter.com/hashtag/d4c?src=hash&amp;ref_src=twsrc%5Etfw">#d4c</a><a href="https://t.co/ycd09MFi1x">https://t.co/ycd09MFi1x</a></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </center>
 
 <br>

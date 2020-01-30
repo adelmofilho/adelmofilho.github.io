@@ -5,7 +5,7 @@ subtitle: "Infraestrutura como código"
 bigimg: /img/goku.gif
 tags: [cloud, Terraform, iaac, Ansible, digital-ocean]
 comments: true
-draft: true
+draft: false
 output:
   html_document:
     keep_md: true
@@ -50,7 +50,7 @@ A ideia é reduzir o desgaste gerado na configuração dessas máquinas, já dis
 Todas as instruções para operacionalização do projeto estão em seu `README`. 
 
 <center>
-< blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </center>
 
 ## Infrastructure as a Code

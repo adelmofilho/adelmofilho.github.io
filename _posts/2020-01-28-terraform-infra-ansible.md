@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Voando nas clouds"
+title: "Voando nas nuvens"
 subtitle: "Infraestrutura como código"
 bigimg: /img/goku.gif
 tags: [cloud, terraform, iaac, ansible, digital-ocean]

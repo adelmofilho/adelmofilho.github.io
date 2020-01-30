@@ -70,7 +70,7 @@ Aqui, vamos focar em duas ferramentas complementares: Terraform e Ansible.
 Terraform é um software de código aberto para gerenciamento de Infra as a Code que utiliza de linguagem proprietária (HCL) para comunicação com as APIs das provedoras de Cloud.
 
 <center>
-<img src="/img/Terraform.png" style="display: block; margin: auto;height: 80px;">
+<img src="/img/terraform.png" style="display: block; margin: auto;height: 80px;">
 </center>
 
 Duas características fazem o Terraform ser uma opção interessante pra sua IaaC.
@@ -90,7 +90,7 @@ Caso tenha, interesse o [material introdutório do Terraform](https://www.Terraf
 Ansible é uma ferramenta de provisionamento de software. De forma curta, ele é capaz de acessar uma máquina já existente via SSH e promover a instalação e configuração de softwares. 
 
 <center>
-<img src="/img/Ansible.png" style="display: block; margin: auto;height: 80px;">
+<img src="/img/ansible.png" style="display: block; margin: auto;height: 80px;">
 </center>
 
 As chamadas *tasks* que ele executará devem estar contidas em arquivos .yaml, denominados `playbooks`. 

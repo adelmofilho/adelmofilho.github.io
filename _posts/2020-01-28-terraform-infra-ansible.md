@@ -17,11 +17,13 @@ Acessei meu servidor, e quando fui conferir o status de um banco de dados me dep
 
 > Send us 0.5 BTC to recover your database
 
+Aquele vixe, atrás de eita.
+
 Por pior que tenha sido ser hackeado, no futuro isso me faria estudar mais sobre segurança e a comprar bitcoins (isso não foi tão bom).
 
-Naquela época, apesar do susto, estava tranquilo, pois tinha comigo meu bloco de notas com os comandos pra recuperar o servidor do zero.
+Apesar do susto, estava tranquilo, pois tinha comigo meu bloco de notas com os comandos para recuperar o servidor do zero.
 
-Um bloco de notas com os comandos pra recuperar o servidor do zero...
+Um bloco de notas com os comandos para recuperar o servidor do zero...
 
 Um bloco de notas...
 
@@ -31,15 +33,17 @@ Um bloco de notas...
 
 <p align="center">O importante é a gente ir evoluindo, né?</p>
 
-Não nego que nesses anos até foi divertido subir na unha um cluster spark, mapear cada porta do hadoop, resolver os bugs de colocar um servidor R-shiny num raspberry. 
+Não nego que, nesses anos, até foi divertido subir na unha um cluster spark, mapear cada porta do hadoop, resolver os bugs de colocar um servidor R-shiny num raspberry. 
 
-Mas ter que refazer todo o processo duas, três vezes por ter bloqueado meu próprio ip, já era demais.
+Mas, ter que refazer todo o processo duas, três vezes por ter bloqueado meu próprio ip, já era demais.
 
-Por isso, todo o jogo virou quando conheci as ferramentas de Infra as a Code (IaaC).
+Todo esse ciclo mudou quando conheci as ferramentas de Infra as a Code (IaaC).
+
+Neste post, quero compartilhar um projeto recente que escrevi para por um ponto final nesta trabalheira de subir e derrubar máquinas na cloud.
 
 ## Tl;dr
 
-O projeto `Dirty Deeds Done Dirt Cheap` disponibiliza um conjunto de scripts em `terraform` e `ansible` para criação de instâncias na cloud da Digital Ocean.
+O projeto `Dirty Deeds Done Dirt Cheap` disponibiliza um conjunto de scripts em terraform e ansible para criação de instâncias na cloud da Digital Ocean.
 
 A ideia é reduzir o desgaste gerado na configuração dessas máquinas, já disponibilizando ferramentas de segurança e ambiente para prototipagem com docker.
 
@@ -53,6 +57,19 @@ Todas as instruções para operacionalização do projeto estão em seu `README`
 
 ## Infrastructure as a Code
 
+Quando encaramos a construção e configuração da nossa infraestrutura de processamento (e.b. computadores) como um código, passamos a ter um menor custo (tempo, dinheiro), menor risco de erros humanos e podemos versionar nossos códigos para melhor rastreabilidade de erros e colaboração com parceiros.
 
+Só vantagens para o desenvolvedor.
+
+Existem diferentes linguagens, ferramentas para trabalharmos com IaaC. Direcionadas para uma cloud especifica ou multi-cloud; serverless ou com arquitetura cliente-servidor; declarativas ou imperativas.
+
+Vale apena explorar as alternativas, se tiver interesse no tema.
+
+Aqui, vamos focar em duas opções complementares: terraform e ansible.
+
+### Terraform
+
+
+### Ansible
 
 <br>

@@ -3,7 +3,7 @@ layout: post
 title: "Voando nas nuvens"
 subtitle: "Infraestrutura como código"
 bigimg: /img/goku.gif
-tags: [cloud, terraform, iaac, ansible, digital-ocean]
+tags: [cloud, Terraform, iaac, Ansible, digital-ocean]
 comments: true
 draft: true
 output:
@@ -43,7 +43,7 @@ Neste post, quero compartilhar um projeto recente que escrevi para por um ponto 
 
 ## Tl;dr
 
-O projeto `Dirty Deeds Done Dirt Cheap` disponibiliza um conjunto de scripts em terraform e ansible para criação de instâncias na cloud da Digital Ocean.
+O projeto `Dirty Deeds Done Dirt Cheap` disponibiliza um conjunto de scripts em Terraform e Ansible para criação de instâncias na cloud da Digital Ocean.
 
 A ideia é reduzir o desgaste gerado na configuração dessas máquinas, já disponibilizando ferramentas de segurança e ambiente para prototipagem com docker.
 
@@ -52,8 +52,6 @@ Todas as instruções para operacionalização do projeto estão em seu `README`
 <center>
 < blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </center>
-
-<br>
 
 ## Infrastructure as a Code
 
@@ -69,35 +67,35 @@ Aqui, vamos focar em duas ferramentas complementares: Terraform e Ansible.
 
 ### Terraform
 
-Terraform é um software de código aberto para gerenciamento de Infra as a Code que utiliza de línguagem proprietária (HCL) para comunicação com as APIs das provedoras de Cloud.
+Terraform é um software de código aberto para gerenciamento de Infra as a Code que utiliza de linguagem proprietária (HCL) para comunicação com as APIs das provedoras de Cloud.
 
 <center>
-<img src="/img/terraform.png" style="display: block; margin: auto;height: 80px;">
+<img src="/img/Terraform.png" style="display: block; margin: auto;height: 80px;">
 </center>
 
-Duas características fazem o Terraform ser uma opção interssante pra sua IaaC.
+Duas características fazem o Terraform ser uma opção interessante pra sua IaaC.
 
-Primeiro, antes de enviar requisições à API da cloud, Terraform  cria um plano de execução que permite verificar todos os recursos e/ou modificações necessárias na sua infraestrutura. 
+Primeiro, antes de enviar requisições à API da cloud, Terraform cria um plano de execução que permite verificar todos os recursos e/ou modificações necessárias na sua infraestrutura. 
 
-O plano ainda conta um grafo de depedência das alterações necessárias, o que permite a paralelização de atividades.
+O plano ainda conta um grafo de dependência das alterações necessárias, o que permite a paralelização de atividades.
 
 Somado a isso, para realizar modificações numa infra já existente não é necessariamente obrigatório reconstruir ela do zero. 
 
 As execuções criam um arquivo (.tfstate) que armazena os recursos, configurações e metadados da infra criada pelo Terraform. 
 
-Caso tenha, interesse o [material introdutório do Terraform](https://www.terraform.io/intro/index.html) é um bom ponto de partida.
+Caso tenha, interesse o [material introdutório do Terraform](https://www.Terraform.io/intro/index.html) é um bom ponto de partida.
 
 ### Ansible
 
 Ansible é uma ferramenta de provisionamento de software. De forma curta, ele é capaz de acessar uma máquina já existente via SSH e promover a instalação e configuração de softwares. 
 
 <center>
-<img src="/img/ansible.png" style="display: block; margin: auto;height: 80px;">
+<img src="/img/Ansible.png" style="display: block; margin: auto;height: 80px;">
 </center>
 
 As chamadas *tasks* que ele executará devem estar contidas em arquivos .yaml, denominados `playbooks`. 
 
-Nos playbooks declaramos as instações desejadas, não como uma linha de comando, mas utilizando módulos do proprio Ansible. 
+Nos playbooks declaramos as instalações desejadas, não como uma linha de comando, mas utilizando módulos do próprio Ansible. 
 
 Se quisermos, por exemplo, instalar o python via apt, bastaria adicionar as seguintes linhas em um playbook.
 
@@ -109,7 +107,7 @@ Se quisermos, por exemplo, instalar o python via apt, bastaria adicionar as segu
 
 Além de tornar o trabalho de provisionamento automatizado, Ansible é escalável. 
 
-Ao definir as ações em cada playbook, também somos capazes de referênciar em qual máquina ou grupo de máquinas queremos aplicar cada *task* do playbook. 
+Ao definir as ações em cada playbook, também somos capazes de referenciar em qual máquina ou grupo de máquinas queremos aplicar cada *task* do playbook. 
 
 Isto é possível pelo Ansible trabalhar com o conceito de `inventários`.
 
@@ -149,7 +147,7 @@ Para aplicar a instrução de instalação do python apenas nas máquinas `worke
 
 ```
 
-Caso se interesse pelo tema, recomendo o livro [Ansible for DevOps](https://.www.ansiblefordevops.com)
+Caso se interesse pelo tema, recomendo o livro [Ansible for DevOps](https://.www.Ansiblefordevops.com)
 
 
 ## Dirty Deeds Done Dirt Cheap (D4C)
@@ -158,9 +156,9 @@ Quando procurei um nome pra esse projeto, não esperava algo tão alinhado com s
 
 Sua referência pode ser AC/DC ou JoJo Bizarre Adventures, no fim, o que queremos é fazer algo entediante da forma mais ráṕida.
 
-O `D4C` se propõe a criar um instância de tamanho e distribuição personalizavel usando a Digital Ocean como provedora de Cloud. No processo também é criada uma chave de acesso ssh para conexão.
+O `D4C` se propõe a criar um instância de tamanho e distribuição personalizavel usando a Digital Ocean como provedora de Cloud. No processo também é criada uma chave de acesso SSH para conexão.
 
-Após criada a instância, o ansible realiza o provisionamento, configurando o firewall via `ufw`, levantando proteção contra ataques via `fail2ban` e impedindo o acesso via root. 
+Após criada a instância, o Ansible realiza o provisionamento, configurando o firewall via `ufw`, levantando proteção contra ataques via `fail2ban` e impedindo o acesso via root. 
 
 Finalmente, `docker` é instalado para que as aplicações deployadas no servidor sejam na forma de containers.
 
@@ -171,7 +169,7 @@ Para entrarmos em maiores detalhes, vejamos a árvore de arquivos e diretórios 
 ├── ansible/
 │   ├── jail.local
 │   ├── provision.yml
-│   └── sshd_config
+│   └── SSHd_config
 ├── connect.sh
 ├── create.sh
 ├── credentials/
@@ -191,11 +189,11 @@ Para entrarmos em maiores detalhes, vejamos a árvore de arquivos e diretórios 
 
 ```
 
-O arquivo `main.tf` é o coração do projeto. Além de criar a instância e as chaves ssh, é ele que executa o playbook de ansible para o posterior provisionamento de recursos.
+O arquivo `main.tf` é o coração do projeto. Além de criar a instância e as chaves SSH, é ele que executa o playbook de Ansible para o posterior provisionamento de recursos.
 
 <script src="https://gist.github.com/adelmofilho/10893f684fae9de72b3615b161d2497d.js"></script>
 
-Com o módulo `provider` possibilitamos a comunicação do terraform com as API da cloud. 
+Com o módulo `provider` possibilitamos a comunicação do Terraform com as API da cloud. 
 
 Os módulos `resource` se referem a tudo que iremos criar de forma transparente na DIgital Ocean. A `digitalocean_droplet` se refere às instàncias de máquina virtual que desejamos, referenciamos ela com o nome "droplet".
 
@@ -203,11 +201,11 @@ No módulo de `connection`, definimos o tipo de acesso, usuário, e outros parâ
 
 Nos módulos de `provisioner`, temos uma distinção do provisionamento executado de dentro da instância (remote-exec) e aquele executado pela máquina local (local-exec).
 
-Apesar dos playbooks em ansible permitirem executar os comandos que estão no provisionamento remoto, adicionamos um provisionamento remoto para garantir que o `local-exec` só seja executado com a instância já criada.
+Apesar dos playbooks em Ansible permitirem executar os comandos que estão no provisionamento remoto, adicionamos um provisionamento remoto para garantir que o `local-exec` só seja executado com a instância já criada.
 
 Observe que o `main.tf` é completamente parametrizado. O valor assumido pelas variáveis utilizadas estão contidos nos arquivos `keys.tfvars`, `project.tfvars` e `provider.tfvars`. 
 
-Desses arquivos, o `provider.tfvars` é um lista contendo as opções diponíveis pela API da Digital Ocean para cada recurso. Use o `keys.tfvars` para adicionar seu API token e personalize o arquivo `project.tfvars` com informações do seu projeto.
+Desses arquivos, o `provider.tfvars` é um lista contendo as opções disponíveis pela API da Digital Ocean para cada recurso. Use o `keys.tfvars` para adicionar seu API token e personalize o arquivo `project.tfvars` com informações do seu projeto.
 
 Não recomendo alterar qualquer outro arquivo, exceto se desejar adicionar alguma funcionalidade adicional. 
 

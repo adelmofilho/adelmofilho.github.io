@@ -91,6 +91,10 @@ Caso tenha, interesse o [material introdutório do Terraform](https://www.terraf
 
 Ansible é uma ferramenta de provisionamento de software. De forma curta, ele é capaz de acessar uma máquina já existente via SSH e promover a instalação e configuração de softwares. 
 
+<center>
+<img src="/img/ansible.png" style="display: block; margin: auto;height: 80px;">
+</center>
+
 As chamadas *tasks* que ele executará devem estar contidas em arquivos .yaml, denominados `playbooks`. 
 
 Nos playbooks declaramos as instações desejadas, não como uma linha de comando, mas utilizando módulos do proprio Ansible. 
@@ -122,9 +126,11 @@ two.example.com
 <p align="center">Exemplo de inventário</p>
 </center>
 
-O inventário é um arquivo contendo o endereço das máquinas que terão provisionamento realizado pelo Ansible. Nos headers do aquivo temos a denominação que daremos para aplicar uma certa instrução àquelas máquinas.
+O inventário é um arquivo contendo o endereço das máquinas que terão provisionamento realizado pelo Ansible. 
 
-Para aplicar a instrução de instalação do python apenas nas máquinas `workers` e de instalação do docker nas máquinas `master`, chegamos no seguinte playbook.
+Nos headers do aquivo temos a denominação que daremos para aplicar uma certa instrução àquelas máquinas.
+
+Para aplicar a instrução de instalação do python apenas nas máquinas `workers` e de instalação do docker nas máquinas `master`, podemos escrever o seguinte playbook.
 
 ```
 - hosts: master
@@ -142,7 +148,6 @@ Para aplicar a instrução de instalação do python apenas nas máquinas `worke
         name: python
 
 ```
-<p align="center">Exemplo de mínimo de playbook</p>
 
 Caso se interesse pelo tema, recomendo o livro [Ansible for DevOps](https://.www.ansiblefordevops.com)
 

@@ -50,7 +50,7 @@ A ideia é reduzir o desgaste gerado na configuração dessas máquinas, já dis
 Todas as instruções para operacionalização do projeto estão em seu `README`. 
 
 <center>
-<blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+< blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </center>
 
 <br>
@@ -158,13 +158,13 @@ Quando procurei um nome pra esse projeto, não esperava algo tão alinhado com s
 
 Sua referência pode ser AC/DC ou JoJo Bizarre Adventures, no fim, o que queremos é fazer algo entediante da forma mais ráṕida.
 
-O `D4C` se propõe a criar um instância de tamanho e distribuição usando a Digital Ocean como provedora de Cloud. No processo também é criada uma chave de acesso ssh para conexão.
+O `D4C` se propõe a criar um instância de tamanho e distribuição personalizavel usando a Digital Ocean como provedora de Cloud. No processo também é criada uma chave de acesso ssh para conexão.
 
-Após criada a instância, o ansible realiza o provisionamento, configurando o firewall via `ufw` e levantando proteção contra ataques via `fail2ban` e impedindo o acesso via root. 
+Após criada a instância, o ansible realiza o provisionamento, configurando o firewall via `ufw`, levantando proteção contra ataques via `fail2ban` e impedindo o acesso via root. 
 
 Finalmente, `docker` é instalado para que as aplicações deployadas no servidor sejam na forma de containers.
 
-Para entrarmos em maiores detalhes, confira, primeiro, a árvore de arquivos e diretórios do projeto.
+Para entrarmos em maiores detalhes, vejamos a árvore de arquivos e diretórios do projeto.
 
 ```
 .
@@ -199,15 +199,15 @@ Com o módulo `provider` possibilitamos a comunicação do terraform com as API 
 
 Os módulos `resource` se referem a tudo que iremos criar de forma transparente na DIgital Ocean. A `digitalocean_droplet` se refere às instàncias de máquina virtual que desejamos, referenciamos ela com o nome "droplet".
 
-No módulo de `connection` definimos o tipo de acesso, usuário, e outros parâmetros de conexão com a droplet.
+No módulo de `connection`, definimos o tipo de acesso, usuário, e outros parâmetros de conexão com a droplet.
 
-Nos módulos de `provisioner` temos uma distinção do provisionamento executado de dentro a instância (remote-exec) e aquele executado pela máquina local (local-exec).
+Nos módulos de `provisioner`, temos uma distinção do provisionamento executado de dentro da instância (remote-exec) e aquele executado pela máquina local (local-exec).
 
-Apesar dos playbooks em ansible permitirem executar os comandos que estão no provisionamento remoto, adicionamos um provisionamento remoto para garantir que o "local-exec" só seja executado com a instância já criada.
+Apesar dos playbooks em ansible permitirem executar os comandos que estão no provisionamento remoto, adicionamos um provisionamento remoto para garantir que o `local-exec` só seja executado com a instância já criada.
 
-Observe que o `main.tf` é completamente parametrizado. O valor assumido pelas variáveis utilizadas estão contidas nos arquivos `keys.tfvars`, `project.tfvars` e `provider.tfvars`. 
+Observe que o `main.tf` é completamente parametrizado. O valor assumido pelas variáveis utilizadas estão contidos nos arquivos `keys.tfvars`, `project.tfvars` e `provider.tfvars`. 
 
-Desses arquivos, o `provider.tfvars` é um inventário, contendo as opções diponíveis pela API da Digital Ocean para cada recurso. Use o `keys.tfvars` para adicionar seu API token e personalize o arquivo `project.tfvars` com informações do seu projeto.
+Desses arquivos, o `provider.tfvars` é um lista contendo as opções diponíveis pela API da Digital Ocean para cada recurso. Use o `keys.tfvars` para adicionar seu API token e personalize o arquivo `project.tfvars` com informações do seu projeto.
 
 Não recomendo alterar qualquer outro arquivo, exceto se desejar adicionar alguma funcionalidade adicional. 
 

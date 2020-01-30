@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Voando nas nuvens"
-subtitle: "Acelerando seus estudos com IaaC"
-bigimg: /img/iaac.jpeg
+title: "Voando nas clouds"
+subtitle: "Infraestrutura como código"
+bigimg: /img/goku.gif
 tags: [cloud, terraform, iaac, ansible, digital-ocean]
 comments: true
 draft: true

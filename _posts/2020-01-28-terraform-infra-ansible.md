@@ -72,4 +72,49 @@ Aqui, vamos focar em duas opções complementares: terraform e ansible.
 
 ### Ansible
 
+
+## Dirty Deeds Done Dirt Cheap (D4C)
+
+Quando procurei um nome pra esse projeto, não esperava algo tão alinhado com seu propósito.
+
+Sua referência pode ser AC/DC ou JoJo Bizarre Adventures, no fim, o que queremos, é fazer algo entediante da forma mais ráṕida.
+
+O `D4C` se propõe a criar um instância de tamanho e distribuição usando a Digital Ocean como provedora de Cloud. No processo também é criada uma chave de acesso ssh para conexão.
+
+Após criada a instância, o ansible realiza o provisionamento, configurando o firewall via `ufw` e levantando proteção contra ataques via `fail2ban` e impedindo o acesso via root. 
+
+Finalmente, `docker` é instalado para que as aplicações deployadas no servidor sejam na forma de containers.
+
+Para entrarmos em maiores detalhes, confira, primeiro, a árvore de arquivos e diretórios do projeto.
+
+```
+.
+├── ansible/
+│   ├── jail.local
+│   ├── provision.yml
+│   └── sshd_config
+├── connect.sh
+├── create.sh
+├── credentials/
+│   ├── id_rsa
+│   └── id_rsa.pub
+├── destroy.sh
+├── setup.sh
+└── terraform/
+    ├── env/
+    │   ├── keys.tfvars
+    │   ├── project.tfvars
+    │   └── provider.tfvars
+    ├── main.tf
+    ├── out/
+    ├── outputs.tf
+    └── variables.tf
+
+```
+
+O arquivo `main.tf` é o coração do projeto. Além de criar a instância e as chaves ssh, é ele que executa o playbook de ansible para o posterior provisionamento de recursos.
+
+<script src="https://gist.github.com/adelmofilho/10893f684fae9de72b3615b161d2497d.js"></script>
+
+
 <br>

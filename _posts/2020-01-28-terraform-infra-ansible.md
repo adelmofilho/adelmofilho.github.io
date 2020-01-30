@@ -70,7 +70,9 @@ Aqui, vamos focar em duas opções complementares: terraform e ansible.
 ### Terraform
 
 
+
 ### Ansible
+
 
 
 ## Dirty Deeds Done Dirt Cheap (D4C)
@@ -116,5 +118,30 @@ O arquivo `main.tf` é o coração do projeto. Além de criar a instância e as 
 
 <script src="https://gist.github.com/adelmofilho/10893f684fae9de72b3615b161d2497d.js"></script>
 
+Com o módulo `provider` possibilitamos a comunicação do terraform com as API da cloud. 
 
-<br>
+Os módulos `resource` se referem a tudo que iremos criar de forma transparente na DIgital Ocean. A `digitalocean_droplet` se refere às instàncias de máquina virtual que desejamos, referenciamos ela com o nome "droplet".
+
+No módulo de `connection` definimos o tipo de acesso, usuário, e outros parâmetros de conexão com a droplet.
+
+Nos módulos de `provisioner` temos uma distinção do provisionamento executado de dentro a instância (remote-exec) e aquele executado pela máquina local (local-exec).
+
+Apesar dos playbooks em ansible permitirem executar os comandos que estão no provisionamento remoto, adicionamos um provisionamento remoto para garantir que o "local-exec" só seja executado com a instância já criada.
+
+Observe que o `main.tf` é completamente parametrizado. O valor assumido pelas variáveis utilizadas estão contidas nos arquivos `keys.tfvars`, `project.tfvars` e `provider.tfvars`. 
+
+Desses arquivos, o `provider.tfvars` é um inventário, contendo as opções diponíveis pela API da Digital Ocean para cada recurso. Use o `keys.tfvars` para adicionar seu API token e personalize o arquivo `project.tfvars` com informações do seu projeto.
+
+Não recomendo alterar qualquer outro arquivo, exceto se desejar adicionar alguma funcionalidade adicional. 
+
+Conforme o `README` disponibilizado, personalize os arquivos `.tfvars` comentados acima, e execute os arquivos .sh para ter sua instância pronta para uso em poucos minutos.
+
+## Devaneios finais
+
+Foi um projeto bem divertido! 
+
+Me esforcei em comentar todos os códigos, e tornar a operacionalização bem transparente.
+
+Deu tão certo para mim, que uso o servidor criado pelo `D4C` para o deploy de minhas aplicações.
+
+Espero que possa ser útil a você também!

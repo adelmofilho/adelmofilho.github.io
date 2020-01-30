@@ -72,8 +72,14 @@ Aqui, vamos focar em duas opções complementares: terraform e ansible.
 Terraform é um software de código aberto para gerenciamento de Infra as a code que utiliza de línguagem proprietária (HCL) da própria desenvolvedora para comunicação com as APIs das provedoras de Cloud.
 
 <center>
-<img src="/img/terraform.png" style="display: block; margin: auto;height: 220px;">
+<img src="/img/terraform.png" style="display: block; margin: auto;height: 120px;">
 </center>
+
+Duas características fazem o Terraform ser uma opção eficiente pra sua IaaC.
+
+Antes de enviar requisições à API da cloud, Terraform  cria um plano de execução que permite verificar todos os recursos e/ou modificações necessárias na sua infraestrutura. O plano ainda conta um grafo de depedência das alterações necessárias, o que permite a paralelização de atividades.
+
+
 
 
 

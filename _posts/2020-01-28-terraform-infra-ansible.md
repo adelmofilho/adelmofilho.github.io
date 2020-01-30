@@ -69,6 +69,13 @@ Aqui, vamos focar em duas opções complementares: terraform e ansible.
 
 ### Terraform
 
+Terraform é um software de código aberto para gerenciamento de Infra as a code que utiliza de línguagem proprietária (HCL) da própria desenvolvedora para comunicação com as APIs das provedoras de Cloud.
+
+<center>
+<img src="/img/terraform.png" style="display: block; margin: auto;height: 220px;">
+</center>
+
+
 
 
 ### Ansible

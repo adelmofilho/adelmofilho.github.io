@@ -50,7 +50,7 @@ A ideia é reduzir o desgaste gerado na configuração dessas máquinas, já dis
 Todas as instruções para operacionalização do projeto estão em seu `README`. 
 
 <center>
-<blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+< blockquote class="twitter-tweet" data-theme="light"><p lang="pt" dir="ltr"></p>&mdash; Adelmo Filho (@AdelmoFilho42) <a href="https://twitter.com/AdelmoFilho42/status/1216443720544944136?ref_src=twsrc%5Etfw">January 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </center>
 
 <br>
@@ -61,38 +61,84 @@ Quando encaramos a construção e configuração da nossa infraestrutura de proc
 
 Só vantagens para o desenvolvedor.
 
-Existem diferentes linguagens, ferramentas para trabalharmos com IaaC. Direcionadas para uma cloud especifica ou multi-cloud; serverless ou com arquitetura cliente-servidor; declarativas ou imperativas.
+Existem diferentes linguagens, ferramentas para trabalharmos com IaaC. Direcionadas para uma cloud especifica ou multi-cloud; declarativas ou imperativas...
 
-Vale apena explorar as alternativas, se tiver interesse no tema.
+Vale apena explorar as alternativas. Se tiver interesse no tema, experimente o livro do Kief Morris - [Infrastructure as Code](http://shop.oreilly.com/product/0636920039297.do)
 
-Aqui, vamos focar em duas opções complementares: terraform e ansible.
+Aqui, vamos focar em duas ferramentas complementares: terraform e ansible.
 
 ### Terraform
 
 Terraform é um software de código aberto para gerenciamento de Infra as a code que utiliza de línguagem proprietária (HCL) da própria desenvolvedora para comunicação com as APIs das provedoras de Cloud.
 
 <center>
-<img src="/img/terraform.png" style="display: block; margin: auto;height: 120px;">
+<img src="/img/terraform.png" style="display: block; margin: auto;height: 80px;">
 </center>
 
 Duas características fazem o Terraform ser uma opção eficiente pra sua IaaC.
 
-Antes de enviar requisições à API da cloud, Terraform  cria um plano de execução que permite verificar todos os recursos e/ou modificações necessárias na sua infraestrutura. O plano ainda conta um grafo de depedência das alterações necessárias, o que permite a paralelização de atividades.
+Primeiro, antes de enviar requisições à API da cloud, Terraform  cria um plano de execução que permite verificar todos os recursos e/ou modificações necessárias na sua infraestrutura. O plano ainda conta um grafo de depedência das alterações necessárias, o que permite a paralelização de atividades.
 
+Somado a isso, paa realizar modificações numa infra já existente não é necessariamente obrigatório reconstruir ela do zero. As execuções criam um arquivo (.tfstate) que armazena os recursos, configurações e metadados da infra criada pelo Terraform. 
 
-
-
-
+Caso tenha, interesse o [material introdutório do Terraform](https://www.terraform.io/intro/index.html) é um bom ponto de partida.
 
 ### Ansible
 
+Ansible é uma ferramenta de provisionamento de software. De forma curta, ele acessa uma máquina já existente via SSH e promove a instalação e configuração de softwares. 
+
+As chamadas *tasks* que ele executará devem estar contidas em arquivos .yaml, denominados `playbooks`. Nos playbooks declaramos as instações desejadas, não como uma linha de comando, mas utilizando módulos do proprio Ansible. Se quisermos, por exemplo, instalar o python via apt, bastaria adicionar as seguintes linhas em um playbook.
+
+```
+- name: Install python
+  apt:
+    name: python
+```
+<p align="center">Exemplo de task do Ansible</p>
+
+Além de tornar o trabalho de provisionamento automatizado, Ansible é escalável. Ao definir as ações em cada playbook, também somos capazes de referênciar em qual máquina ou grupo de máquinas queremos aplicar o playbook. Isto, é possível pelo Ansible trabalhar com o conceito de `inventários`.
+
+```
+[master]
+127.0.0.1
+bar.example.com
+
+[workers]
+one.example.com
+two.example.com
+```
+<p align="center">Exemplo de inventário</p>
+
+O inventário é um arquivo contendo o endereço das máquinas que terão provisionamento realizado pelo Ansible. Nos headers do aquivo temos a denominação que daremos para aplicar uma certa instrução àquelas máquinas.
+
+Para aplicar a instrução de instalação do python apenas nas máquinas `workers` e de instalação do docker nas máquinas `master`, chegamos no seguinte playbook.
+
+```
+- hosts: master
+  become: yes
+  tasks:
+    - name: install Docker  
+      apt:
+        name: docker.io
+
+- hosts: workers
+  become: yes
+  tasks:
+    - name: install python  
+      apt:
+        name: python
+
+```
+<p align="center">Exemplo de mínimo de playbook</p>
+
+Caso se interesse pelo tema, recomendo o livro [Ansible for DevOps](https://.www.ansiblefordevops.com)
 
 
 ## Dirty Deeds Done Dirt Cheap (D4C)
 
 Quando procurei um nome pra esse projeto, não esperava algo tão alinhado com seu propósito.
 
-Sua referência pode ser AC/DC ou JoJo Bizarre Adventures, no fim, o que queremos, é fazer algo entediante da forma mais ráṕida.
+Sua referência pode ser AC/DC ou JoJo Bizarre Adventures, no fim, o que queremos é fazer algo entediante da forma mais ráṕida.
 
 O `D4C` se propõe a criar um instância de tamanho e distribuição usando a Digital Ocean como provedora de Cloud. No processo também é criada uma chave de acesso ssh para conexão.
 

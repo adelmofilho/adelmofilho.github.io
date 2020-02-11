@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Ciência de dados reproduzível em R"
-subtitle: "Nunca mais 'funciona na minha máquina'"
+title: "R em Produção"
+subtitle: "Parte 1 - Nunca mais 'funciona na minha máquina'"
 bigimg: /img/docker.jpeg
 tags: [r, rstudio, rstudio-server, data-science, docker, renv]
 comments: true
@@ -11,4 +11,8 @@ output:
     keep_md: true
 ---
 
-echo
+R em produção.
+
+Já foram tantos os sentimento que presenciei de alguém ouvindo essas três palavras...
+
+No 

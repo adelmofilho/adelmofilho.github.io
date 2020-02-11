@@ -11,8 +11,20 @@ output:
     keep_md: true
 ---
 
-R em produção.
+> Este é o primeiro post de uma série. Diferente de um tutorial, minha ideia é expor alguns pensamentos e pipelines que venho desenvolvendo para pôr em produção projetos que desenvolvo em R.
 
-Já foram tantos os sentimento que presenciei de alguém ouvindo essas três palavras...
+<br>
 
-No 
+"R em produção".
+
+
+
+Já foram tantos os sentimentos que presenciei de alguém ouvindo essas três palavras...
+
+
+
+## Content
+
+- O que significa "pôr em produção"?
+
+- 

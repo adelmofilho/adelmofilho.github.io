@@ -27,6 +27,8 @@ Vamos lá!
 
 ## Sumário
 
+
+
 - O que significa "pôr em produção"?
 
 - Como desenvolver pensando em produção?
@@ -45,5 +47,8 @@ Vamos lá!
 <blockquote>
 <p align="right"><cite>"Só não gosto desse git add -A"</cite></p>
 
-<p align="right"><cite>constante lucidez de @rpgmbicalho</cite></p>
+<cite text-align="right">constante lucidez de @rpgmbicalho</cite>
 <blockquote>
+
+
+bla bla bla

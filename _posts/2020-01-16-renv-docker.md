@@ -27,7 +27,7 @@ Vamos lá!
 
 ## Sumário
 
-Para discutir 
+Nos tópicos a seguir temos o encaminhamento 
 
 - O que significa "pôr em produção"?
 
@@ -44,11 +44,8 @@ Para discutir
 
 ## Versionamento de código
 
-<blockquote>
-<p align="right"><cite>"Só não gosto desse git add -A"</cite></p>
-
-<cite text-align="right">constante lucidez de @rpgmbicalho</cite>
-</blockquote>
+<p style="margin:0px;text-align:right"><b><cite>Só não gosto desse git add -A</cite></b></p>
+<p style="margin:0px;text-align:right"><cite>constante lucidez de @rpgmbicalho</cite></p>
 
 
 bla bla blaasdsadasd

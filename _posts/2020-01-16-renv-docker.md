@@ -27,7 +27,7 @@ Vamos lá!
 
 ## Sumário
 
-
+Para discutir 
 
 - O que significa "pôr em produção"?
 
@@ -48,7 +48,7 @@ Vamos lá!
 <p align="right"><cite>"Só não gosto desse git add -A"</cite></p>
 
 <cite text-align="right">constante lucidez de @rpgmbicalho</cite>
-<blockquote>
+</blockquote>
 
 
-bla bla bla
+bla bla blaasdsadasd

@@ -27,7 +27,7 @@ Vamos lá!
 
 ## Sumário
 
-Nos tópicos a seguir temos o encaminhamento 
+
 
 - O que significa "pôr em produção"?
 
@@ -42,10 +42,66 @@ Nos tópicos a seguir temos o encaminhamento
   - Testes unitários (testthat, codecovr)
   - Formatação de código (rlint)
 
+<br>
+
+## O que significa "pôr em produção"?
+
 ## Versionamento de código
 
 <p style="margin:0px;text-align:right"><b><cite>Só não gosto desse git add -A</cite></b></p>
 <p style="margin:0px;text-align:right"><cite>constante lucidez de @rpgmbicalho</cite></p>
 
+<br>
 
-bla bla blaasdsadasd
+## Versionamento de dados e experimentos
+
+<p style="margin:0px;text-align:right"><b><cite>Se for verdade é gol</cite></b></p>
+<p style="margin:0px;text-align:right"><cite>@Lzda sobre o dvc</cite></p>
+
+<br>
+
+## Code as a Package
+
+<p style="margin:0px;text-align:right"><b><cite>Polimorfismo em ciência de dados é usar o notebook do colega com outro banco de dados</cite></b></p>
+<p style="margin:0px;text-align:right"><cite>by @thiagorizuti</cite></p>
+
+
+
+<br>
+
+## Documentação contínua
+
+<p style="margin:0px;text-align:right"><b><cite>Podiamos ter um continuous documentation, heim?</cite></b></p>
+<p style="margin:0px;text-align:right"><cite>@thalsin e sua arquitetura alvo</cite></p>
+
+<br>
+
+## Containerização
+
+<p style="margin:0px;text-align:right"><b><cite>(...) estou apaixonado por docker</cite></b></p>
+<p style="margin:0px;text-align:right"><cite>@boreloide #gratiluz</cite></p>
+
+<br>
+
+## Controle de dependências
+<p style="margin:0px;text-align:right"><b><cite>Não aguento instalar mais dependências</cite></b></p>
+<p style="margin:0px;text-align:right"><cite>@pyspark2 e seu raspberry pi2 com R</cite></p>
+
+
+<br>
+
+## Testes unitários
+
+<p style="margin:0px;text-align:right"><b><cite>Vou começar a criar testes unitários e tal, e chamarei isso de defesa contra as artes dos cientistas de dados</cite></b></p>
+<p style="margin:0px;text-align:right"><cite>@AdelmoFIlho42 brigando com a API do kaggle</cite></p>
+
+<br>
+
+## Formatação de código
+
+<p style="margin:0px;text-align:right"><b><cite>Você curte os espaços entre linhas? Hahah </cite></b></p>
+<p style="margin:0px;text-align:right"><cite>@dges julgando meus códigos</cite></p>
+
+<br>
+
+## Considerações finais (?)

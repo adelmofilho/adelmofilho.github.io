@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "R em Produção"
-subtitle: "Parte 1 - Nunca mais 'funciona na minha máquina'"
+subtitle: "Parte 1 - "
 bigimg: /img/docker.jpeg
 tags: [r, rstudio, rstudio-server, data-science, docker, renv]
 comments: true

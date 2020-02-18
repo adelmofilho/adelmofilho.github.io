@@ -28,8 +28,8 @@ sudo apt -y install r-base
 # Instalação do R-Studio
 
 cd Downloads/
-wget https://download1.rstudio.org/rstudio-xenial-1.1.453-amd64.deb
-sudo gdebi rstudio-xenial-1.1.453-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
+sudo gdebi rstudio-1.2.5033-amd64.deb
 
 # Instalação de pacotes
 

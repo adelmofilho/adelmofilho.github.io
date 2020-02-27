@@ -37,9 +37,10 @@ Parece uma teória conspiratória, mas já aconteceu recentemente, inclusive.
 
 Foi o caso na Venezuela, quando [a Adobe removeu o acesso a usuários do photoshop aos seus projetos e ao software](https://www.fastcompany.com/90414653/adobe-shuts-down-photoshop-in-venezuela-because-of-trumps-sanctions) por conta de sanções dos EUA.
 
-Não quero entrar no mérito da questão, até porque não li os termos de uso do software. O ponto aqui, é o que deve ser sempre lembrado ao trabalhar com serviços na cloud:
+Não quero entrar no mérito da questão, até porque não li os termos de uso do software. O ponto aqui, é mesmo o que deve sempre ser lembrado ao trabalhar com serviços na cloud:
 
 <p align="center"><img src="https://i.redd.it/f4f4tcoo8wu21.png"></img></p>
+
 
 
 

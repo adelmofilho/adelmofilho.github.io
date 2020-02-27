@@ -2,7 +2,7 @@
 layout: post
 title: "Criando um repositório git pra chamar de seu"
 subtitle: "Raspberry + Gitlab"
-bigimg: /img/gitmerge.jpeg
+bigimg: /img/gitmerge.gif
 tags: [r, rstudio, rstudio-server, data-science, docker, renv]
 comments: true
 draft: true
@@ -68,5 +68,7 @@ Em ambos os casos, é disponibilizado uma versão gratuita (Gitlab-CE) e uma pag
 
 O Gitlab-CE (Community Edition) é o projeto open-source sob licença MIT que a `Gitlab` apoia, desenvolve e suporta, o que democratiza o acesso ao servidores web para repositório de código que tanto usamos.
 
-Resta entender
+Resta entender, em que máquina vamos levantar o web server e armazenar nossos códigos.
+
+## 
 

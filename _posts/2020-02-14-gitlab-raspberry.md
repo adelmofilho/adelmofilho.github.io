@@ -39,8 +39,8 @@ Foi o caso na Venezuela, quando [a Adobe removeu o acesso a usuários do photosh
 
 Não quero entrar no mérito da questão, até porque não li os termos de uso do software. O ponto aqui, é mesmo o que deve sempre ser lembrado ao trabalhar com serviços na cloud:
 
-<p align="center"><img src="https://i.redd.it/f4f4tcoo8wu21.png"></img></p>
+<p align="center"><img src="https://i.redd.it/f4f4tcoo8wu21.png"></p>
 
-
+Cabe a nós entendermos
 
 

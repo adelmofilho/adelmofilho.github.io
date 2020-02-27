@@ -46,7 +46,7 @@ Ou com o próprio `github` em 2019, neste caso com os repositórios pagos ou pri
 
 A discussão entre open-source e política não deve ser minimizada.
 
-Não quero entrar no mérito da questão, até porque não li os termos de uso do software. O ponto aqui, é mesmo o que deve sempre ser lembrado ao trabalhar com serviços na cloud:
+Não quero entrar no mérito da questão, até porque não li os termos de uso do software/plataforma. O ponto aqui, é o mesmo que deve sempre ser lembrado ao trabalhar com serviços na cloud:
 
 <center>
 <img src="https://i.redd.it/f4f4tcoo8wu21.png"/>

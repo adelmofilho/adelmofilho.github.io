@@ -37,10 +37,21 @@ Parece uma teória conspiratória, mas já aconteceu recentemente, inclusive.
 
 Foi o caso na Venezuela, quando [a Adobe removeu o acesso a usuários do photoshop aos seus projetos e ao software](https://www.fastcompany.com/90414653/adobe-shuts-down-photoshop-in-venezuela-because-of-trumps-sanctions) por conta de sanções dos EUA.
 
+Ou com o próprio `github` em 2019, neste caso com os repositórios pagos ou privados de desenvolvedores do irã.
+
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">To comply with US sanctions, we unfortunately had to implement new restrictions on private repos and paid accounts in Iran, Syria, and Crimea. <br><br>Public repos remain available to developers everywhere – open source repos are NOT affected.</p>&mdash; Nat Friedman (@natfriedman) <a href="https://twitter.com/natfriedman/status/1155311122137804801?ref_src=twsrc%5Etfw">July 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+</center>
+
 Não quero entrar no mérito da questão, até porque não li os termos de uso do software. O ponto aqui, é mesmo o que deve sempre ser lembrado ao trabalhar com serviços na cloud:
 
+<center>
 <p align="center"><img src="https://i.redd.it/f4f4tcoo8wu21.png"></p>
+</center>
 
-Cabe a nós entendermos
+Cabe a nós entendermos as limitações do uso de uma plataforma de terceiros e até onde nos sentimos confortáveis em armazenar nossa produção intelectual fora de nossas máquinas pessoais.
+
+A discussão entre open-source e política não deve ser minimizada.
 
 

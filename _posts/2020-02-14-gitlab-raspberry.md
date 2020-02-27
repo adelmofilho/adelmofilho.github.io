@@ -2,7 +2,7 @@
 layout: post
 title: "Criando um repositório git pra chamar de seu"
 subtitle: "Raspberry + Gitlab"
-bigimg: /img/docker.jpeg
+bigimg: /img/gitmerge.jpeg
 tags: [r, rstudio, rstudio-server, data-science, docker, renv]
 comments: true
 draft: true
@@ -53,3 +53,5 @@ Não quero entrar no mérito da questão, até porque não li os termos de uso d
 </center>
 
 Cabe a nós entendermos as limitações do uso de uma plataforma de terceiros e até onde nos sentimos confortáveis em armazenar nossa produção intelectual fora de nossas máquinas pessoais.
+
+## Gitlab open-source project

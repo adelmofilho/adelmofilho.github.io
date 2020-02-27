@@ -54,4 +54,19 @@ Não quero entrar no mérito da questão, até porque não li os termos de uso d
 
 Cabe a nós entendermos as limitações do uso de uma plataforma de terceiros e até onde nos sentimos confortáveis em armazenar nossa produção intelectual fora de nossas máquinas pessoais.
 
-## Gitlab open-source project
+Mas, e se não quisermos depender dessas empresas?
+
+## Gitlab é open-source
+
+A empresa `Gitlab` oferece o servidor web para repositórios git em duas modalidades: SaaS (o habitual site que acessamos) e Self-Managed (um instalável em uma máquina linux).
+
+Em ambos os casos, é disponibilizado uma versão gratuita (Gitlab-CE) e uma paga (Gitlab-EE).
+
+<center>
+<img src="/img/gitlab.png" style="display: block; margin: auto;" />
+</center>
+
+O Gitlab-CE (Community Edition) é o projeto open-source sob licença MIT que a `Gitlab` apoia, desenvolve e suporta, o que democratiza o acesso ao servidores web para repositório de código que tanto usamos.
+
+Resta entender
+

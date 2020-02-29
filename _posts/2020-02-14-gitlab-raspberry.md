@@ -60,15 +60,21 @@ Mas, e se não quisermos depender dessas empresas?
 
 A empresa `Gitlab` oferece o servidor web para repositórios git em duas modalidades: SaaS (o habitual site que acessamos) e Self-Managed (um instalável em uma máquina linux).
 
-Em ambos os casos, é disponibilizado uma versão gratuita (Gitlab-CE) e uma paga (Gitlab-EE).
+No caso da opção SaaS, armazenamento é de resposabilidade do `Gitlab`, enquanto segurança é gerida de forma compartilhada com o usuário. A opção Self-Managed entrega tudo na mão do usuário.
+
+Em ambos os casos, é disponibilizado uma versão gratuita (Gitlab-CE) e uma versão paga (Gitlab-EE).
 
 <center>
 <img src="/img/gitlab.png" style="display: block; margin: auto;" />
 </center>
 
-O Gitlab-CE (Community Edition) é o projeto open-source sob licença MIT que a `Gitlab` apoia, desenvolve e suporta, o que democratiza o acesso ao servidores web para repositório de código que tanto usamos.
+O Gitlab-CE (Community Edition) é o projeto open-source sob licença MIT que o `Gitlab` apoia, desenvolve e suporta, o que democratiza o acesso a repositórios online de código que tanto usamos.
 
-Resta entender, em que máquina vamos levantar o web server e armazenar nossos códigos.
+Resta entender, em que máquina vamos levantar o web server e armazenar nossos códigos com o Gitlab-CE.
 
-## 
+## Raspberry Pi
+
+Apesar de podermos instalar o Gitlab-CE em nossas máquinas (linux), isso significaria manter todo o armazenamento em um único ambiente. 
+
+Além de que expor o serviço para outros usuários via internet poderia levar a ataques em sua máquina.
 

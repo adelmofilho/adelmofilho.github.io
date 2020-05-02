@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Customizando sua expeRiência"
+subtitle: "Sobre profiles e startups"
+bigimg: /img/hs.gif
+tags: [r, 'rprofile', 'r-programming']
+comments: true
+draft: true
+output:
+  html_document:
+    keep_md: true
+---
+

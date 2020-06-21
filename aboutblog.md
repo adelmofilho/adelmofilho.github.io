@@ -33,8 +33,6 @@ Pra ser sincero... Esse não é meu primeiro blog. Já foram muitas tentivas de 
 
 Por isso, decidi trocar de vez em quando aquele texto do tipo "[como acender uma fogueira com a luz da lua **usando R**](https://what-if.xkcd.com/145/), para passar a contar histórias usando dados, estatística e programação.
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/xUOxfh0FW33JpeFdzq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-
 Claro, haverão textos mais técnicos, o que não significa ter que segregar os públicos.
 
 Obrigado por chegar até aqui!

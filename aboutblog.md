@@ -23,8 +23,6 @@ Lá, conheci [@kierisi](https://twitter.com/kierisi) da [Teaching Trust](http://
 
 A ideia foi de usar esse espaço para contribuir com a comunidade de ciência de dados e programação em R. 
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3ohc11HR5Z6u1YRK3m" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-
 E, claro, salvar meus chucks de código em algum lugar fácil pra copiar e colar!
 
 Pra ser sincero... Esse não é meu primeiro blog. Já foram muitas tentivas de tornar o hábito de escrever uma rotina. Já Tentei falar de música, cinema, escrever com outras pessoas. Mas, faltava algo pra dar certo.

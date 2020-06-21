@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sobre o Blog
-subtitle: Ou, a inesperada falta de sono nas madrugadas
+subtitle: Ou a inesperada falta de sono nas madrugadas
 ---
 
 <blockquote>

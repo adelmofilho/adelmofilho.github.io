@@ -25,7 +25,7 @@ A ideia foi de usar esse espaço para contribuir com a comunidade de ciência de
 
 E, claro, salvar meus chucks de código em algum lugar fácil pra copiar e colar!
 
-Pra ser sincero... Esse não é meu primeiro blog. Já foram muitas tentivas de tornar o hábito de escrever uma rotina. Já Tentei falar de música, cinema, escrever com outras pessoas. Mas, faltava algo pra dar certo.
+Pra ser sincero... Esse não é meu primeiro blog. Já foram muitas tentivas de tornar o hábito de escrever uma rotina. Já Tentei falar de música, cinema, escrever com outras pessoas.
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3o75215O7rqt3trGPC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 

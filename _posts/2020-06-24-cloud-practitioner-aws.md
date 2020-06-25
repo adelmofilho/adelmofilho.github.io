@@ -36,11 +36,16 @@ O [guia do exame](https://d1.awsstatic.com/training-and-certification/docs-cloud
 
 E de fato, isso ajuda muito.
 
-Mas, não em toda a prova, pois é avaliado apenas o aspecto teórico e se cobram muitos conceitos de computação em nuvem que podem passar batidos mesmo com os 6 meses de experiência indicados.
+Mas, não em toda a prova, pois nela é avaliado apenas o aspecto teórico e muitos conceitos de computação em nuvem podem passar batidos mesmo com os 6 meses de experiência indicados.
 
 ## Estratégia de estudos
 
 Minha recomendação de partida é, sem dúvida, acessar a [página da AWS sobre a certificação](https://aws.amazon.com/certification/certified-cloud-practitioner/) e se atualizar sobre a prova, pois a AWS está sempre atualizando suas provas de certificação.
+
+Em seguida, leia o [guia do exame](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf) e as [questões de exemplo](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf) para se ambientar do conteúdo cobrado.
+
+
+
 
 
 

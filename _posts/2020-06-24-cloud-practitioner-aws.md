@@ -42,9 +42,13 @@ Mas, não em toda a prova, pois nela é avaliado apenas o aspecto teórico e mui
 
 Minha recomendação de partida é, sem dúvida, acessar a [página da AWS sobre a certificação](https://aws.amazon.com/certification/certified-cloud-practitioner/) e se atualizar sobre a prova, pois a AWS está sempre atualizando suas provas de certificação.
 
-Em seguida, leia o [guia do exame](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf) e as [questões de exemplo](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf) para se ambientar do conteúdo cobrado.
+Em seguida, leia o [guia do exame](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf) e as [questões de exemplo](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf) para se ambientar do conteúdo que é cobrado na avaliação.
 
+Um último passo obrigatório, nessa primeira meia hora de leitura, é criar sua conta pessoal na AWS e completar todos os 5 passos se segurança solicitados pelo serviço [IAM](https://console.aws.amazon.com/iam/home?#/home). 
 
+Por padrão, você começa sua conta com 12 meses de free tier, que lhe dá direito ao uso de diferentes serviços da AWS sem cobrança envolvida até uma determinada quota. E o free tier é mais do que suficiente para usar a AWS durante os estudos sem custos.
+
+### 
 
 
 

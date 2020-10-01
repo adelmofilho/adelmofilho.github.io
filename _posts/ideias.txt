@@ -1,0 +1,71 @@
+Reprodutibilidade
+O projeto está versionado em repositório git?
+A documentação atende os padrões da área de controles internos?
+Existe o mapeamento das dependências de linguagem de programação?
+Existe o mapeamento das dependências de OS?
+Existe o mapeamento das bases de dados utilizadas?
+Existe uma amostra para reprodução do fluxo do projeto?
+Existe teste unitário do seu código?
+Existe teste unitário dos dados?
+O código foi escrito orientado a falha?
+Os dados foram versionados?
+Houve controle de estilo e forma do código?
+Existe mapeamento das features da base de modelagem?
+As dependências de linguagem estão disponíveis localmente?
+Quais as permissões necessárias para um novo colaborador reproduzir o projeto?
+Os experimentos estão versionados?
+Existe controle da seed para processos randômicos?
+Referências e documentações importantes para o entendimento do projeto estão listadas?
+Códigos e Notebooks estão comentados e documentados?
+As bases de dados não possuem score de outros modelos
+
+Orientação ao Deploy
+Sabe-se como as entregas do projeto serão consumidas?
+O cliente pode consumir as entregas intermediárias do projeto?
+Sabe-se qual equipe irá dar sustentação às entregas do projetos?
+Sabe-se em que plataforma de deploy as entregas do projeto serão implementadas?
+A estrutura do projeto está adequada para a plataforma de deploy selecionada?
+O código do projeto está modularizado?
+Existem dependências não adequadas para implantação das entregas do projeto?
+A performance do código está adequada para implantação?
+Foi utilizado algum Git workflow?
+Foi implementado monitoramento da performance do modelo?
+Existem controles para recalibração do modelo?
+As bases de dados utilizadas são produtivas?
+Os parâmetros do projeto estão consolidados em um arquivo de configuração?
+
+Comunicação
+Existe um fluxo periódico de comunicação aos clientes do projeto?
+Existe uma maneira de verificar as próximas atividades do projeto?
+Seus colegas de gerência conhecem o projeto e seus desafios?
+Existe uma maneira de verificar o andamento das atividades atuais?
+O coordenador do projeto está ciente dos riscos e oportunidades identificadas durante o desenvolvimento do projeto?
+Foi escrito whitepaper com os principais achados do projeto e outros highlights?
+O cliente teve questionamentos respondidos no mesmo dia?
+O projeto foi discutido em algum fórum junto aos especialistas da superintendência?
+Foi criado grupo no Teams para compartilhamento de informações com o cliente e colegas do case?
+
+Planejamento
+A métrica de sucesso do projeto está definida?
+Foi realizado mapeamento de riscos do projeto?
+O público de modelagem foi definido de forma clara?
+São conhecidos os ganhos do projetos? VPL, NPS, outros tipos de ganho
+Foram levantados projetos anteriores similares ao proposto agora?
+Os consultores de dados foram envolvidos para levantamento de bases de dados aplicáveis?
+
+
+Modelagem
+
+A seleção de features do modelo considerou apenas aquelas com maior importância?
+As features possuem baixa correlação linear entre si?
+A performance do modelo foi verificada para diferentes conjuntos de dados (treino, teste, validação)?
+A performance do modelo foi verificada ao longo do tempo?
+Foi avaliado possível desbalanceamento da target?
+Foi avaliado presença de duplicação da chave primária?
+Foi avaliado o percentual de missing values nas features?
+Os valores ausentes nas bases de dados foram tratados?
+As premissas dos modelos e análises são claras?
+Diferentes algoritmos e abordagens foram testados?
+Foi avaliado possíveis bias na modelagem?
+Foram avaliadas questões éticas?
+Foi avaliado possível vazamento de dados?

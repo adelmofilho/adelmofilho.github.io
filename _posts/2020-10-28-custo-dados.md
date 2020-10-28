@@ -11,4 +11,4 @@ output:
     keep_md: true
 ---
 
-teste
+Em engenharia de software, o termo `dependency hell` é comumente usado quando 

@@ -43,7 +43,7 @@ Até hoje não sei para que público `Utopia` foi direcionado. Num ano com Disne
 
 Nem o primeiro episódio consegui terminar.
 
-<img src="img/utopia.png">
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/ii5Rxcv"  ><a href="//imgur.com/a/ii5Rxcv">utopia</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 <br>
 
@@ -65,4 +65,4 @@ Nem vou gastar sua banda de internet pra carregar uma imagem disso.
 
 ---
 
-2021 só tente ser algo suportável.
+2021, só tente ser algo suportável.

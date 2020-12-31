@@ -27,7 +27,7 @@ Baseado em porra nenhuma, completamente enviesado, e de pouca credibilidade - ne
 
 Escrevi o texto acima, em 2019 e vejo como estou errado hoje.
 
-</br>
+<br>
 
 ## Melhor Pior Previsão Matemática de 2020
 
@@ -35,7 +35,7 @@ Num ano em que todos viraram especialistas em previsões matemáticas de curvas 
 
 <blockquote class="twitter-tweet"><p lang="pt" dir="ltr">A curva de contágio da Covid 19 já passou pelo pico e está caindo durante o mês de maio, como prevíamos. Todas as cidades mais afetadas registram quedas de internação diária. A trajetória do vírus ignorou a quarentena, não achatou curva alguma. Epidemia termina em junho. <a href="https://t.co/wXmlyo6h29">pic.twitter.com/wXmlyo6h29</a></p>&mdash; Osmar Terra (@OsmarTerra) <a href="https://twitter.com/OsmarTerra/status/1267795343460220929?ref_src=twsrc%5Etfw">June 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-</br>
+<br>
 
 ## Melhor pior série de streaming
 
@@ -63,3 +63,6 @@ Uma prova viva de que um primor de edição não salva um roteiro sem alma.
 
 Nem vou gastar sua banda de internet pra carregar uma imagem disso.
 
+---
+
+2021 só tente ser algo suportável.

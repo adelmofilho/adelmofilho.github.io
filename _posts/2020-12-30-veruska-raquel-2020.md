@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prêmio Veruska Raquel - 2019"
+title: "Prêmio Veruska Raquel - 2020"
 subtitle: "O melhor do pior no ano"
 bigimg: /img/pvr2019.jpg
 tags: [offtopic, Off-Topic]

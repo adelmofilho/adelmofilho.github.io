@@ -2,7 +2,7 @@
 
 # Base URL
 
-url: "http://blog.adelmofilho.com"   
+url: "adelmofilho.github.io"   
 baseurl: ""                          
 
 # General
@@ -18,8 +18,8 @@ navbar-links:
   Blog: ""
   Papers: "publications"
   Packages:
-    - tenispolaR: "https://blog.adelmofilho.com/tenispolaR/"
-    - kRypto: "http://blog.adelmofilho.com/kRypto/"
+    - tenispolaR: "https://adelmofilho.github.io/tenispolaR/"
+    - kRypto: "http://adelmofilho.github.io/kRypto/"
   Shiny: "shiny"
   GAMMA: "http://gamma.ufba.br/"
   About:
